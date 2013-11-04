@@ -1,0 +1,51 @@
+[version]
+signature="$Windows NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%Cypress%
+catalogfile=CypressSerial.cat
+DriverVer=07/04/2012,3.0.11.0
+
+[SourceDisksNames]
+1=%Cypress.Disk%,,,
+
+[ControlFlags]
+
+[SourceDisksFiles]
+CypressUsbConsoleWindowsDriver.sys=1
+
+[DestinationDirs]
+DefaultDestDir=12
+ComPort.NT.Copy=12
+
+[Manufacturer]
+%Cypress%=Cypress
+
+[Cypress]
+%CypressSerial% = CypressSerial, {FFEC7336-10CD-41CF-BF82-5EEF9AAA1B64}\VirtualCOM
+
+;****************** Class Sections *********************************
+[ClassInstall32]
+
+[CypressSerial.NT]
+AddReg = CypressSerialAddReg
+
+[CypressSerialAddReg]
+HKR,,PortSubClass,1,01
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[CypressSerial.NT.Services]
+AddService = CypressSerial, 0x00000002, CypressSerial_Service_Inst
+
+[CypressSerial_Service_Inst]
+DisplayName = %CypressSerial%
+ServiceType = 1
+StartType = 3
+ErrorControl = 0
+ServiceBinary = %12%\CypressUsbConsoleWindowsDriver.sys
+
+[Strings]
+Cypress = "Cypress"
+Cypress.Disk="Cypress Disk"
+DeviceDesc = "Cypress Virtual Comm Port"
+CypressSerial = "Cypress Serial"

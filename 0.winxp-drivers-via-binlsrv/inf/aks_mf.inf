@@ -1,0 +1,92 @@
+; AKS_MF.INF
+;
+; Windows 2000 Setup Multifunction INF file for Aladdin PCMCIA (PC-Card).
+; (c) Copyright 2000 by Aladdin Knowledge Systems
+;
+
+[Version]
+Signature  =   "$Windows NT$"
+Class      =   MultiFunction
+ClassGUID  =   {4d36e971-e325-11ce-bfc1-08002be10318}
+Provider   =   %MSFT%
+
+[Manufacturer]
+%AKS% = Aks
+
+[ControlFlags]
+ExcludeFromSelect = PCMCIA\FAST_Electronic-Hardlock_V1.0-E258, \
+                    PCMCIA\FAST_Electronic-Hardlock_V1.0-9586, \
+		    PCMCIA\Aladdin_Knowledge_Systems_Ltd.-Hardlock_V2.0-73FD, \
+		    PCMCIA\Aladdin_Knowledge_Systems_Ltd.-PC-CardHASP_V1.1-A809
+
+[Aks]
+%Tip1.DevDesc%=Hlhs.mf,PCMCIA\FAST_Electronic-Hardlock_V1.0-E258
+%Tip2.DevDesc%=Hlhs.mf,PCMCIA\FAST_Electronic-Hardlock_V1.0-9586
+%Tip3.DevDesc%=Hlhs.mf,PCMCIA\Aladdin_Knowledge_Systems_Ltd.-Hardlock_V2.0-73FD
+%Tip4.DevDesc%=hs.mf,PCMCIA\Aladdin_Knowledge_Systems_Ltd.-PC-CardHASP_V1.1-A809
+
+;-------------------------------------------------------------------------------
+; Hlhs multifunction config
+;
+[Hlhs.mf]
+LogConfig=Hlhs.mf.LogConfig
+
+[Hlhs.mf.Services]
+AddService = mf, 2, mf_Service_Inst
+
+[Hlhs.mf.HW]
+AddReg=Hlhs.mf.RegHW
+
+[Hlhs.mf.RegHW]	
+HKR,Child0000,HardwareID,,MF\HLKPCMCIA_DEV0
+HKR,Child0000,ResourceMap,1,00
+
+[Hlhs.mf.LogConfig]
+LogConfig=Hlhs.mf.LogConf
+
+[hs.mf]
+LogConfig=hs.mf.LogConfig
+
+[hs.mf.Services]
+AddService = mf, 2, mf_Service_Inst
+
+[hs.mf.HW]
+AddReg=hs.mf.RegHW
+
+[hs.mf.RegHW]	
+HKR,Child0000,HardwareID,,MF\HSPCMCIA_DEV0
+HKR,Child0000,ResourceMap,1,00
+
+[hs.mf.LogConfig]
+LogConfig=hs.mf.LogConf
+
+;-------------------------------------------------------------------------------
+; Multifunction Service 
+;
+[mf_Service_Inst]
+ServiceType    = 1
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %12%\mf.sys
+LoadOrderGroup = System Bus Extender
+
+;-------------------------------------------------------------------------------
+; Override Config 
+;
+[Hlhs.mf.LogConf]    
+ConfigPriority=DESIRED
+IOConfig=3bc-3be(3ff::),378-37a(3ff::),278-27a(3ff::)
+
+
+
+;-------------------------------------------------------------------------------
+; Localizable Strings
+;
+[Strings]
+AKS            = "Aladdin_Knowledge_Systems_Ltd."
+MSFT           = "Microsoft"
+Tip1.DevDesc   = "Hardlock PCMCIA (PC-Card)"
+Tip2.DevDesc   = "Hardlock PCMCIA (PC-Card)"
+Tip3.DevDesc   = "Hardlock PCMCIA (PC-Card)"
+Tip4.DevDesc   = "HASP PCMCIA (PC-Card)"
+MFClassName    = "Multifunction PCMCIA Device Driver"

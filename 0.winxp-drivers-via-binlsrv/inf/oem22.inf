@@ -1,0 +1,900 @@
+;Hewlett-Packard LaserJet combined printer driver INF file for Windows 2000 and XP
+;Copyright Hewlett-Packard 2001
+
+[Version]
+Signature="$Windows NT$"
+Provider=%HP% 
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318} 
+Class=Printer 
+DriverPackageType=PlugAndPlay
+DriverPackageDisplayName=%HP_Mombi_Driver_Name%
+CatalogFile=hppcp604.cat
+DriverVer=05/04/2008,61.074.561.43
+
+; Manufacturer section.
+;
+; This section lists all of the manufacturers
+; that we will display in the Dialog box
+;The format of TargetOSVersion, the version decoration, is as follows:
+;NT[Architecture][.[OSMajorVersion][.[OSMinorVersion][.[ProductType][.SuiteMask]]]]
+
+;NT 
+;Operating system version recognition is supported for Windows XP and later NT-based operating systems. 
+;
+;Architecture 
+;Identifies the hardware platform. This must be x86 or ia64. 
+;
+;OSMajorVersion 
+;A number representing the operating system's major version number. For Windows XP, this number is 5. 
+;
+;OSMinorVersion 
+;A number representing the operating system's minor version number. For Windows XP, this number is 1. 
+;
+;ProductType 
+;0x0000003 (VER_NT_SERVER)
+
+[MANUFACTURER]
+%HP%=HP, NT.6.0
+
+; Model sections
+;
+; Each section here corresponds with an entry listed in the
+; [Manufacturer] section, above. The models will be displayed in the order 
+; that they appear in the INF file.
+
+;***************************
+;XP Machine
+;***************************
+
+;******************************
+;VISTA 
+;******************************
+
+; OEM URLS
+;
+; This sections gives the URL for manufacturers found in the Manufacturers section
+[OEM URLS]
+%HP% = "http://go.microsoft.com/fwlink/?LinkID=37&prd=10798&sbp=Printers"
+
+;
+; MS Driver Core installs
+;
+; These sections are used by Printer OEMs to install MS provided drivers
+
+; Installer Sections
+;
+; These sections control file installation, and reference all files that
+; need to be copied. The section name will be assumed to be the driver
+; file, unless there is an explicit DriverFile section listed.
+;
+
+[HPC20156.GPD]
+CopyFiles=VENDOR_SETUP,DATA_FILES,HPPRPROC,UI,PCL6RENDER,DMC_x86,GPD_PCL6_COMMON1,RES_COMMON,MANUAL_DUPLEX,RES_PCL6,PCLXL_GPD_P3,CP_SIMULATOR,HELP,HP_UNIDRV,SERVICES,CAPI_32
+DriverFile=unidrv.dll
+ConfigFile=hpmdp5r1.dll
+HelpFile=unidrv.hlp
+DataFile=HPC20156.GPD
+PrintProcessor=%PRINT_PROCESSOR%
+DelFiles=DEL9xFILE
+
+;********************************************
+;32 bit VISTA machine 
+;NTPRINT.INF supports UNIDRV_DATA Section
+;UNIDRV_DATA is added to Needs section
+;[UNIDRV_DATA] is removed from INF
+;UNIDRV.OEM is added to Needs section
+;UNIDRV.OEM is defined in NTPRINT.INF
+;Used for Copying UNIDRV DLLs
+;HP_UNIDRV is removed from Vista Copy section
+;as Vista copies UNDRV DLLs from OS
+;for More details Open NTPRINT.INF & Check
+;*********************************************
+
+[HPC20156.GPD.NT.6.0]
+CopyFiles=VENDOR_SETUP,DATA_FILES,HPPRPROC,UI,PCL6RENDER,DMC_x86,GPD_PCL6_COMMON1,RES_COMMON,MANUAL_DUPLEX,RES_PCL6,PCLXL_GPD_P3,CP_SIMULATOR,HELP,HP_UNIDRV,SERVICES,CAPI_32
+DriverFile=unidrv.dll
+ConfigFile=hpmdp5r1.dll
+HelpFile=unidrv.hlp
+DataFile=HPC20156.gpd
+PrintProcessor=%PRINT_PROCESSOR%
+DelFiles=DEL9xFILE
+
+[PrinterPackageInstallation.x86]
+PackageAware=TRUE
+
+; Copy Sections
+;
+; Lists of files that are actually copied. These sections are referenced
+; from the installer sections, above. Only create a section if it contains
+; two or more files (if we only copy a single file, identify it in the
+; installer section, using the @filename notation) or if it's a color
+; profile (since the DestinationDirs can only handle sections, and not
+; individual files).
+
+;hp LaserJet 2015 files
+
+[CAPI_32]
+hpcc35r1.DLL,hpcc35r1.DLL,,0x00000020
+
+[DEL9xFILE]
+hpzimn12.DLL
+
+[HPPRPROC]
+hpcpp5r1.dll,,,0x00000020
+
+[UI]
+hpcui5r1.dll,,,0x00000020
+hpcpe5r1.DLL,,,0x00000020
+hppdvq01.dll,,,0x00000010
+hpmdp5r1.DLL,,,0x00000020
+
+[PCL6RENDER]
+hpc6r5r1.dll,,,0x00000020
+
+[DATA_FILES]
+hpcp2015.cfg,hpcp2015.CF_,,0x00000020
+hpc20156.xml,,,0x00000020
+hpcsc5r1.dtd,,,0x00000020
+hpc20156.gpd,,,0x00000020
+hpc2015c.ini,,,0x00000020
+hpcP6.hpx,hpcP6.hpx,,0x00000020
+
+[GPD_PCL6_COMMON1]
+hpc6m5r1.gpd,,,0x00000020
+hpcsm5r1.gpd,,,0x00000020
+
+[RES_COMMON]
+hpcst5r1.dll,,,0x00000020
+hpcur5r1.dll,,,0x00000020
+hpcsat.dll,,,0x00000020
+
+[MANUAL_DUPLEX]
+hpcev5r1.dll,,,0x00000020
+
+[RES_PCL6]
+pclxl.dll,,,0x00000020
+
+[PCLXL_GPD_P3]
+pjl.gpd,,,0x00000020
+p6disp.gpd,,,0x00000020
+pclxl.gpd,,,0x00000020
+
+[CP_SIMULATOR]
+HPC2015W.HTML,,,0X00000020
+HPC2015W.SWF,,,0X00000020
+HPC2015W.XML,,,0X00000020
+
+[HP_UNIDRV]
+UNIDRV.DLL,,,0x00000020
+UNIRES.DLL,,,0x00000020
+UNIDRVUI.DLL,,,0x00000020
+STDNAMES.GPD,,,0x00000020 
+UNIDRV.HLP,,,0x00000020
+STDDTYPE.GDL,STDDTYPE.GDL,,0x00000020
+STDSCHEM.GDL,STDSCHEM.GDL,,0x00000020
+STDSCHMX.GDL,STDSCHMX.GDL,,0x00000020
+
+[DMC_x86]
+hpcdmc32.DLL,hpcdmc32.DLL,,0x00000020
+hpbcfgre.DLL,hpbcfgre.DLL,,0x00000020
+
+[SERVICES]
+hpcls5r1.DLL,hpcls5r1.DLL,,0x00000020
+hpcss5r1.DLL,hpcss5r1.DLL,,0x00000020
+
+[HELP]
+hpchl5r1.cab,hpchl5r1.cab,,0x00000020
+
+[SourceDisksNames]
+98="HP LaserJet P2015 Series CD",hppcp604.CAB,,
+97="HP LaserJet P2015 Series CD",%LocaleCABFile%,,
+96=%DiskID%,,,""
+
+[SourceDisksFiles]
+hpc20156.gpd=98
+hpc2015c.ini=98 
+hppdvq01.dll=98
+hpc2015w.swf=98
+hpc2015w.xml=98
+hpc2015w.html=98
+hpc20156.xml=98
+hpcp2015.CF_=98
+hpcpe5r1.DLL=98
+hpmdp5r1.dll=98
+hpcpp5r1.dll=98 
+hpcui5r1.dll=98
+hpc6r5r1.dll=98
+hpcst5r1.dll=98 
+hpcur5r1.dll=98
+hpcsat.dll=98
+hpcc35r1.DLL=98
+hpcev5r1.dll=98
+HPCDMC32.DLL=98
+hpbcfgre.DLL=98
+hpcsc5r1.dtd=98
+hpcP6.hpx=98 
+UNIDRV.DLL=98
+UNIRES.DLL=98 
+UNIDRVUI.DLL=98 
+STDNAMES.GPD=98 
+UNIDRV.HLP=97
+STDDTYPE.GDL=98
+STDSCHEM.GDL=98
+STDSCHMX.GDL=98
+pclxl.dll=98
+pjl.gpd=98
+p6disp.gpd=98
+pclxl.gpd=98
+hpc6m5r1.gpd=98
+hpcsm5r1.gpd=98
+hpchl5r1.cab=98    
+hpcls5r1.DLL=98
+hpcss5r1.DLL=98
+hppapr04.dat=98
+hppapr04.dll=98
+hppepr04.dll=98
+
+[DestinationDirs]
+DefaultDestDir=66000
+HPPRPROC=66001 
+VENDOR_SETUP=66002
+PNPDLL_SYSCOPY=66002
+
+[Strings]
+PrinterClassName="Printers" 
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL" 
+HP="HP" 
+HP_Mombi_Driver_Name ="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+
+[HP]
+"HP LaserJet P2015 Series PCL 6"=HPC20156.GPD,USBPRINT\Hewlett-PackardHP_LaF552
+[HPC20156.GPD.CoInstallers]
+AddReg=CoLaunchInstall.AddReg
+CopyFiles=VENDOR_SETUP
+[HP.NT.6.0]
+"HP LaserJet P2015 Series PCL 6"=HPC20156.GPD.NT.6.0,USBPRINT\Hewlett-PackardHP_LaF552
+[HPC20156.GPD.NT.6.0.CoInstallers]
+AddReg=CoLaunchInstall_Vista.AddReg
+CopyFiles=VENDOR_SETUP
+[CoLaunchInstall.AddReg]
+HKR,,CoInstallers32,0x10000,"hppapr04.DLL,CoSetup"
+[VENDOR_SETUP]
+hppapr04.dll
+hppapr04.dat
+hppepr04.dll
+[SourceInfo]
+OriginalInfSourcePath = %1%
+[CoLaunchInstall_Vista.AddReg]
+HKR,,CoInstallers32,0x10000,"hppepr04.DLL,CoSetup"
+[Strings.0409]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.0809]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.0C09]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.1009]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.1409]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.1809]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.1C09]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.2009]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.2409]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.2809]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.2C09]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2enww.cab"
+[Strings.041F]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2trww.cab"
+[Strings.0413]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2nlww.cab"
+[Strings.0813]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2nlww.cab"
+[Strings.040B]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2fiww.cab"
+[Strings.0406]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2daww.cab"
+[Strings.0419]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2ruww.cab"
+[Strings.0819]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2ruww.cab"
+[Strings.0412]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2koww.cab"
+[Strings.0812]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2koww.cab"
+[Strings.0414]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2noww.cab"
+[Strings.0814]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2noww.cab"
+[Strings.040E]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2huww.cab"
+[Strings.0401]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.0801]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.0C01]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.1001]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.1401]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.1801]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.1C01]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.2001]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.2401]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.2801]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.2C01]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.3001]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.3401]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.3801]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.3C01]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.4001]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2arww.cab"
+[Strings.041E]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2thww.cab"
+[Strings.040D]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2heww.cab"
+[Strings.040C]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2frww.cab"
+[Strings.080C]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2frww.cab"
+[Strings.0C0C]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2frww.cab"
+[Strings.100C]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2frww.cab"
+[Strings.140C]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2frww.cab"
+[Strings.180C]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2frww.cab"
+[Strings.0403]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2caww.cab"
+[Strings.0415]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2plww.cab"
+[Strings.041D]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2svww.cab"
+[Strings.081D]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2svww.cab"
+[Strings.0407]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2deww.cab"
+[Strings.0807]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2deww.cab"
+[Strings.0C07]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2deww.cab"
+[Strings.1007]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2deww.cab"
+[Strings.1407]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2deww.cab"
+[Strings.041B]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2skww.cab"
+[Strings.0416]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2ptww.cab"
+[Strings.0816]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2ptww.cab"
+[Strings.0405]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2csww.cab"
+[Strings.040A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.0456]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.0C0A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.080A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.100A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.140A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.180A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.1C0A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.200A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.240A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.280A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.2C0A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.300A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.340A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.380A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.3C0A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.400A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.440A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.480A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.4C0A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.500A]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.042D]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2esww.cab"
+[Strings.0404]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2zhtw.cab"
+[Strings.0C04]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2zhtw.cab"
+[Strings.1404]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2zhtw.cab"
+[Strings.0804]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2zhcn.cab"
+[Strings.1004]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2zhcn.cab"
+[Strings.0410]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2itww.cab"
+[Strings.0810]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2itww.cab"
+[Strings.0408]
+PrinterClassName="Printers"
+DiskID="HP LaserJet P2015 Series CD"
+PRINT_PROCESSOR="HPCPP5r1,hpcpp5r1.DLL"
+HP="HP"
+HP_Mombi_Driver_Name="HP LaserJet P2015 Series PCL 6"
+LocaleCABFile="p6i2elww.cab"

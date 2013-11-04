@@ -1,0 +1,132 @@
+;
+; USBIO Setup Information file V2.41
+; Copyright (c) 1998-2007 by Thesycon GmbH
+;
+; This file supports:
+;     Windows 2000
+;     Windows 2000 Server
+;     Windows XP
+;     Windows Server 2003
+;     Windows Vista
+;
+
+;******************************************************************************
+; Version section
+;------------------------------------------------------------------------------
+[Version]
+Signature="$Windows NT$"
+Provider=%S_Provider%
+DriverVer=04/11/2007,2.41.0.0
+CatalogFile=AltiumUSBJTAG.cat
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+
+
+;******************************************************************************
+; Manufacturer section
+;------------------------------------------------------------------------------
+[Manufacturer]
+%S_Mfg%=_Models
+
+
+;******************************************************************************
+; Models section
+;------------------------------------------------------------------------------
+[_Models]
+%S_DeviceDesc0%=_Install, USB\VID_1B8C&PID_0100&MI_00
+%S_DeviceDesc1%=_Install, USB\VID_1B8C&PID_0200
+
+
+;******************************************************************************
+; Install sections x86-based systems
+;------------------------------------------------------------------------------
+[_Install.ntx86]
+CopyFiles=_CopyFiles_sys
+
+[_Install.ntx86.Services]
+AddService = %S_DriverName%, 0x00000002, _AddService, _EventLog
+
+[_Install.ntx86.HW]
+AddReg=_AddReg_HW
+
+[_AddService]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\%S_DriverName%.sys
+
+[_EventLog]
+AddReg=_EventLog_AddReg
+
+[_EventLog_AddReg]
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\%S_DriverName%.sys"
+HKR,,TypesSupported,  %REG_DWORD%,7
+
+
+;******************************************************************************
+; Registry sections
+;------------------------------------------------------------------------------
+[_AddReg_HW]
+HKR,,DriverUserInterfaceGuid,%REG_SZ%,"{0BAAF132-AF71-4C9B-8797-B6DC702CFEFE}"
+HKR,,DisableDefaultInterface, %REG_DWORD%, 1
+HKR,,PowerStateOnOpen,     %REG_DWORD%, 0
+HKR,,PowerStateOnClose,    %REG_DWORD%, 0
+HKR,,MinPowerStateUsed,    %REG_DWORD%, 3
+HKR,,MinPowerStateUnused,  %REG_DWORD%, 3
+HKR,,EnableRemoteWakeup,   %REG_DWORD%, 0
+HKR,,AbortPipesOnPowerDown,%REG_DWORD%, 1
+HKR,,UnconfigureOnClose,   %REG_DWORD%, 1
+HKR,,ResetDeviceOnClose,   %REG_DWORD%, 0
+HKR,,MaxIsoPackets,        %REG_DWORD%, 512
+HKR,,ShortTransferOk,      %REG_DWORD%, 1
+HKR,,RequestTimeout,       %REG_DWORD%, 1000
+HKR,,SuppressPnPRemoveDlg, %REG_DWORD%, 1
+
+
+;******************************************************************************
+; Copy Files section
+;------------------------------------------------------------------------------
+[_CopyFiles_sys]
+AltiumUSBJtag.sys
+
+
+;******************************************************************************
+; Destination Directories
+;------------------------------------------------------------------------------
+[DestinationDirs]
+DefaultDestDir =     12
+_CopyFiles_sys =     12
+
+
+;******************************************************************************
+; Disk Layout
+;------------------------------------------------------------------------------
+[SourceDisksNames.x86]
+1=%S_DiskName%,,
+
+[SourceDisksFiles.x86]
+AltiumUSBJtag.sys=1
+
+
+;******************************************************************************
+; Text Strings
+;------------------------------------------------------------------------------
+[Strings]
+REG_SZ         = 0x00000000
+REG_MULTI_SZ   = 0x00010000
+REG_EXPAND_SZ  = 0x00020000
+REG_BINARY     = 0x00000001
+REG_DWORD      = 0x00010001
+
+S_Provider="Altium"
+S_Mfg="Altium"
+
+S_DeviceDesc0="Altium Jtag over USB"
+S_DeviceDesc1="Altium JTAG over USB"
+
+S_DiskName="Altium Designer Installation Media"
+
+S_DriverName="AltiumUSBJtag"
+
+
+; *** EOF ***

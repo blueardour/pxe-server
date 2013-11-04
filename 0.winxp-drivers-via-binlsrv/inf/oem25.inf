@@ -1,0 +1,108 @@
+[version]
+signature="$Windows NT$"
+Class=CypressUsbConsoleWindowsDriver
+ClassGuid={FFEC7336-10CD-41cf-BF82-5EEF9AAA1B64}
+Provider=%Cypress%
+catalogfile=CypressUsbAndBus.cat
+DriverVer=07/04/2012,3.0.11.0
+
+[SourceDisksNames]
+1=%Cypress.Disk%,,,
+
+[ControlFlags]
+
+[SourceDisksFiles]
+CypressUsbConsoleWindowsDriver.sys=1
+CypressUsbConsoleCoInstaller.dll=1
+
+[DestinationDirs]
+DefaultDestDir=12
+CoInstaller_CopyFiles = 11 ; System Dir( system32 on NT )
+
+[Manufacturer]
+%Cypress%=Cypress
+
+[Cypress]
+%CypressBus% = CypressBus, root\CypressBus
+%CypressUsb% = CypressUsb, USB\VID_04B4&PID_0008
+
+;****************** Class Sections *********************************
+[ClassInstall32]
+
+; **************** CypressBus section - virtual bus driver **************
+
+[CypressBus.NT]
+AddReg = CypressBusAddReg
+
+
+[CypressBusAddReg]
+
+[CypressBus.NT.Services]
+AddService = CypressSerial, 0x00000002, CypressSerial_Service_Inst
+
+[CypressSerial_Service_Inst]
+DisplayName = %CypressPort%
+ServiceType = 1
+StartType = 3
+ErrorControl = 0
+ServiceBinary = %12%\CypressUsbConsoleWindowsDriver.sys
+AddReg = CypressBusAddReg_Service
+
+[CypressBusAddReg_Service]
+; InitialNumComPorts is the number of virtual COM ports that should be created when the driver is loaded for the first time.
+; After that this value is erased to 0, so that no more additional ports will be added when the driver restarted (for example during system reboot).
+; After that there are two ways to add more ports:
+; 1. Plug more Cypress USB devices than there are COM ports. Additional COM  ports will be added autoatically.
+; 2. Manually edit InitialNumComPorts value in the registry (at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CypressSerial), then restart the driver.
+; To remove unneeded ports, launch Device Manager from the Control Panel, select the COM port (under Ports), right click and select Uninstall.
+HKR,,InitialNumComPorts,0x00010001,0
+
+; **************** CypressUsb section - USB driver **************
+[CypressUsb.NT]
+CopyFiles=CypressUsb.NT.Copy
+AddReg=CypressUsb.NT.AddReg
+
+[CypressUsb.NT.HW]
+AddReg=CypressUsb.NT.HW.AddReg
+
+[CypressUsb.NT.Copy]
+CypressUsbConsoleWindowsDriver.sys
+
+[CypressUsb.NT.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,CypressUsbConsoleWindowsDriver.sys
+
+[CypressUsb.NT.HW.AddReg]
+;HKR,,"UpperFilters",0x00010000,"serenum"
+
+[CypressUsb.NT.Services]
+AddService = CypressSerial, 0x00000002, Serial_Service_Inst
+;AddService = Serenum,,Serenum_Service_Inst
+
+[Serial_Service_Inst]
+DisplayName    = %CypressPort%
+ServiceType    = 1            
+StartType      = 3            
+ErrorControl   = 0            
+ServiceBinary  = %12%\CypressUsbConsoleWindowsDriver.sys ; %12% == %windir%\system32\drivers
+;LoadOrderGroup = Base
+
+;-------------- Coinstaller installation
+
+[CypressUsb.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+CypressUsbConsoleCoInstaller.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000,"CypressUsbConsoleCoInstaller.dll,CypressUsbConsoleWindowsDriverCoInstaller"
+
+[Strings]
+Cypress = "Cypress"
+Cypress.Disk="Cypress Disk"
+CypressUsb = "Cypress USB to Serial adapter"
+CypressPort = "CypressPort"
+CypressBus = "Cypress Bus enumerator"
+

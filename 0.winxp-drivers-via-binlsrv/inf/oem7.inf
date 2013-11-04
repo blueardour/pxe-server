@@ -1,0 +1,113 @@
+; ****************************************************************************
+; ****************************************************************************
+; **    Filename:  ICH78IDE.INF
+; **    Abstract:  Windows* 2K, XP, and 2003 Server INF File for 
+; **               Intel(R) 82801 IDE device
+; **    Last Update: November 07, 2008 (Version 8.2.1 Build 1011)
+; ****************************************************************************
+; ****************************************************************************
+
+[version]
+Signature="$WINDOWS NT$"
+Class=hdc
+ClassGuid={4D36E96A-E325-11CE-BFC1-08002BE10318}
+Provider=%INTEL%
+CatalogFile=ich78ide.cat
+DriverVer=11/07/2008, 8.2.1.1011
+
+[SourceDisksNames] 
+[SourceDisksFiles]
+ 
+[PackageInfo]
+Condition=InstalledDriverSection(pciide_Inst)
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%INTEL%=INTEL_HDC,NTamd64
+
+[INTEL_HDC]
+%PCI\VEN_8086&DEV_27C0.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_27C0
+%PCI\VEN_8086&DEV_27C4.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_27C4     
+%PCI\VEN_8086&DEV_27DF.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_27DF
+%PCI\VEN_8086&DEV_2820.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_2820
+%PCI\VEN_8086&DEV_2825.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_2825     
+%PCI\VEN_8086&DEV_2828.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_2828   
+%PCI\VEN_8086&DEV_2850.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_2850 
+
+[INTEL_HDC.NTamd64]
+%PCI\VEN_8086&DEV_27C0.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_27C0
+%PCI\VEN_8086&DEV_27C4.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_27C4     
+%PCI\VEN_8086&DEV_27DF.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_27DF
+%PCI\VEN_8086&DEV_2820.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_2820
+%PCI\VEN_8086&DEV_2825.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_2825     
+%PCI\VEN_8086&DEV_2828.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_2828   
+%PCI\VEN_8086&DEV_2850.DeviceDesc%=pciide_Inst, PCI\VEN_8086&DEV_2850  
+
+;**********************************************************
+; Intel PCI IDE Controller (DUAL_GOOD_IDE)
+
+[pciide_Inst]
+Include=mshdc.inf
+Needs=pciide_Inst
+AddReg = intelChannelEnableCheck_AddReg
+
+[intelChannelEnableCheck_AddReg]
+HKR,,MasterOnMask,%REG_DWORD%,0x00000080
+HKR,,MasterOnConfigOffset,%REG_DWORD%,0x00000041
+HKR,,SlaveOnMask,%REG_DWORD%,0x00000080
+HKR,,SlaveOnConfigOffset,%REG_DWORD%,0x00000043
+
+[pciide_Inst.Services]
+Include=mshdc.inf
+Needs=pciide_Inst.Services
+
+[pciide_Inst.PosDup]
+*PNP0600
+
+[Strings]
+INTEL="Intel"
+PCI\VEN_8086&DEV_27C0.DeviceDesc="Intel(R) 82801GB/GR/GH (ICH7 Family) Serial ATA Storage Controller - 27C0"
+PCI\VEN_8086&DEV_27C4.DeviceDesc="Intel(R) 82801GBM/GHM (ICH7-M Family) Serial ATA Storage Controller - 27C4"
+PCI\VEN_8086&DEV_27DF.DeviceDesc="Intel(R) 82801G (ICH7 Family) Ultra ATA Storage Controllers - 27DF"
+PCI\VEN_8086&DEV_2820.DeviceDesc="Intel(R) ICH8 4 port Serial ATA Storage Controller - 2820"
+PCI\VEN_8086&DEV_2825.DeviceDesc="Intel(R) ICH8 2 port Serial ATA Storage Controller - 2825"
+PCI\VEN_8086&DEV_2828.DeviceDesc="Intel(R) ICH8M 3 port Serial ATA Storage Controller - 2828"
+PCI\VEN_8086&DEV_2850.DeviceDesc="Intel(R) ICH8M Ultra ATA Storage Controllers - 2850"
+
+;*******************************************
+;Handy macro substitutions (non-localizable)
+REG_DWORD              = 0x00010001
+
+; Copyright (c) 2003-2008 Intel Corporation
+
+; ************************************************************
+; Intel is making no claims of usability, efficacy or 
+; warranty.  
+; ************************************************************
+; Information in this document is provided in connection with 
+; Intel products.  No license, express or implied, by estoppel 
+; or otherwise, to any intellectual property rights is granted 
+; by this document.  Intel assumes no liability whatsoever, 
+; and Intel disclaims any express or implied warranty, 
+; relating to sale and/or use of Intel products including 
+; liability or warranties relating to fitness for a particular 
+; purpose, merchantability, or infringement of any patent, 
+; copyright or other intellectual property right.  Intel 
+; products are not intended for use in medical, life saving, 
+; or life sustaining applications.
+
+; ************************************************************
+; Intel Corporation disclaims all warranties and liabilities 
+; for the use of this document and the information contained 
+; herein, and assumes no responsibility for any errors which 
+; may appear in this document, nor does Intel make a 
+; commitment to update the information contained herein. Intel 
+; reserves the right to make changes to this document at any 
+; time, without notice.
+; ************************************************************
+; ************************************************************
+
+; * Third-party brands and names are the property of their 
+; respective owners.

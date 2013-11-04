@@ -1,0 +1,109 @@
+;
+; INF File for Aladdin Hasp Function Driver
+;-----------------------------------------------
+;
+; (c) Copyright 2005 by Aladdin Knowledge Systems
+;
+
+[Version]
+signature="$Windows NT$"
+Provider=%Fast%
+Class=USB
+ClassGuid={36fc9e60-c465-11cf-8056-444553540000}
+DriverVer=11/17/2006,5.19     ; new DriverVer directive
+CatalogFile=akshasp.cat
+
+[Manufacturer]
+%FastMfg%=Aladdin
+
+[Aladdin]
+%AKSCLASS\Hasp.DeviceDesc%=akshasp, USB\Hasp ;HASP Protection Device
+%AKSCLASS\Hardlock.DeviceDesc%=akshasp, USB\Hardlock ;Hardlock Protection Device
+
+;*****************************************
+; Coinstaller section
+;*****************************************
+[akshasp.nt.CoInstallers]
+AddReg=akshasp.CoInstallers.reg
+CopyFiles=AladdinCoInstCopyFiles
+
+[akshasp.CoInstallers.reg]
+HKR,,CoInstallers32,0x00010000,"akscoinst.dll,AksHaspCoInstallEntryPoint"
+
+[AladdinCoInstCopyFiles]
+akscoinst.dll
+
+;*****************************************
+; AKSHASP Device NT Install Section
+;*****************************************
+
+[akshasp.NT]
+CopyFiles=akshasp.NT.Copy
+
+[akshasp.NT.Copy]
+akshasp.sys
+hardlock.sys
+
+[akshasp.NT.HW]
+AddReg=akshasp.NT.HW.AddReg
+
+[akshasp.NT.HW.AddReg]
+HKR,,"BeepCount",0x00010003,4
+
+[akshasp.NT.Services]
+AddService=akshasp,0x02,akshasp.addservices
+
+[akshasp.addservices]
+DisplayName    = %svcdesc%
+ServiceType    = 1		;SERVICE_KERNEL_DRIVER
+StartType      = 3		;SERVICE_DEMAND_START
+ErrorControl   = 1		;SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\akshasp.sys
+LoadOrderGroup = ExtendedBase
+
+
+;*****************************************
+; AKSHASP Device  W9x Install Section
+;*****************************************
+[akshasp]
+CopyFiles=akshasp.Copy,akshasp.VXD.Copy
+AddReg=akshasp.AddReg
+
+[akshasp.Copy]
+akshsp9x.sys
+
+[akshasp.VXD.Copy]
+hardlock.vxd
+
+[akshasp.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,akshsp9x.sys
+
+;;****************************************************************************
+;; Source Files
+;;****************************************************************************
+[sourcedisksnames]
+1=%INSTDISK%,,,""
+
+[SourceDisksFiles]
+akshasp.sys=1
+hardlock.sys=1
+akscoinst.dll=1
+
+hardlock.vxd=1
+
+[DestinationDirs]
+akshasp.NT.Copy = 10,system32\drivers
+akshasp.Copy = 10,system32\drivers
+AladdinCoInstCopyFiles = 11
+akshasp.VXD.Copy = 10,system
+
+[Strings]
+Fast="Aladdin Knowledge Systems"
+FastMfg="Aladdin Knowledge Systems"
+svcdesc="Aladdin HASP Key"
+AKSCLASS\Hasp.DeviceDesc="Aladdin HASP Key"
+AKSCLASS\Hardlock.DeviceDesc = "Aladdin Hardlock Key"
+ClassName = "Aladdin Software Protection Devices"
+INSTDISK="Aladdin Install Disk"
+

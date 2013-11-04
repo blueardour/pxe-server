@@ -1,0 +1,14 @@
+
+
+At the text mode stage, copying files, about 60~760%, an error occur:
+
+Setup cannot copy the file: w_isdel.exe
+
+Status: solved
+
+Method:
+the w_isdel.exe or w_isdel.ex_  file exist in the i386 folder, check the path
+
+
+tht i386 directory is nessecrry for WinXP 64Bit Install
+

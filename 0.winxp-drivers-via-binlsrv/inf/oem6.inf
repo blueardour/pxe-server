@@ -1,0 +1,141 @@
+; ****************************************************************************
+; ****************************************************************************
+; **    Filename:  2008s4el.INF (82XXX Chipset)                                                 
+; **    Abstract:  Windows* 2K, XP, 2003, Vista, 2008 INF File for 
+; **		   82XXX Memory Controller Hub 
+; **    Last Update: February 02, 2009 (Version 9.0.0 Build 1012)
+; ****************************************************************************
+; ****************************************************************************
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%INTEL%
+CatalogFile=2008s4el.cat
+DriverVer=02/02/2009, 9.1.0.1012
+
+[sourcedisksnames] 
+[sourcedisksfiles] 
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%INTEL%=INTEL_SYS,NTamd64
+
+[INTEL_SYS]
+;Eaglelake
+%PCI\VEN_8086&DEV_2E00.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E00
+%PCI\VEN_8086&DEV_2E01.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E01
+%PCI\VEN_8086&DEV_2E09.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E09
+%PCI\VEN_8086&DEV_2E10.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E10
+%PCI\VEN_8086&DEV_2E11.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E11
+%PCI\VEN_8086&DEV_2E19.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E19
+%PCI\VEN_8086&DEV_2E20.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E20
+%PCI\VEN_8086&DEV_2E21.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E21
+%PCI\VEN_8086&DEV_2E29.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E29
+%PCI\VEN_8086&DEV_2E30.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E30
+%PCI\VEN_8086&DEV_2E31.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E31
+%PCI\VEN_8086&DEV_2E40.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E40
+%PCI\VEN_8086&DEV_2E41.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E41
+%PCI\VEN_8086&DEV_2E90.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E90
+%PCI\VEN_8086&DEV_2E91.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E91
+
+[INTEL_SYS.NTamd64]
+;Eaglelake
+%PCI\VEN_8086&DEV_2E00.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E00
+%PCI\VEN_8086&DEV_2E01.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E01
+%PCI\VEN_8086&DEV_2E09.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E09
+%PCI\VEN_8086&DEV_2E10.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E10
+%PCI\VEN_8086&DEV_2E11.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E11
+%PCI\VEN_8086&DEV_2E19.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E19
+%PCI\VEN_8086&DEV_2E20.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E20
+%PCI\VEN_8086&DEV_2E21.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E21
+%PCI\VEN_8086&DEV_2E29.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E29
+%PCI\VEN_8086&DEV_2E30.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E30
+%PCI\VEN_8086&DEV_2E31.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E31
+%PCI\VEN_8086&DEV_2E40.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E40
+%PCI\VEN_8086&DEV_2E41.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E41
+%PCI\VEN_8086&DEV_2E90.DeviceDesc%=NO_DRV,PCI\VEN_8086&DEV_2E90
+%PCI\VEN_8086&DEV_2E91.DeviceDesc%=INTEL_PCI,PCI\VEN_8086&DEV_2E91
+
+[INTEL_PCI]
+AddReg=INF_VER
+Include=machine.inf
+Needs=PCI_DRV
+
+[INTEL_PCI.Services]
+Include=machine.inf
+Needs=PCI_DRV.Services
+
+[INTEL_PCI.HW]
+Include=machine.inf
+Needs=PCI_DRV.HW
+
+;**************************************************************************
+; Do-nothing section used to avoid "Unknown hardware" installation prompts.
+
+[NO_DRV]
+AddReg=INF_VER
+Include=machine.inf
+Needs=NO_DRV
+
+[NO_DRV.Services]
+Include=machine.inf
+Needs=NO_DRV.Services
+
+[INF_VER]
+HKLM,Software\Intel\InfInst,Infver,,"9.0.0"
+
+[Strings]
+INTEL="Intel"
+; EagleLake
+PCI\VEN_8086&DEV_2E00.DeviceDesc="Intel(R) 4 Series Chipset Processor to I/O Controller - 2E00"
+PCI\VEN_8086&DEV_2E01.DeviceDesc="Intel(R) 4 Series Chipset PCI Express Root Port - 2E01"
+PCI\VEN_8086&DEV_2E09.DeviceDesc="Intel(R) 4 Series Chipset PCI Express Root Port - 2E09"
+PCI\VEN_8086&DEV_2E10.DeviceDesc="Intel(R) 4 Series Chipset Processor to I/O Controller - 2E10"
+PCI\VEN_8086&DEV_2E11.DeviceDesc="Intel(R) 4 Series Chipset PCI Express Root Port - 2E11"
+PCI\VEN_8086&DEV_2E19.DeviceDesc="Intel(R) 4 Series Chipset PCI Express Root Port - 2E19"
+PCI\VEN_8086&DEV_2E20.DeviceDesc="Intel(R) 4 Series Chipset Processor to I/O Controller - 2E20"
+PCI\VEN_8086&DEV_2E21.DeviceDesc="Intel(R) 4 Series Chipset PCI Express Root Port - 2E21"
+PCI\VEN_8086&DEV_2E29.DeviceDesc="Intel(R) 4 Series Chipset PCI Express Root Port - 2E29"
+PCI\VEN_8086&DEV_2E30.DeviceDesc="Intel(R) 4 Series Chipset Processor to I/O Controller - 2E30"
+PCI\VEN_8086&DEV_2E31.DeviceDesc="Intel(R) 4 Series Chipset PCI Express Root Port - 2E31"
+PCI\VEN_8086&DEV_2E40.DeviceDesc="Intel(R) 4 Series Chipset Processor to I/O Controller - 2E40"
+PCI\VEN_8086&DEV_2E41.DeviceDesc="Intel(R) 4 Series Chipset PCI Express Root Port - 2E41"
+PCI\VEN_8086&DEV_2E90.DeviceDesc="Intel(R) 4 Series Chipset Processor to I/O Controller - 2E90"
+PCI\VEN_8086&DEV_2E91.DeviceDesc="Intel(R) 4 Series Chipset PCI Express Root Port - 2E91"
+
+
+; Copyright (c) 2006-2009 Intel Corporation
+
+; ************************************************************
+; Intel is making no claims of usability, efficacy or 
+; warranty.  
+; ************************************************************
+; Information in this document is provided in connection with 
+; Intel products.  No license, express or implied, by estoppel 
+; or otherwise, to any intellectual property rights is granted 
+; by this document.  Intel assumes no liability whatsoever, 
+; and Intel disclaims any express or implied warranty, 
+; relating to sale and/or use of Intel products including 
+; liability or warranties relating to fitness for a particular 
+; purpose, merchantability, or infringement of any patent, 
+; copyright or other intellectual property right.  Intel 
+; products are not intended for use in medical, life saving, 
+; or life sustaining applications.
+
+; ************************************************************
+; Intel Corporation disclaims all warranties and liabilities 
+; for the use of this document and the information contained 
+; herein, and assumes no responsibility for any errors which 
+; may appear in this document, nor does Intel make a 
+; commitment to update the information contained herein. Intel 
+; reserves the right to make changes to this document at any 
+; time, without notice.
+; ************************************************************
+; ************************************************************
+
+; * Third-party brands and names are the property of their 
+; respective owners.

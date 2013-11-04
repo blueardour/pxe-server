@@ -1,0 +1,86 @@
+[Version]
+Signature = "$Windows NT$"
+CatalogFile = ax88172xp.cat
+Class = Net
+ClassGUID = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider = %ASIX%
+DriverVer = 05/22/2003, 2.0.0.5
+[Manufacturer]
+%ASIX% = USB
+[ControlFlags]
+ExcludeFromSelect = USB\VID_0B95&PID_1720
+[USB]
+%AX88172.DeviceDesc% = AX88172.Ndi,USB\VID_0B95&PID_1720
+[AX88172.Ndi]
+AddReg = AX88172.Reg, AX88172.Con.Reg	;, AX88172.Params
+DeviceID = USB\VID_0B95&PID_1720
+[AX88172.Ndi.NT]
+AddReg = AX88172.NT.Reg, AX88172.Con.Reg	;, AX88172.Params
+Characteristics = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType = 15	; USB
+;CpyFiles = CopyFile.NT.Sys
+[AX88172.Ndi.NT.Services]
+AddService = AX88172, 2, AX88172.Service, Common.EventLog
+[AX88172.Reg]
+HKR,Ndi,DeviceID,,USB\VID_0B95&PID_1720
+HKR,Ndi,CardType,,"PNP"
+HKR,,AdapterName,,AX88172
+HKR,,DevLoader,,*ndis,*ntkern,*ndis
+HKR,,DeviceVxDs,,ax88172.sys
+HKR,NDIS,MajorNdisVersion,1,05
+HKR,NDIS,MinorNdisVersion,1,00
+HKR,NDIS,LogDriverName,,AX88172
+HKR,Ndi\Interfaces,DefUpper,,"ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"AX88172.Install"
+HKR,Ndi,HelpText,,"AX88172 USB2 to Fast Ethernet Adpater"
+[AX88172.Con.Reg]
+HKR,Ndi\params\ConnectionType,ParamDesc,,"Connection Type"
+HKR,Ndi\params\ConnectionType,default,,0
+HKR,Ndi\params\ConnectionType,type,,enum
+HKR,Ndi\params\ConnectionType\enum,0,,"AutoSense"
+HKR,Ndi\params\ConnectionType\enum,2,,"10BaseT Half_Duplex"
+HKR,Ndi\params\ConnectionType\enum,3,,"10BaseT Full_Duplex"
+HKR,Ndi\params\ConnectionType\enum,8,,"100BaseTx Half_Duplex"
+HKR,Ndi\params\ConnectionType\enum,9,,"100BaseTx Full_Duplex"
+HKR,NDI\params\ConnectionType,flag,1,20,00,00,00
+[AX88172.Install]
+;CpyFiles=CopyFile.Sys
+[CopyFile.Sys]
+ax88172.sys
+[AX88172.NT.Reg]
+; Interfaces
+HKR, Ndi\Interfaces, LowerRange, 0, "ethernet"
+HKR, Ndi\Interfaces, UpperRange, 0, "ndis5"
+HKR, Ndi, Service, 0, "AX88172"
+[AX88172.Service]
+DisplayName = %AX88172.DeviceDesc%
+ServiceType = 1
+StartType = 3
+ErrorControl = 1
+ServiceBinary = %12%\ax88172.sys
+LoadOrderGroup = NDIS
+AddReg = TextModeFlags.Reg
+[Common.EventLog]
+AddReg = Common.AddEventLog.Reg
+[Common.AddEventLog.Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported , 0x00010001, 7
+[TextModeFlags.Reg]
+HKR, , TextModeFlags, 0x00010001, 0x0001
+[CopyFile.NT.Sys]
+ax88172.sys,,,2
+[DestinationDirs]
+CopyFile.Sys = 11
+CopyFile.NT.Sys = 12
+[SourceDisksNames]
+50=%AX88172.DiskName%,,
+[SourceDisksFiles]
+ax88172.sys=50,.,ax88172.sys,10000
+[Strings]
+ASIX = "ASIX"
+AX88172.DiskName = "AX88172 USB2 to Fast Ethernet Driver Diskette"
+AX88172.DeviceDesc = "ASIX AX88172 USB2 to Fast Ethernet Adapter"

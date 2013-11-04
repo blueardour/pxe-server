@@ -1,0 +1,113 @@
+
+[version]
+Signature="$Chicago$"
+Compatible=1
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider=%D-Link%
+CatalogFile=NETDLKRN.CAT ;; for WHQL certified
+DriverVer=03/26/2002,5.503.326.2002
+[Manufacturer]
+%D-Link%=D-Link
+[ControlFlags]
+[D-Link]
+%DFE530TX.DeviceDesc%=DFE530TX.ndi, PCI\VEN_1186&DEV_1300&SUBSYS_13011186&REV_10
+[DFE530TX.ndi.NT]
+DelReg=PreParams.DelReg
+AddReg=DFE530TX.common.reg, DFE530TX.reg
+Characteristics=0x84
+BusType=5
+;CpyFiles=DFE530TX.CopyFiles
+[DFE530TX.ndi.NT.Services]
+AddService=DLKRTS, 2, rtsnt.Service, DFE530TX.EventLog
+[DFE530TX.CopyFiles]
+DLKRTS.SYS,DLKRTS.SYS,,2
+[DFE530TX.common.reg]
+HKR,Ndi\params\DuplexMode, ParamDesc, 0, %SpeedDuplexMode%
+HKR,Ndi\params\DuplexMode, type, 0, "enum"
+HKR,Ndi\params\DuplexMode, default, 0, "1"
+HKR,Ndi\params\DuplexMode\enum, 1, 0, %dmAutoMode%
+HKR,Ndi\params\DuplexMode\enum, 2, 0, %dm10HalfMode%
+HKR,Ndi\params\DuplexMode\enum, 3, 0, %dm10FullMode%
+HKR,Ndi\params\DuplexMode\enum, 4, 0, %dm100HalfMode%
+HKR,Ndi\params\DuplexMode\enum, 5, 0, %dm100FullMode%
+HKR,Ndi\Params\EarlyTxThreshold, ParamDesc, 0, %EarlyTxThreshold%
+HKR,Ndi\Params\EarlyTxThreshold, Type, 0, "int"
+HKR,Ndi\Params\EarlyTxThreshold, Default, 0, "15"
+HKR,Ndi\Params\EarlyTxThreshold, Min, 0, "0"
+HKR,Ndi\Params\EarlyTxThreshold, Max, 0, "63"
+HKR,Ndi\Params\EarlyTxThreshold, Step, 0, "1"
+HKR,Ndi\Params\EarlyTxThreshold, Base, 0, "10"
+HKR,Ndi\params\NetworkAddress, ParamDesc, 0, %NetworkAddress%
+HKR,Ndi\params\NetworkAddress, type, 0, "edit"
+HKR,Ndi\params\NetworkAddress, default, 0, "000000000000"
+HKR,Ndi\params\NetworkAddress, LimitText, 0, "12"
+HKR,Ndi\params\NetworkAddress, UpperCase, 0, "1"
+HKR,Ndi\params\NetworkAddress, Optional, 0, "1"
+HKR,Ndi\params\RxBufLen, ParamDesc, 0, "Receive Buffer Size"
+HKR,Ndi\params\RxBufLen, type, 0, "enum"
+HKR,Ndi\params\RxBufLen, default, 0, "3"
+HKR,Ndi\params\RxBufLen\enum, "0", 0, "8K bytes"
+HKR,Ndi\params\RxBufLen\enum, "1", 0, "16K bytes"
+HKR,Ndi\params\RxBufLen\enum, "2", 0, "32K bytes"
+HKR,Ndi\params\RxBufLen\enum, "3", 0, "64K bytes"
+HKR,Ndi\params\LinkUp, ParamDesc, 0, "WakeUp on Link Change"
+HKR,Ndi\params\LinkUp, default, 0, "0"
+HKR,Ndi\params\LinkUp, type, 0, "enum"
+HKR,Ndi\params\LinkUp\enum, "1", 0, "Enable"
+HKR,Ndi\params\LinkUp\enum, "0", 0, "Disable"
+HKR,Ndi\params\WakeUpFrame, ParamDesc, 0, "WakeUp on ARP/PING"
+HKR,Ndi\params\WakeUpFrame, default, 0, "1"
+HKR,Ndi\params\WakeUpFrame, type, 0, "enum"
+HKR,Ndi\params\WakeUpFrame\enum, "1", 0, "Enable"
+HKR,Ndi\params\WakeUpFrame\enum, "0", 0, "Disable"
+HKR,,WakeUpFrame, 0, "1"
+HKR,Ndi\params\RTPME, ParamDesc, 0, "WakeUp using APM Mode"
+HKR,Ndi\params\RTPME, default, 0, "0"
+HKR,Ndi\params\RTPME, type, 0, "enum"
+HKR,Ndi\params\RTPME\enum, "1", 0, "Enable"
+HKR,Ndi\params\RTPME\enum, "0", 0, "Disable"
+HKR,Ndi\params\EnableLDPS, ParamDesc, 0, "Link Down Power Saving"
+HKR,Ndi\params\EnableLDPS, default, 0, "0"
+HKR,Ndi\params\EnableLDPS, type, 0, "enum"
+HKR,Ndi\params\EnableLDPS\enum, "1", 0, "Enable"
+HKR,Ndi\params\EnableLDPS\enum, "0", 0, "Disable"
+[PreParams.DelReg]
+HKR,Ndi\Params\PME
+HKR,,PME
+[DFE530TX.reg]
+HKR, Ndi\Interfaces, UpperRange, 0, "ndis5"
+HKR, Ndi\Interfaces, LowerRange, 0, "ethernet"
+HKR, Ndi, Service, 0, "DLKRTS"
+[rtsnt.Service]
+DisplayName=%DFE530TX.Service.DispName%
+ServiceType=1 ; %SERVICE_KERNEL_DRIVER%
+StartType=3 ; %SERVICE_DEMAND_START%
+ErrorControl=1 ; %SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\DLKRTS.SYS
+LoadOrderGroup=NDIS
+[DFE530TX.EventLog]
+Addreg=DFE530TX.AddEventLog.reg
+[DFE530TX.AddEventLog.reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported, 0x00010001, 7
+[DestinationDirs]
+DFE530TX.CopyFiles=12
+DefaultDestDir=11 ; LDID_SYS
+[SourceDisksNames]
+1=%DISKNAME%,,,
+[SourceDisksFiles]
+DLKRTS.SYS=1
+[Strings]
+D-Link="D-Link Corporation"
+DISKNAME="D-Link DFE-530TX+ PCI Adapter Driver"
+NetworkAddress="Network Address"
+EarlyTxThreshold="Early Tx Threshold"
+SpeedDuplexMode="Link Speed/Duplex Mode"
+dmAutoMode="Auto Mode"
+dm10HalfMode="10 Half Mode"
+dm10FullMode="10 Full Mode"
+dm100HalfMode="100 Half Mode"
+dm100FullMode="100 Full Mode"
+DFE530TX.DeviceDesc="D-Link DFE-530TX+ PCI Adapter"
+DFE530TX.Service.DispName="D-Link DFE-530TX+ PCI Adapter"

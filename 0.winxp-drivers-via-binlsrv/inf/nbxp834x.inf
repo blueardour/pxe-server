@@ -1,0 +1,65 @@
+
+[Version]
+Signature="$WINDOWS NT$"
+Provider=%BFOOT%
+class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+DriverVer=05/19/2008,4.0.0.0
+CatalogFile.NTx86=NbXpx86.cat
+CatalogFile.NTAMD64=NbXpx64.cat
+[ClassInstall32]
+Addreg=NetbClassReg
+[NetbClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+HKR,,DeviceCharacteristics,0x10001,0x100 ;Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GA;;;BA)" ;Allow generic all access to system and built-in Admin.
+[ControlFlags]
+ExcludeFromSelect=*
+[Manufacturer]
+%BFOOT%=BFOOT,NTamd64
+[SourceDisksFiles.x86]
+Netb834x.sys=1
+[SourceDisksFiles.amd64]
+N834xA64.sys=1
+[SourceDisksNames]
+1=%DISK_NAME%,
+[BFOOT]
+%NetB834x.DRVDESC%=NetB834x_Inst, PCI\VEN_1957&DEV_0080
+%NetB834x.DRVDESC%=NetB834x_Inst, PCI\VEN_1957&DEV_0086
+[BFOOT.NTamd64]
+%NetB834x.DRVDESC%=N834xA64_Inst, PCI\VEN_1957&DEV_0080
+%NetB834x.DRVDESC%=N834xA64_Inst, PCI\VEN_1957&DEV_0086
+[NetB834x_Inst]
+;CpyFiles=NetB834x.CopyFiles
+[N834xA64_Inst]
+;CpyFiles=N834xA64.CopyFiles
+[NetB834x.CopyFiles]
+NetB834x.sys
+[N834xA64.CopyFiles]
+N834xA64.sys
+[DestinationDirs]
+NetB834x.CopyFiles=12 ; XP 32-bit
+N834xA64.CopyFiles=12 ; XP Amd64
+[NetB834x_Inst.Services]
+AddService=NetB834x,0x00000002,NetB834x_Service
+[N834xA64_Inst.Services]
+AddService=N834xA64,0x00000002,N834xA64_Service
+[NetB834x_Service]
+DisplayName=%NetB834x.SVCDESC%
+ServiceType=1 ; SERVICE_KERNEL_DRIVER
+StartType=3 ; SERVICE_DEMAND_START
+ErrorControl=1 ; SERVICE_ERROR_NORMAL
+ServiceBinary=%12%\netb834x.sys
+[N834xA64_Service]
+DisplayName=%NetB834x.SVCDESC%
+ServiceType=1 ; SERVICE_KERNEL_DRIVER
+StartType=3 ; SERVICE_DEMAND_START
+ErrorControl=1 ; SERVICE_ERROR_NORMAL
+ServiceBinary=%12%\n834xA64.sys
+[Strings]
+BFOOT="Bigfoot"
+ClassName="Killer NIC Gaming Adapter"
+NetB834x.SVCDESC="Killer NIC Gaming Adapter Service"
+NetB834x.DRVDESC="Killer NIC Gaming Adapter"
+DISK_NAME="Killer NIC WDM Install Disk"

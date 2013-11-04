@@ -1,0 +1,77 @@
+
+[Version]
+Signature="$Windows NT$"
+Class=Net
+ClassGUID={4D36E972-E325-11CE-BFC1-08002BE10318}
+Provider=%V_Intel%
+CatalogFile=ians2kxp.cat
+DriverVer=05/20/2009,8.6.19.0
+[Manufacturer]
+%V_Intel%=Intel, NT.5.1, NTIA64, NTAMD64
+[ControlFlags]
+ExcludeFromSelect=*
+[Intel.NT.5.1]
+%iANSMiniport.Desc%=iANSMP.ndi.NT.5.1, iANSMiniport
+[Intel.NTIA64]
+[Intel.NTAMD64]
+[iANSMP.ndi.NT.5.1]
+AddReg=iANSMP.ndi.AddReg.wxp
+Characteristics=0x80a1 ; NCF_FORCE_NDIS_NOTIFY | NCF_VIRTUAL | NCF_NOT_USER_REMOVABLE
+;CpyFiles=iANSMP.ndi.CopyFiles.wxp
+[iANSMP.ndi.NT.5.1.Services]
+AddService=iANSMiniport, %SPSVCINST_ASSOCSERVICE%, iANSMP.AddService.wxp, NetEventLog.wxp
+[iANSMP.ndi.NT.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg.wxp
+;CpyFiles=CoInstaller_CopyFiles.wxp
+[iANSMP.ndi.CopyFiles.wxp]
+ianswxp.sys,,,2
+iansmsg.dll,,,2
+[NetEventLog.wxp]
+AddReg=NetEventLog.AddReg.wxp
+[NetEventLog.AddReg.wxp]
+HKR,,EventMessageFile,0x00020000, %CustomizedEventMessageFile_wxp%
+HKR,,TypesSupported,0x00010001,7
+[iANSMP.AddService.wxp]
+DisplayName=%iANSMiniport.Desc%
+ServiceType=%SERVICE_KERNEL_DRIVER%
+StartType=%SERVICE_DEMAND_START%
+ServiceBinary=%12%\ianswxp.sys
+LoadOrderGroup=NDIS
+ErrorControl=%SERVICE_ERROR_NORMAL%
+AddReg=iANSMP.AddService.AddReg.wxp
+[iANSMP.AddService.AddReg.wxp]
+[iANSMP.ndi.AddReg.wxp]
+HKR,Ndi, Service, , "iANSMiniport"
+HKR,Ndi, HelpText, , %iANSMiniport.Help%
+HKR,Ndi\Interfaces, "UpperRange", %FLG_NOCLOBBER%, "ndis5"
+HKR,Ndi\Interfaces, "LowerRange", %FLG_NOCLOBBER%, "ethernet"
+[CoInstaller_CopyFiles.wxp]
+NicCo2.dll,,, 0x00000010 ;don't overwrite
+[CoInstaller_AddReg.wxp]
+HKR,, CoInstallers32, 0x00010000, "NicCo2.dll,NicCoInstallerEntry"
+HKR,, NicCoPlugins, 0x00010000, "NCS2DMIX.dll,NCS2DMIXEntry,1"
+[DestinationDirs]
+DefaultDestDir=11
+iANSMP.ndi.CopyFiles.wxp=12
+CoInstaller_CopyFiles.wxp=11
+[SourceDisksNames]
+1=%DISKNAME%,,,
+[SourceDisksFiles]
+ianswxp.sys=1
+iansmsg.dll=1
+NicCo2.dll=1
+[Strings]
+CustomizedEventMessageFile_wxp="%SystemRoot%\System32\drivers\ianswxp.sys"
+CustomizedEventMessageFile_w32e="%SystemRoot%\System32\drivers\iansw32e.sys"
+CustomizedEventMessageFile_w64="%SystemRoot%\System32\drivers\iansw64.sys"
+iANSMiniport.Help="Intel(R) Advanced Network Services Virtual Adapter is used for advanced features like teaming and virtual LAN"
+DISKNAME="Intel(R) Advanced Network Services CD-ROM or floppy disk"
+V_Intel="Intel"
+iANSMiniport.Desc="Intel(R) Advanced Network Services Virtual Adapter"
+SERVICE_KERNEL_DRIVER=0x00000001
+SERVICE_DEMAND_START=0x00000003
+SERVICE_ERROR_NORMAL=0x00000001
+REG_MULTI_SZ=0x10000
+REG_DWORD=0x10001
+SPSVCINST_ASSOCSERVICE=0x2
+FLG_NOCLOBBER=0x00000002

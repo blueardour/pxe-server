@@ -1,0 +1,172 @@
+; ****************************************************************************
+; ****************************************************************************
+; **    Filename:  ICH78USB.INF                                              
+; **    Abstract:  Windows* 2000, XP, 2003 Server, & Vista INF Update File for 
+; **               Intel(R) 82801 USB devices                     
+; **    Last Update: November 07, 2008 (Version 8.0.1 Build 1008)
+; ****************************************************************************
+; ****************************************************************************
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%INTEL%
+CatalogFile=ich78usb.cat
+DriverVer=11/07/2008, 8.0.1.1008
+
+[SourceDisksNames] 
+[SourceDisksFiles] 
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+; =================== Table of content =========================
+
+[Manufacturer]
+%INTEL%=Intel,NT.5.1,NT.6.0,NTamd64
+
+; =================== Intel ====================================
+
+[Intel]
+%PCI\VEN_8086&DEV_27C8.DeviceDesc%=INTEL_USB_2K,PCI\VEN_8086&DEV_27C8
+%PCI\VEN_8086&DEV_27C9.DeviceDesc%=INTEL_USB_2K,PCI\VEN_8086&DEV_27C9
+%PCI\VEN_8086&DEV_27CA.DeviceDesc%=INTEL_USB_2K,PCI\VEN_8086&DEV_27CA
+%PCI\VEN_8086&DEV_27CB.DeviceDesc%=INTEL_USB_2K,PCI\VEN_8086&DEV_27CB
+%PCI\VEN_8086&DEV_27CC.DeviceDesc%=INTEL_USB2_2K,PCI\VEN_8086&DEV_27CC
+%PCI\VEN_8086&DEV_2830.DeviceDesc%=INTEL_USB_2K,PCI\VEN_8086&DEV_2830
+%PCI\VEN_8086&DEV_2831.DeviceDesc%=INTEL_USB_2K,PCI\VEN_8086&DEV_2831
+%PCI\VEN_8086&DEV_2832.DeviceDesc%=INTEL_USB_2K,PCI\VEN_8086&DEV_2832
+%PCI\VEN_8086&DEV_2834.DeviceDesc%=INTEL_USB_2K,PCI\VEN_8086&DEV_2834
+%PCI\VEN_8086&DEV_2835.DeviceDesc%=INTEL_USB_2K,PCI\VEN_8086&DEV_2835
+%PCI\VEN_8086&DEV_2836.DeviceDesc%=INTEL_USB2_2K,PCI\VEN_8086&DEV_2836
+%PCI\VEN_8086&DEV_283A.DeviceDesc%=INTEL_USB2_2K,PCI\VEN_8086&DEV_283A
+
+[Intel.NT.5.1]
+%PCI\VEN_8086&DEV_27C8.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27C8
+%PCI\VEN_8086&DEV_27C9.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27C9
+%PCI\VEN_8086&DEV_27CA.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27CA
+%PCI\VEN_8086&DEV_27CB.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27CB
+%PCI\VEN_8086&DEV_27CC.DeviceDesc%=INTEL_USB2,PCI\VEN_8086&DEV_27CC
+%PCI\VEN_8086&DEV_2830.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2830
+%PCI\VEN_8086&DEV_2831.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2831
+%PCI\VEN_8086&DEV_2832.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2832
+%PCI\VEN_8086&DEV_2834.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2834
+%PCI\VEN_8086&DEV_2835.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2835
+%PCI\VEN_8086&DEV_2836.DeviceDesc%=INTEL_USB2,PCI\VEN_8086&DEV_2836
+%PCI\VEN_8086&DEV_283A.DeviceDesc%=INTEL_USB2,PCI\VEN_8086&DEV_283A
+
+[Intel.NTamd64]
+%PCI\VEN_8086&DEV_27C8.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27C8
+%PCI\VEN_8086&DEV_27C9.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27C9
+%PCI\VEN_8086&DEV_27CA.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27CA
+%PCI\VEN_8086&DEV_27CB.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27CB
+%PCI\VEN_8086&DEV_27CC.DeviceDesc%=INTEL_USB2,PCI\VEN_8086&DEV_27CC
+%PCI\VEN_8086&DEV_2830.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2830
+%PCI\VEN_8086&DEV_2831.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2831
+%PCI\VEN_8086&DEV_2832.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2832
+%PCI\VEN_8086&DEV_2834.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2834
+%PCI\VEN_8086&DEV_2835.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2835
+%PCI\VEN_8086&DEV_2836.DeviceDesc%=INTEL_USB2,PCI\VEN_8086&DEV_2836
+%PCI\VEN_8086&DEV_283A.DeviceDesc%=INTEL_USB2,PCI\VEN_8086&DEV_283A
+
+[Intel.NT.6.0]
+%PCI\VEN_8086&DEV_27C8.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27C8
+%PCI\VEN_8086&DEV_27C9.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27C9
+%PCI\VEN_8086&DEV_27CA.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27CA
+%PCI\VEN_8086&DEV_27CB.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_27CB
+%PCI\VEN_8086&DEV_27CC.DeviceDesc%=INTEL_USB2,PCI\VEN_8086&DEV_27CC
+%PCI\VEN_8086&DEV_2830.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2830
+%PCI\VEN_8086&DEV_2831.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2831
+%PCI\VEN_8086&DEV_2832.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2832
+%PCI\VEN_8086&DEV_2834.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2834
+%PCI\VEN_8086&DEV_2835.DeviceDesc%=INTEL_USB,PCI\VEN_8086&DEV_2835
+%PCI\VEN_8086&DEV_2836.DeviceDesc%=INTEL_USB2,PCI\VEN_8086&DEV_2836
+%PCI\VEN_8086&DEV_283A.DeviceDesc%=INTEL_USB2,PCI\VEN_8086&DEV_283A
+
+; For Windows 2000 Only
+[INTEL_USB_2K.NT]
+Include=usb.inf
+Needs=UniversalHCD.Dev.NT
+
+[INTEL_USB_2K.NT.Services]
+Include=usb.inf
+Needs=UniversalHCD.Dev.NT.Services
+
+; For USB2 Support
+[INTEL_USB2_2K.NT]
+Include=usb.inf
+Needs=EHCI.NT
+
+[INTEL_USB2_2K.NT.Services]
+Include=usb.inf
+Needs=EHCI.NT.Services
+
+; For Windowns XP and greater
+[INTEL_USB.NT]
+Include=usbport.inf
+Needs=UHCI.Dev.NT
+
+[INTEL_USB.NT.Services]
+Include=usbport.inf
+Needs=UHCI.Dev.NT.Services
+
+; For USB2 Support
+[INTEL_USB2.NT]
+Include=usbport.inf
+Needs=EHCI.Dev.NT
+
+[INTEL_USB2.NT.Services]
+Include=usbport.inf
+Needs=EHCI.Dev.NT.Services
+
+[INTEL_USB2.NT.CoInstallers]
+Include=usbport.inf
+Needs=EHCI.Dev.NT.CoInstallers
+
+[Strings]
+INTEL="Intel"
+PCI\VEN_8086&DEV_27C8.DeviceDesc="Intel(R) 82801G (ICH7 Family) USB Universal Host Controller - 27C8"
+PCI\VEN_8086&DEV_27C9.DeviceDesc="Intel(R) 82801G (ICH7 Family) USB Universal Host Controller - 27C9"
+PCI\VEN_8086&DEV_27CA.DeviceDesc="Intel(R) 82801G (ICH7 Family) USB Universal Host Controller - 27CA"
+PCI\VEN_8086&DEV_27CB.DeviceDesc="Intel(R) 82801G (ICH7 Family) USB Universal Host Controller - 27CB"
+PCI\VEN_8086&DEV_27CC.DeviceDesc="Intel(R) 82801G (ICH7 Family) USB2 Enhanced Host Controller - 27CC"
+PCI\VEN_8086&DEV_2830.DeviceDesc="Intel(R) ICH8 Family USB Universal Host Controller - 2830"
+PCI\VEN_8086&DEV_2831.DeviceDesc="Intel(R) ICH8 Family USB Universal Host Controller - 2831"
+PCI\VEN_8086&DEV_2832.DeviceDesc="Intel(R) ICH8 Family USB Universal Host Controller - 2832"
+PCI\VEN_8086&DEV_2834.DeviceDesc="Intel(R) ICH8 Family USB Universal Host Controller - 2834"
+PCI\VEN_8086&DEV_2835.DeviceDesc="Intel(R) ICH8 Family USB Universal Host Controller - 2835"
+PCI\VEN_8086&DEV_2836.DeviceDesc="Intel(R) ICH8 Family USB2 Enhanced Host Controller - 2836"
+PCI\VEN_8086&DEV_283A.DeviceDesc="Intel(R) ICH8 Family USB2 Enhanced Host Controller - 283A"
+
+; Copyright (c) 2003-2008 Intel Corporation
+
+; ************************************************************
+; Intel is making no claims of usability, efficacy or 
+; warranty.  
+; ************************************************************
+; Information in this document is provided in connection with 
+; Intel products.  No license, express or implied, by estoppel 
+; or otherwise, to any intellectual property rights is granted 
+; by this document.  Intel assumes no liability whatsoever, 
+; and Intel disclaims any express or implied warranty, 
+; relating to sale and/or use of Intel products including 
+; liability or warranties relating to fitness for a particular 
+; purpose, merchantability, or infringement of any patent, 
+; copyright or other intellectual property right.  Intel 
+; products are not intended for use in medical, life saving, 
+; or life sustaining applications.
+
+; ************************************************************
+; Intel Corporation disclaims all warranties and liabilities 
+; for the use of this document and the information contained 
+; herein, and assumes no responsibility for any errors which 
+; may appear in this document, nor does Intel make a 
+; commitment to update the information contained herein. Intel 
+; reserves the right to make changes to this document at any 
+; time, without notice.
+; ************************************************************
+; ************************************************************
+
+; * Third-party brands and names are the property of their 
+; respective owners.

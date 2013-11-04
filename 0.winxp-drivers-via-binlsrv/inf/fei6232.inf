@@ -1,0 +1,321 @@
+
+[Version]
+Signature="$Windows NT$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider=%V_INTEL%
+CatalogFile=fei6232.cat
+DriverVer=07/01/2009,9.0.12.0
+[Manufacturer]
+%V_INTEL%=Intel, NTx86.6.0, NTx86.6.1.1
+[Intel]
+[Intel.NTx86.6.0]
+[Intel.NTx86.6.1.1]
+%FE10FE.DeviceDesc%=10FE, PCI\VEN_8086&DEV_10FE
+[10FE]
+Characteristics=0x84
+BusType=5
+AddReg=ICH.reg, LogLinkState.reg, Speed100.reg, EnablePME.reg, EnableLLPD.reg, PowerSave.reg
+AddReg=FEI.ndi.Interfaces.reg, WakeOn.reg
+AddReg=Uninstall.reg, uninstallW7.reg
+;CpyFiles=FEI.ndis5x.CopyFiles, UninstallFEI.CopyFiles
+[10FE.Services]
+AddService=FEIExpress, 2, FEIExpress.Service, FEI.EventLog
+[10FE.CoInstallers]
+AddReg=CoInstaller_AddReg_VS
+;CpyFiles=CoInstaller_CopyFiles_VS
+[E10FE.HW]
+Include=machine.inf
+Needs=PciIoSpaceNotRequired
+[ICH.reg]
+HKR,Ndi\Params\FlowControl, ParamDesc, 0, %FlowControlSettings%
+HKR,Ndi\Params\FlowControl, Type, 0, "enum"
+HKR,Ndi\Params\FlowControl, Default, 0, "3"
+HKR,Ndi\Params\FlowControl\Enum, "3", 0, %GenerateAndRespond%
+HKR,Ndi\Params\FlowControl\Enum, "2", 0, %Respond%
+HKR,Ndi\Params\FlowControl\Enum, "1", 0, %Generate%
+HKR,Ndi\Params\FlowControl\Enum, "0", 0, %Off%
+HKR,Ndi\Params\NumRfd, ParamDesc, 0, %RxBuffers%
+HKR,Ndi\Params\NumRfd, Type, 0, "int"
+HKR,Ndi\Params\NumRfd, Default, 0, "48"
+HKR,Ndi\Params\NumRfd, Min, 0, "8"
+HKR,Ndi\Params\NumRfd, Max, 0, "1024"
+HKR,Ndi\Params\NumRfd, Step, 0, "1"
+HKR,Ndi\Params\NumRfd, Base, 0, "10"
+HKR,Ndi\Params\NumTcb, ParamDesc, 0, %TxBuffers%
+HKR,Ndi\Params\NumTcb, Type, 0, "int"
+HKR,Ndi\Params\NumTcb, Default, 0, "16"
+HKR,Ndi\Params\NumTcb, Min, 0, "8"
+HKR,Ndi\Params\NumTcb, Max, 0, "64"
+HKR,Ndi\Params\NumTcb, Step, 0, "1"
+HKR,Ndi\Params\NumTcb, Base, 0, "10"
+HKR,Ndi\Params\NumCoalesce, ParamDesc, 0, %CoalesceBuffers%
+HKR,Ndi\Params\NumCoalesce, Type, 0, "int"
+HKR,Ndi\Params\NumCoalesce, Default, 0, "8"
+HKR,Ndi\Params\NumCoalesce, Min, 0, "1"
+HKR,Ndi\Params\NumCoalesce, Max, 0, "32"
+HKR,Ndi\Params\NumCoalesce, Step, 0, "1"
+HKR,Ndi\Params\NumCoalesce, Base, 0, "10"
+HKR,Ndi\Params\Adaptive_IFS, ParamDesc, 0, %AdaptiveIFS%
+HKR,Ndi\Params\Adaptive_IFS, Type, 0, "int"
+HKR,Ndi\Params\Adaptive_IFS, Default, 0, "1"
+HKR,Ndi\Params\Adaptive_IFS, Min, 0, "0"
+HKR,Ndi\Params\Adaptive_IFS, Max, 0, "255"
+HKR,Ndi\Params\Adaptive_IFS, Step, 0, "1"
+HKR,Ndi\Params\Adaptive_IFS, Base, 0, "10"
+HKR,Ndi\Params\Threshold, ParamDesc, 0, %AdaptiveTxThreshold%
+HKR,Ndi\Params\Threshold, Type, 0, "int"
+HKR,Ndi\Params\Threshold, Default, 0, "200"
+HKR,Ndi\Params\Threshold, Min, 0, "0"
+HKR,Ndi\Params\Threshold, Max, 0, "200"
+HKR,Ndi\Params\Threshold, Step, 0, "1"
+HKR,Ndi\Params\Threshold, Base, 0, "10"
+HKR,Ndi\Params\UcodeSW, ParamDesc, 0, %AdaptiveTechnology%
+HKR,Ndi\Params\UcodeSW, Type, 0, "enum"
+HKR,Ndi\Params\UcodeSW, Default, 0, "1"
+HKR,Ndi\Params\UcodeSW\Enum, "1", 0, %On%
+HKR,Ndi\Params\UcodeSW\Enum, "0", 0, %Off%
+HKR,Ndi\Params\Coalesce, ParamDesc, 0, %PciBusEfficiency%
+HKR,Ndi\Params\Coalesce, Type, 0, "enum"
+HKR,Ndi\Params\Coalesce, Default, 0, "0"
+HKR,Ndi\Params\Coalesce\Enum, "1", 0, %Enabled%
+HKR,Ndi\Params\Coalesce\Enum, "0", 0, %Disabled%
+HKR,PROSetNdi\Params\CPUSaver, ParamDesc, 0, %AdaptivePerfTuning%
+HKR,PROSetNdi\Params\CPUSaver, Type, 0, "slider"
+HKR,PROSetNdi\Params\CPUSaver, Default, 0, "0"
+HKR,,CPUSaver, 0, "0"
+HKR,PROSetNdi\Params\CPUSaver, LeftLabel, 0, %AdapterBandwidth%
+HKR,PROSetNdi\Params\CPUSaver, RightLabel, 0, %CpuUtil%
+HKR,PROSetNdi\Params\CPUSaver, MiniHelp, 0, %AdaptivePerfTuningMiniHelp%
+HKR,PROSetNdi\Params\CPUSaver\Values, "0", 0, "0"
+HKR,PROSetNdi\Params\CPUSaver\Values, "1", 0, "1"
+HKR,PROSetNdi\Params\CPUSaver\Values, "2", 0, "512"
+HKR,PROSetNdi\Params\CPUSaver\Values, "3", 0, "768"
+HKR,PROSetNdi\Params\CPUSaver\Values, "4", 0, "1024"
+HKR,PROSetNdi\Params\CPUSaver\Values, "5", 0, "1280"
+HKR,PROSetNdi\Params\CPUSaver\Values, "6", 0, "1536"
+HKR,PROSetNdi\Params\CPUSaver\Values, "7", 0, "1792"
+HKR,PROSetNdi\Params\CPUSaver\Values, "8", 0, "2048"
+HKR,PROSetNdi\Params\CPUSaver\Values, "9", 0, "2304"
+HKR,PROSetNdi\Params\CPUSaver\Values, "10", 0, "2560"
+HKR,PROSetNdi\Params\CPUSaver\Values, "11", 0, "2816"
+HKR,PROSetNdi\Params\CPUSaver\Values, "12", 0, "3072"
+HKR,PROSetNdi\Params\CPUSaver\Values, "13", 0, "3328"
+HKR,PROSetNdi\Params\CPUSaver\Values, "14", 0, "3584"
+HKR,PROSetNdi\Params\CPUSaver\Values, "15", 0, "3840"
+HKR,PROSetNdi\Params\CPUSaver\Values, "16", 0, "4096"
+HKR,Ndi\Params\NetworkAddress, ParamDesc, 0, %LocalyAdminAddress%
+HKR,Ndi\Params\NetworkAddress, Type, 0, "edit"
+HKR,Ndi\Params\NetworkAddress, Default, 0, ""
+HKR,NDI\params\NetworkAddress, LimitText, 0, "12"
+HKR,NDI\params\NetworkAddress, UpperCase, 0, "1"
+HKR,NDI\params\NetworkAddress, optional, 0, "1"
+HKR,Ndi\Params\ConfigIFS, ParamDesc, 0, %RetransmitInterFrameSpace%
+HKR,Ndi\Params\ConfigIFS, Type, 0, "int"
+HKR,Ndi\Params\ConfigIFS, Default, 0, "10"
+HKR,Ndi\Params\ConfigIFS, Min, 0, "0"
+HKR,Ndi\Params\ConfigIFS, Max, 0, "15"
+HKR,Ndi\Params\ConfigIFS, Step, 0, "1"
+HKR,Ndi\Params\ConfigIFS, Base, 0, "10"
+HKR,,PcNic, 0, "1"
+HKR,,MWIEnable, 0, "0"
+HKR,,DeviceVxDsPrefix, 0, "e100b"
+HKR,,HPQDisable, 0, "1"
+HKR,,AdaptiveStalledInterrupts, 2, "1"
+HKR,,AdaptiveCarrierLoss, 2, "1"
+HKR,,AdaptiveTransmitMethod, 2, "1"
+HKR,,Threshold, 0, "200"
+HKR,,LogErrorMessages, 0, "1"
+[LogLinkState.reg]
+HKR,Ndi\Params\LogLinkStateEvent, ParamDesc, 0, %LogLinkState%
+HKR,Ndi\Params\LogLinkStateEvent, Type, 0, "enum"
+HKR,Ndi\Params\LogLinkStateEvent, Default, 0, "0"
+HKR,Ndi\Params\LogLinkStateEvent\Enum, "1", 0, %Enabled%
+HKR,Ndi\Params\LogLinkStateEvent\Enum, "0", 0, %Disabled%
+[Speed100.reg]
+HKR, Ndi\params\SpeedDuplex, ParamDesc, 0, %SpeedDuplex%
+HKR, Ndi\params\SpeedDuplex, default, 0, "0"
+HKR, Ndi\params\SpeedDuplex, type, 0, "enum"
+HKR, Ndi\params\SpeedDuplex\enum, "0", 0, %AutoDetect%
+HKR, Ndi\params\SpeedDuplex\enum, "1", 0, %10Mb-Half-Duplex%
+HKR, Ndi\params\SpeedDuplex\enum, "2", 0, %10Mb-Full-Duplex%
+HKR, Ndi\params\SpeedDuplex\enum, "3", 0, %100Mb-Half-Duplex%
+HKR, Ndi\params\SpeedDuplex\enum, "4", 0, %100Mb-Full-Duplex%
+[EnablePME.reg]
+HKR,Ndi\Params\EnablePME, ParamDesc, 0, %EnablePME%
+HKR,Ndi\Params\EnablePME, Type, 0, "enum"
+HKR,Ndi\Params\EnablePME, Default, 0, "2"
+HKR,Ndi\Params\EnablePME\Enum, "1", 0, %Enabled%
+HKR,Ndi\Params\EnablePME\Enum, "0", 0, %Disabled%
+HKR,Ndi\Params\EnablePME\Enum, "2", 0, %OsControlled%
+HKR,,EnablePME, 0, "2"
+[EnableLLPD.reg]
+HKR,Ndi\Params\EnablePowerDownOnLinkLoss, ParamDesc, 0, %SmartPowerDown%
+HKR,Ndi\Params\EnablePowerDownOnLinkLoss, Type, 0, "enum"
+HKR,Ndi\Params\EnablePowerDownOnLinkLoss, Default, 0, "1"
+HKR,Ndi\Params\EnablePowerDownOnLinkLoss\Enum, "1", 0, %Enabled%
+HKR,Ndi\Params\EnablePowerDownOnLinkLoss\Enum, "0", 0, %Disabled%
+[PowerSave.reg]
+HKR,,AutoPowerSaveModeEnabled, 0, "0"
+HKR,,Force10MbOnD3, 0, "1"
+HKR,,SavePowerNowEnabled, 0, "1"
+HKR,,NdisMultipleIndicateDown, 0, "0"
+HKR,,LPLUEnabled, 0, "1"
+[FEI.ndi.Interfaces.reg]
+HKR,Ndi\Interfaces, UpperRange, 0, "ndis5"
+HKR,Ndi\Interfaces, LowerRange, 0, "ethernet"
+HKR,Ndi, Service, 0, "FEIExpress"
+[WakeOn.reg]
+HKR, Ndi\Params\WakeOn, ParamDesc, 0, %WakeOnSettings%
+HKR, Ndi\Params\WakeOn, default, 0, "246"
+HKR, Ndi\Params\WakeOn\Enum, "0", 0, %Disabled%
+HKR, Ndi\Params\WakeOn\Enum, "2", 0, %WakeOnMagicPacket%
+HKR, Ndi\Params\WakeOn\Enum, "116", 0, %WakeOnDirected%
+HKR, Ndi\Params\WakeOn\Enum, "118", 0, %WakeOnMagicAndDirectedPackets%
+HKR, Ndi\Params\WakeOn\Enum, "246", 0, %OSControlled%
+HKR, Ndi\Params\WakeOn, type, 0, "enum"
+HKR,, WakeOn, 0, "246"
+HKR, Ndi\Params\WakeOnLink, ParamDesc, 0, %WakeOnLinkSettings%
+HKR, Ndi\Params\WakeOnLink, default, 0, "0"
+HKR, Ndi\Params\WakeOnLink\Enum, "0", 0, %Disabled%
+HKR, Ndi\Params\WakeOnLink\Enum, "2", 0, %Enabled%
+HKR, Ndi\Params\WakeOnLink, type, 0, "enum"
+[WakeOnDelReg.DelReg]
+HKR, PROSetNdi\Params\WakeOn
+HKR, Ndi\Params\WakeOn
+HKR, Ndi\Params\WakeOnLink
+[Force10Disable.reg]
+HKR,,Force10MbOnD3, 0, "0"
+[Uninstall.reg]
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10FE, 0, "82552"
+[uninstallW7.reg]
+HKLM,Software\Intel\Prounstl\Dins, fei6232.din, 0, "8255x.Uninstall.6.0"
+[FEIExpress.Service]
+DisplayName=%FEI.Service.DispName%
+ServiceType=1 ;%SERVICE_KERNEL_DRIVER%
+StartType=3 ;%SERVICE_DEMAND_START%
+ErrorControl=1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\fei6232.sys
+LoadOrderGroup=NDIS
+AddReg=TextModeFlags.reg
+[TextModeFlags.reg]
+HKR, , TextModeFlags, 0x00010001, 0x0001
+[FEI.EventLog]
+AddReg=FEI.AddEventLog.reg
+[FEI.AddEventLog.reg]
+HKR, , EventMessageFile, 0x00020000, %EventLogMessageDllPath_fei6232%
+HKR, , TypesSupported, 0x00010001, 7
+[DestinationDirs]
+DefaultDestDir=11
+FEI.ndis5x.CopyFiles=12
+[SourceDisksNames]
+1=%DISKNAME%,,,
+[SourceDisksFiles]
+fei6232.din=1,,
+fei6232.sys=1,,
+NicCo26.dll=1,,
+NicIn100.dll=1,,
+e100bmsg.dll=1,,
+[FEI.ndis5x.CopyFiles]
+fei6232.sys,,,2
+[UninstallFEI.CopyFiles]
+fei6232.din,,,2
+[CoInstaller_CopyFiles_VS]
+NicCo26.dll,,,0x00000010 ;don't overwrite
+NicIn100.dll,,,2
+e100bmsg.dll,,,2
+[CoInstaller_AddReg_VS]
+HKR,, CoInstallers32, 0x00010000,"NicCo26.dll,NicCoInstallerEntry"
+HKR,, NicCoPlugins, 0x00010000, "NicIn100.dll,NicCoInstallerEntry"
+HKR,, CoInstallFlag, 0x00010001, "0x80000000"
+[Strings]
+EventLogMessageDllPath_fei6232="%SystemRoot%\System32\netevent.dll;%SystemRoot%\system32\drivers\fei6232.sys"
+On="On"
+Off="Off"
+Enabled="Enabled"
+Disabled="Disabled"
+AutoDetect="Auto Detect"
+10Mb-Half-Duplex="10Mbps/Half Duplex"
+10Mb-Full-Duplex="10Mbps/Full Duplex"
+100Mb-Half-Duplex="100Mbps/Half Duplex"
+100Mb-Full-Duplex="100Mbps/Full Duplex"
+High="High"
+Low="Low"
+None="None"
+GenerateAndRespond="Generate and Respond"
+Respond="Respond"
+Generate="Generate"
+NoAction="No Action"
+HardwareDefault="Hardware Default"
+OSControlled="OS Controlled"
+Forced="Forced"
+RxBuffers="Receive Descriptors"
+RxBuffersMiniHelp="Sets the number of buffers the driver uses when copying data to protocol memory. Increasing this value can enhance receive performance, but also consumes system memory. Use the default if performance is not an issue."
+TxBuffers="Transmit Descriptors"
+TxBuffersMiniHelp="Sets the number of data segments that enable the adapter to track transmit packets. Increasing this value can improve transmit performance, but also consumes system memory. Use the default if performance is not an issue."
+CoalesceBuffers="Coalesce Buffers"
+CoalesceBuffersMiniHelp="Sets number of buffers available for transmit acceleration. Should be 30-50 percent of Transmit Descriptors. See Help for more information."
+AdaptiveIFS="Adaptive Inter-Frame Spacing"
+AdaptiveIFSMiniHelp="Compensates for excessive Ethernet packet collisions by controlling back-to-back timing."
+AdaptiveTxThreshold="Adaptive Transmit Threshold"
+AdaptiveTxThresholdMiniHelp="Sets number of bytes before adapter empties FIFO buffer. Lower values may enhance transmit performance, but may also result in more underruns. If the adapter can achieve better performance using a lower value, it will use that value. Actual value is 8 times setting."
+HPQPriorityLevelDef="Priority Level Definition"
+HPQPriorityLevelDefMiniHelp="Sets the controlled cutoff level between high and low traffic priorities for use with High Priority Queue (HPQ) and Intel(R) Priority Packet."
+AdaptiveTechnology="Adaptive Technology"
+AdaptiveTechnologyMiniHelp="Enables or disables micro-code that optimizes performance. If you disable this feature, you must enable Adapter Inter-Frame Spacing."
+PciBusEfficiency="PCI Bus Efficiency"
+PciBusEfficiencyMiniHelp="Combines transmit packet buffer fragments into a single buffer before sending them to the network."
+BasicConnectivity="Low Resource Connectivity"
+BasicConnectivityMiniHelp="Sets the driver to attempt to load in low-resource environments. Advanced features will be disabled until they have sufficient resources to function."
+LocalyAdminAddress="Locally Administered Address"
+LocalyAdminAddressMiniHelp="Allows you to configure a custom MAC address for the adapter."
+RetransmitInterFrameSpace="Retransmit Inter-Frame Spacing"
+RetransmitInterFrameSpaceMiniHelp="Compensates for excessive Ethernet packet collisions by controlling retransmit timing. Increasing this value can improve network performance if there is a large number of collisions on the network."
+LogLinkState="Log Link State Event"
+LogLinkStateMiniHelp="Enables/disables recording of the link state message to the Event Viewer."
+QoSPacketTag="QoS Packet Tagging"
+QosPacketTagMiniHelp="Enables sending and receiving of IEEE Tagged frames (802.3ac/802.1p/802.1Q), which include priority and VLAN indicators."
+FlowControlSettings="Flow Control"
+FlowControlSettingsMiniHelp="Pauses packet transmission on receipt of full flow control frame and sends full flow control frame to notify the other side to stop transmission."
+SpeedDuplex="Link Speed & Duplex"
+SpeedDuplex10MiniHelp="Sets link speed to 10 Mbps and duplex to half or full. Must coincide with switch port or no link will occur."
+SpeedDuplexMiniHelp="Sets link speed to 10 or 100 Mbps and duplex to half or full. Must match link partner settings, or link may be unstable, and performance will suffer."
+PhyPhoneSpeed="Phoneline Transmit Speed"
+PhyPhonePower="Phoneline Power Level"
+PhyGiladIfs="Inter Frame Spacing"
+IPSecEnabled="Offload IP Security"
+IPSecEnabledMiniHelp="Saves CPU cycles by offloading IPSec encryption from the CPU to the adapter."
+ChecksumEnabled="Offload TCP/IP Checksum"
+ChecksumEnabledMiniHelp="Allows adapter to verify TCP/IP checksum on received packets and compute checksum on transmitted packets. May improve TCP/IP performance."
+LargeSendEnabled="Offload TCP Segmentation"
+LargeSendEnabledMiniHelp="Allows the adapter to offload the task of segmenting TCP messages. May improve CPU utilization."
+SecurityAssociations="Security Associations"
+SecurityAssociationsMiniHelp="Sets Simultaneous Security Associations that can be offloaded to the adapter’s co-processor."
+AdaptivePerfTuning="Adaptive Performance Tuning"
+AdapterBandwidth="Network Performance"
+CpuUtil="Computer Performance"
+AdaptivePerfTuningMiniHelp="Maximize the performance of the network adapter or computer. See Help for more information."
+WakeOnSettings="Wake On Settings"
+WakeOnLink="Wake on Link Change"
+WakeOnMagicPacket="Wake on Magic Packet"
+WakeOnMagicAndDirectedPackets="Wake on Magic & Directed"
+WakeOnLAA="Wake on LAA"
+WakeOnArp="Wake on ARP"
+WakeOnDirected="Wake on Directed Packet"
+WakeOnNBT="Wake on NBT Query"
+WakeOnSettingsMiniHelp="Determines how to wake the system."
+ForceWakeOnLink="Force Wake On Link"
+ForceWakeOnLinkMiniHelp="Allows wake-up from APM power management when link is reconnected."
+EnablePME="Enable PME"
+EnablePMEMiniHelp="Enables/disables wake-up from Advanced Power Management (APM) sleep states."
+SmartPowerDown="Smart Power Down"
+SmartPowerDownMiniHelp="Minimizes power consumption by enabling the adapter to enter a deep sleep mode when it does not have a valid link or when the operating system is in Suspend mode."
+AdaptiveLinkResponse="Adaptive Link Response"
+AdaptiveLinkResponseMiniHelp="Enables Adaptive Link Response to check PHYLink status."
+WakeOnLinkSettings="Wake On Link Settings"
+WakeOnLinkHelp="Allows wake-up from APM power management when link is reconnected."
+LPLUEnabled="Low Power Link Up"; Vendors
+V_INTEL="Intel"
+DISKNAME="Intel Network Connections"
+FEI.Service.DispName="Intel(R) 10/100 Network Connection Driver"
+FE10FE.DeviceDesc="Intel(R) 82552 10/100 Network Connection"

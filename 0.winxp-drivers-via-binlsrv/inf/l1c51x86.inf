@@ -1,0 +1,604 @@
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider=%Atheros%
+CatalogFile=l1c51x86.cat
+Compatible=1
+DriverVer=12/22/2009,1.0.0.33
+[Manufacturer]
+%Atheros%=Atheros
+[Atheros]
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063 ; L1C
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_10631969&REV_C0
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_83041043&REV_C0 ; ASUS
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_83FE1043&REV_C0 ; ASUS
+%Atheros.L1c%=L1c.DisS5.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_18201043&REV_C0 ; ASUS
+%Atheros.L1c%=L1c.DisS5.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_18301043&REV_C0 ; ASUS
+%Atheros.L1c%=L1c.ShutOn.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_20081854&REV_C0 ; Pegatron
+%Atheros.L1c%=L1c.ShutOn.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_20091854&REV_C0 ; Pegatron
+%Atheros.L1c%=L1c.ShutOn.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_FF101854&REV_C0 ; Pegatron
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_202F1B0A&REV_C0 ; Pegatron
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_00C31B0A&REV_C0 ; Pegatron
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_00C91B0A&REV_C0 ; Pegatron
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_10D217C0&REV_C0 ; M10B1
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_10D717C0&REV_C0 ; Dagger
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_394E17AA&REV_C0 ; NAUR2,NAWA
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_395817AA&REV_C0 ; NIMUA/B
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_395617AA&REV_C0 ; LU16_INTEL
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_396117AA&REV_C0 ; LU16_AMD
+%Atheros.L1c%=L1c.GIGABYTE.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_E0001458&REV_C0 ; GIGABYTE
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_81311019&REV_C0 ; ECS
+%Atheros.L1c%=L1c.Toshiba.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_FF501179&REV_C0 ; TZ2
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_02291025&REV_C0 ; JM31
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_027F1025&REV_C0 ; JM31
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_02801025&REV_C0 ; JM31
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_02381025&REV_C0 ; SJM31
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_02811025&REV_C0 ; SJM31
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_02821025&REV_C0 ; SJM31
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_03021025&REV_C0 ; SJM52
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_03031025&REV_C0 ; SJM52
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_03041025&REV_C0 ; SJM52
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_022A1025&REV_C0 ; JM41
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_022B1025&REV_C0 ; JM51
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_034B1025&REV_C0 ; NCL20
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_04301025&REV_C0 ; SJM40
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_04311025&REV_C0 ; SJM40
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_04321025&REV_C0 ; SJM40
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_04331025&REV_C0 ; SJM40
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_04341025&REV_C0 ; SJM40
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_04111025&REV_C0 ; NCWH1
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_041C1025&REV_C0 ; SJM30
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_041D1025&REV_C0 ; SJM30
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_042B1025&REV_C0 ; SJM50
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_042C1025&REV_C0 ; SJM30
+%Atheros.L1c%=L1c.SONY.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_390217AA&REV_C0 ; LU15
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_395617AA&REV_C0 ; LA46
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_01671025&REV_C0 ; KAL90
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_021B1025&REV_C0 ; KBLG0
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_02601025&REV_C0 ; KALG0
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_027D1025&REV_C0 ; NBLG0
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_01281025&REV_C0 ; KALH0
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_004214C0&REV_C0 ; NBLB1
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_004314C0&REV_C0 ; NBLB2
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_004514C0&REV_C0 ; NTTB1
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_004614C0&REV_C0 ; NTUC0
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_021E1025&REV_C0 ; ZK6
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_02531025&REV_C0 ; ZR6
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_026A1025&REV_C0 ; ZK8
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_026D1025&REV_C0 ; ZK8
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_026E1025&REV_C0 ; ZK8
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_029B1025&REV_C0 ; ZH7
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_029F1025&REV_C0 ; ZH8
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_029E1025&REV_C0 ; ZH6
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_03001025&REV_C0 ; ZE8
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_029D1025&REV_C0 ; ZE9
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_03321025&REV_C0 ; ZH9
+%Atheros.L1c%=L1c.ShutOn.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_7009103C&REV_C0 ; SP7
+%Atheros.L1c%=L1c.ShutOn.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_1522103C&REV_C0 ; Nikita
+%Atheros.L1c%=L1c.ShutOn.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_147D103C&REV_C0 ; Nikita1.2
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_1411103C&REV_C0 ; ZENO
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_1412103C&REV_C0 ; ZENO
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_1413103C&REV_C0 ; ZENO
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_142C103C&REV_C0 ; PETEK
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_142D103C&REV_C0 ; PETEK
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_1421103C&REV_C0 ; Hamilton
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_1423103C&REV_C0 ; Hamilton
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_1420103C&REV_C0 ; Prano
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_142B103C&REV_C0 ; Prano
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0D4E105B&REV_C0 ; AJ-BOX
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0D52105B&REV_C0 ; AJ-BOX-N
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0CD9105B&REV_C0 ; Clone
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0D56105B&REV_C0 ; Clone
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0CDA105B&REV_C0 ; Clone
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0E35105B&REV_C0 ; Clone
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0D57105B&REV_C0 ; Clone
+%Atheros.L1c%=L1c.ShutOn.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0DC5105B&REV_C0 ; Clone
+%Atheros.L1c%=L1c.WOLMagic.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_07991854&REV_C0 ; QL2
+%Atheros.L1c%=L1c.WOLMagic.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_08001854&REV_C0 ; QL2
+%Atheros.L1c%=L1c.WOLMagic.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_08031854&REV_C0 ; QL4
+%Atheros.L1c%=L1c.WOLMagic.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_08041854&REV_C0 ; QL4
+%Atheros.L1c%=L1c.WOLMagic.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_08051854&REV_C0 ; QL2
+%Atheros.L1c%=L1c.WOLMagic.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_08071854&REV_C0 ; QL4
+%Atheros.L1c%=L1c.WOLMagic.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_08211854&REV_C0 ; QL4
+%Atheros.L1c%=L1c.WOLMagic.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_08321854&REV_C0 ; QL4
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0809152D&REV_C0 ; SW9
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0810152D&REV_C0 ; SW9
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0812152D&REV_C0 ; TW9
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0813152D&REV_C0 ; TW9
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0814152D&REV_C0 ; SW9
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0815152D&REV_C0 ; TW9
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0822152D&REV_C0 ; TW9
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_0828152D&REV_C0 ; TW9
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_041E1028&REV_C0 ; Dell-DC1
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_041F1028&REV_C0 ; Dell-DC2
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_906A104D&REV_C0 ; NEO
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_9069104D&REV_C0 ; NEO
+%Atheros.L1c%=L1c.SONY.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_906F104D&REV_C0 ; Sony
+%Atheros.L1c%=L1c.SONY.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_9076104D&REV_C0 ; Cadiz
+%Atheros.L1c%=L1c.WOLMagic.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_906C104D&REV_C0 ; TW6
+%Atheros.L1c%=L1c.ndi, PCI\VEN_1969&DEV_1063&SUBSYS_10D217C0&REV_C0 ; M10B1
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062 ; L2C
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_10621969&REV_C0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_83041043&REV_C0 ; ASUS
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_83FF1043&REV_C0 ; ASUS
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_838A1043&REV_C0 ; EEEPC
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_83BE1043&REV_C0 ; EEEPC
+%Atheros.L2c%=L2c.DisS5.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_14E51043&REV_C0 ; F50Q
+%Atheros.L2c%=L2c.DisS5.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_15251043&REV_C0 ; ASUS
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_81321019&REV_C0 ; ECS
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_20261B0A&REV_C0 ; PEGATRON
+%Atheros.L2c%=L2c.WOLMagic.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_00AA1B0A&REV_C0 ; PEGATRON
+%Atheros.L2c%=L2c.ShutOn.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_20081854&REV_C0 ; PEGATRON
+%Atheros.L2c%=L2c.ShutOn.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_20091854&REV_C0 ; PEGATRON
+%Atheros.L2c%=L2c.ShutOn.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_200A1854&REV_C0 ; PEGATRON
+%Atheros.L2c%=L2c.ShutOn.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_200B1854&REV_C0 ; PEGATRON
+%Atheros.L2c%=L2c.ShutOn.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_200D1854&REV_C0 ; PEGATRON, H00J
+%Atheros.L2c%=L2c.GIGABYTE.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_E0001458&REV_C0 ; GIGABYTE
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_394F17AA&REV_C0 ; NAUR2,NAWA
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_38A317AA&REV_C0 ; LA14
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_395617AA&REV_C0 ; LA46
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_395817AA&REV_C0 ; NIMUA/B
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_019C1025&REV_C0 ; KAV10
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02101025&REV_C0 ; KAWH0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02111025&REV_C0 ; KBWH0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02121025&REV_C0 ; KAWF0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02131025&REV_C0 ; KAWG0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02141025&REV_C0 ; HM40-MV
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02151025&REV_C0 ; HM40-YK
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02161025&REV_C0 ; HM20-YK
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_019D1025&REV_C0 ;
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_022E1025&REV_C0 ; KAW10
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_022F1025&REV_C0 ; KAV50
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02301025&REV_C0 ; KAV60
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02411025&REV_C0 ; KAV80
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02431025&REV_C0 ; KAVA0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02601025&REV_C0 ; KALG0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_028D1025&REV_C0 ; HM50/70-PU
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_03491025&REV_C0 ; NAV50
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_034A1025&REV_C0 ; NAV60
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_030D1025&REV_C0 ; HM41
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_03501025&REV_C0 ; HM50/51/70
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04111025&REV_C0 ; NCWH1
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04391025&REV_C0 ; NAVD0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_043A1025&REV_C0 ; NAVD0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_043B1025&REV_C0 ; NAVE0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_043C1025&REV_C0 ; NAVE0
+%Atheros.L2c%=L2c.ShutOn.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_308F103C&REV_C0 ; BIXBY
+%Atheros.L2c%=L2c.ShutOn.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_1468103C&REV_C0 ; BIXBY 2.0
+%Atheros.L2c%=L2c.ShutOn.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_1492103C&REV_C0 ;
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_0820152D&REV_C0 ; UW2
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04091028&REV_C0 ; ARGOS
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04431028&REV_C0 ; Phantom
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04511028&REV_C0 ; DJ
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04521028&REV_C0 ; DJ
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04531028&REV_C0 ; DJ
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04541028&REV_C0 ; DJ
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04651028&REV_C0 ; NAP10
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04661028&REV_C0 ; DJx
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04701028&REV_C0 ; NLM01
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_04711028&REV_C0 ; NLM00
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_004414C0&REV_C0 ; NTTB0
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_004714C0&REV_C0 ; NTV00/10
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_022C1025&REV_C0 ; ZG8
+%Atheros.L2c%=L2c.Toshiba.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_FF501179&REV_C0 ; TZ2
+%Atheros.L2c%=L2c.Toshiba.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_FFE01179&REV_C0 ; BU3
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_022C1025&REV_C0 ; ZG8
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_0790152D&REV_C0 ; IN1
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_02441025&REV_C0 ; ZA3
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_9064104D&REV_C0 ; SY2
+%Atheros.L2c%=L2c.ndi, PCI\VEN_1969&DEV_1062&SUBSYS_9066104D&REV_C0 ; SY3
+%Atheros.L2cb%=L2cb.ndi, PCI\VEN_1969&DEV_2060 ; L2cB
+%Atheros.L2cb%=L2cb.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_20601969&REV_C1 ; L2cB
+%Atheros.L2cb%=L2cb.PWMAll.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_FF1E1179&REV_C1 ; IEC
+%Atheros.L2cb%=L2cb.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_04551028&REV_C1 ; UM7
+%Atheros.L2cb%=L2cb.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_04561028&REV_C1 ; UM8
+%Atheros.L2cb%=L2cb.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_04571028&REV_C1 ; UM9
+%Atheros.L2cb%=L2cb.ShutOn.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_147E103C&REV_C1 ; Bixby 3.0
+%Atheros.L2cb%=L2cb.ShutOn.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_FD501179&REV_C1 ; TE2
+%Atheros.L2cb%=L2cb.ShutOn.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_FDD01179&REV_C1 ; BL6
+%Atheros.L2cb%=L2cb.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_04291025&REV_C1 ; ZH9
+%Atheros.L2cb%=L2cb.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_043D1025&REV_C1 ; ZH9
+%Atheros.L2cb%=L2cb.ndi, PCI\VEN_1969&DEV_2060&SUBSYS_043E1025&REV_C1 ; ZH9AB
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073 ; L1d
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_10731969&REV_C0 ; L1d
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03561025&REV_C0 ; ZQ1
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03571025&REV_C0 ; ZQ1
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03581025&REV_C0 ; ZQ1B
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03591025&REV_C0 ; ZQ1B
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_035A1025&REV_C0 ; ZR7
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_035B1025&REV_C0 ; ZR7
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_035C1025&REV_C0 ; ZR7B
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_035D1025&REV_C0 ; ZR7B
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_035E1025&REV_C0 ; ZQ2
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03601025&REV_C0 ; ZR8
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03621025&REV_C0 ; ZR8B
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03661025&REV_C0 ; ZQ2B
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03641025&REV_C0 ; JM31
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03671025&REV_C0 ; ZYA
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_03681025&REV_C0 ; ZYA
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_038B1025&REV_C0 ; ZYB
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_038C1025&REV_C0 ; ZYB
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_04121025&REV_C0 ; ZYD
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_040E1025&REV_C0 ; JV10
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_04281025&REV_C0 ; SJV10
+%Atheros.L1d%=L1d.ShutOn.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_FD501179&REV_C0 ; TE2
+%Atheros.L1d%=L1d.ShutOn.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_FDD01179&REV_C0 ; BL6
+%Atheros.L1d%=L1d.PWMAll.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_FF1E1179&REV_C0 ; Berlin
+%Atheros.L1d%=L1d.ndi, PCI\VEN_1969&DEV_1073&SUBSYS_395B17AA&REV_C0 ; NAU00
+[L1c.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.params, Common.Params, Common.Params.WinNT, ShutOff.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L1c.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1c.ShutOn.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.params, Common.Params, Common.Params.WinNT, ShutOn.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L1c.ShutOn.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1c.DisS5.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.params, Common.Params, Common.Params.WinNT, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L1c.DisS5.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1c.Toshiba.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.params, Common.Params, Common.Params.WinNT, ShutOn.params, Toshiba.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L1c.Toshiba.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1c.GIGABYTE.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.params, Common.Params, Common.Params.WinNT, ShutOn.params, WOLMagic.params
+;CpyFiles=L1c.CopyFiles
+[L1c.GIGABYTE.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1c.SONY.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.params, Common.Params, Common.Params.WinNT, ShutOff.params, WOLNone.params
+;CpyFiles=L1c.CopyFiles
+[L1c.SONY.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1c.WOLMagic.ndi]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.params, Common.Params, Common.Params.WinNT, ShutOff.params, WOLMagic.params
+;CpyFiles=L1c.CopyFiles
+[L1c.WOLMagic.ndi.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2c.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, Common.Params, Common.Params.WinNT, ShutOff.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L2c.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2c.ShutOn.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, Common.Params, Common.Params.WinNT, ShutOn.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L2c.ShutOn.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2c.DisS5.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, Common.Params, Common.Params.WinNT, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L2c.DisS5.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2c.Toshiba.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, Common.Params, Common.Params.WinNT, ShutOn.params, Toshiba.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L2c.Toshiba.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2c.GIGABYTE.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, Common.Params, Common.Params.WinNT, ShutOn.params, WOLMagic.params
+;CpyFiles=L1c.CopyFiles
+[L2c.GIGABYTE.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2c.SONY.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, Common.Params, Common.Params.WinNT, ShutOff.params, WOLNone.params
+;CpyFiles=L1c.CopyFiles
+[L2c.SONY.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2c.WOLMagic.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, Common.Params, Common.Params.WinNT, ShutOff.params, WOLMagic.params
+;CpyFiles=L1c.CopyFiles
+[L2c.WOLMagic.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2cb.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L2cb.Params, Common.Params, Common.Params.WinNT, ShutOff.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L2cb.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2cb.ShutOn.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L2cb.Params, Common.Params, Common.Params.WinNT, ShutOn.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L2cb.ShutOn.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L2cb.PWMAll.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L2cb.Params, Common.Params, Common.Params.WinNT, ShutOn.params, WOLDefault.params, PWMAll.params
+;CpyFiles=L1c.CopyFiles
+[L2cb.PWMAll.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1d.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.params, Common.Params, Common.Params.WinNT, ShutOff.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L1d.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1d.ShutOn.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.params, Common.Params, Common.Params.WinNT, ShutOn.params, WOLDefault.params
+;CpyFiles=L1c.CopyFiles
+[L1d.ShutOn.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1d.PWMAll.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1c.reg, L1c.Params, Common.Params, Common.Params.WinNT, ShutOn.params, WOLDefault.params, PWMAll.params
+;CpyFiles=L1c.CopyFiles
+[L1d.PWMAll.ndi.NT.Services]
+AddService=L1c, 2, L1c.Service, Common.EventLog
+[L1c.reg]
+HKR, Ndi, HelpText,, %HelpText%
+HKR, Ndi, Service, 0, "L1c"
+HKR, Ndi\Interfaces, UpperRange, 0, "ndis5"
+HKR, Ndi\Interfaces, LowerRange, 0, "ethernet"
+[L1c.Service]
+DisplayName=%L1c.Service.DispName%
+ServiceType=1 ;%SERVICE_KERNEL_DRIVER%
+StartType=3 ;%SERVICE_DEMAND_START%
+ErrorControl=1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\l1c51x86.sys
+LoadOrderGroup=NDIS
+[common.EventLog]
+AddReg=common.AddEventLog.reg
+[common.AddEventLog.reg]
+HKR,, EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\Drivers\l1c51x86.sys"
+HKR,, TypesSupported, 0x00010001, 7
+[Toshiba.params]
+HKR,, WOLMode, 0x00010001, 1
+[PWMNone.params]
+HKR,, PnPCapabilities, 0x00010001, 0x0038
+[PWM.params]
+HKR,, PnPCapabilities, 0x00010001, 0x0020
+[PWMAll.params]
+HKR,, PnPCapabilities, 0x00010001, 0x0120
+[L1c.params]
+HKR,Ndi\params\JumboPacket, ParamDesc, 0, %JumboFrame%
+HKR,Ndi\params\JumboPacket, Default, 0, "1514"
+HKR,Ndi\params\JumboPacket, Type, 0, "enum"
+HKR,Ndi\params\JumboPacket\enum, "1514", 0, %Off%
+HKR,Ndi\params\JumboPacket\enum, "2048", 0, %2KBMTU%
+HKR,Ndi\params\JumboPacket\enum, "3072", 0, %3KBMTU%
+HKR,Ndi\params\JumboPacket\enum, "4096", 0, %4KBMTU%
+HKR,Ndi\params\JumboPacket\enum, "5120", 0, %5KBMTU%
+HKR,Ndi\params\JumboPacket\enum, "6144", 0, %6KBMTU%
+HKR,Ndi\params\JumboPacket\enum, "7168", 0, %7KBMTU%
+HKR,Ndi\params\JumboPacket\enum, "8192", 0, %8KBMTU%
+HKR,Ndi\params\JumboPacket\enum, "9216", 0, %9KBMTU%
+[L2cb.Params]
+HKR, Ndi\Params\APSmode, ParamDesc, 0, %APSmode%
+HKR, Ndi\Params\APSmode, Type, 0, "enum"
+HKR, Ndi\Params\APSmode, Default, 0, "0"
+HKR, Ndi\Params\APSmode\enum, "1", 0, %On%
+HKR, Ndi\Params\APSmode\enum, "0", 0, %Off%
+[L1d.Params]
+HKR, Ndi\Params\AZPower, ParamDesc, 0, %AZPower%
+HKR, Ndi\Params\AZPower, Type, 0, "enum"
+HKR, Ndi\Params\AZPower, Default, 0, "0"
+HKR, Ndi\Params\AZPower\enum, "1", 0, %On%
+HKR, Ndi\Params\AZPower\enum, "0", 0, %Off%
+[Common.Params]
+HKR, Ndi\Params\NetworkAddress, ParamDesc, 0, %NetAddr%
+HKR, Ndi\Params\NetworkAddress, Type, 0, "edit"
+HKR, Ndi\Params\NetworkAddress, LimitText, 0, "18"
+HKR, Ndi\Params\NetworkAddress, UpperCase, 0, "1"
+HKR, Ndi\Params\NetworkAddress, Default, 0, ""
+HKR, Ndi\Params\NetworkAddress, Optional, 0, "1"
+HKR, Ndi\Params\MaxInterrupt, ParamDesc, 0, %MaxIrq%
+HKR, Ndi\Params\MaxInterrupt, Type, 0, "int"
+HKR, Ndi\Params\MaxInterrupt, Base, 0, "10"
+HKR, Ndi\Params\MaxInterrupt, Min, 0, "1000"
+HKR, Ndi\Params\MaxInterrupt, Max, 0, "30000"
+HKR, Ndi\Params\MaxInterrupt, Step, 0, "200"
+HKR, Ndi\Params\MaxInterrupt, Default, 0, "5000"
+HKR, Ndi\Params\MediaType, ParamDesc, 0, %MediaType%
+HKR, Ndi\Params\MediaType, Type, 0, "enum"
+HKR, Ndi\Params\MediaType, Default, 0, "0"
+HKR, Ndi\Params\MediaType\enum, "0", 0, %Auto%
+HKR, Ndi\Params\MediaType\enum, "1", 0, %100MFD%
+HKR, Ndi\Params\MediaType\enum, "2", 0, %100MHD%
+HKR, Ndi\Params\MediaType\enum, "3", 0, %10MFD%
+HKR, Ndi\Params\MediaType\enum, "4", 0, %10MHD%
+HKR, Ndi\Params\FlowControl, ParamDesc, 0, %FlowCtrl%
+HKR, Ndi\Params\FlowControl, Type, 0, "enum"
+HKR, Ndi\Params\FlowControl, Default, 0, "1"
+HKR, Ndi\Params\FlowControl\enum, "1", 0, %On%
+HKR, Ndi\Params\FlowControl\enum, "0", 0, %Off%
+HKR, Ndi\Params\VLanID, ParamDesc, 0, %VLanID%
+HKR, Ndi\Params\VLanID, Base, 0, "10"
+HKR, Ndi\Params\VLanID, Type, 0, "long"
+HKR, Ndi\Params\VLanID, Min, 0, "0"
+HKR, Ndi\Params\VLanID, Max, 0, "4094"
+HKR, Ndi\Params\VLanID, Step, 0, "1"
+HKR, Ndi\Params\VLanID, Default, 0, "0"
+[WOLDefault.params]
+HKR, Ndi\Params\WakeUpCapability, ParamDesc, 0, %WakeUpCapabilities%
+HKR, Ndi\Params\WakeUpCapability, Type, 0, "enum"
+HKR, Ndi\Params\WakeUpCapability, Default, 0, "6"
+HKR, Ndi\Params\WakeUpCapability\enum, "0", 0, %None%
+HKR, Ndi\Params\WakeUpCapability\enum, "1", 0, %LinkChange%
+HKR, Ndi\Params\WakeUpCapability\enum, "2", 0, %MagicPacket%
+HKR, Ndi\Params\WakeUpCapability\enum, "4", 0, %PatternMatch%
+HKR, Ndi\Params\WakeUpCapability\enum, "3", 0, %Link_Magic%
+HKR, Ndi\Params\WakeUpCapability\enum, "5", 0, %Link_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "6", 0, %Magic_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "7", 0, %All%
+[WOLMagic.params]
+HKR, Ndi\Params\WakeUpCapability, ParamDesc, 0, %WakeUpCapabilities%
+HKR, Ndi\Params\WakeUpCapability, Type, 0, "enum"
+HKR, Ndi\Params\WakeUpCapability, Default, 0, "2"
+HKR, Ndi\Params\WakeUpCapability\enum, "0", 0, %None%
+HKR, Ndi\Params\WakeUpCapability\enum, "1", 0, %LinkChange%
+HKR, Ndi\Params\WakeUpCapability\enum, "2", 0, %MagicPacket%
+HKR, Ndi\Params\WakeUpCapability\enum, "4", 0, %PatternMatch%
+HKR, Ndi\Params\WakeUpCapability\enum, "3", 0, %Link_Magic%
+HKR, Ndi\Params\WakeUpCapability\enum, "5", 0, %Link_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "6", 0, %Magic_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "7", 0, %All%
+[WOLNone.params]
+HKR, Ndi\Params\WakeUpCapability, ParamDesc, 0, %WakeUpCapabilities%
+HKR, Ndi\Params\WakeUpCapability, Type, 0, "enum"
+HKR, Ndi\Params\WakeUpCapability, Default, 0, "0"
+HKR, Ndi\Params\WakeUpCapability\enum, "0", 0, %None%
+HKR, Ndi\Params\WakeUpCapability\enum, "1", 0, %LinkChange%
+HKR, Ndi\Params\WakeUpCapability\enum, "2", 0, %MagicPacket%
+HKR, Ndi\Params\WakeUpCapability\enum, "4", 0, %PatternMatch%
+HKR, Ndi\Params\WakeUpCapability\enum, "3", 0, %Link_Magic%
+HKR, Ndi\Params\WakeUpCapability\enum, "5", 0, %Link_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "6", 0, %Magic_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "7", 0, %All%
+[Common.Params.WinNT]
+HKR, Ndi\Params\LsoOffload, ParamDesc, 0, %LsoOff%
+HKR, Ndi\Params\LsoOffload, Type, 0, "enum"
+HKR, Ndi\Params\LsoOffload, Default, 0, "1"
+HKR, Ndi\Params\LsoOffload\enum, "1", 0, %On%
+HKR, Ndi\Params\LsoOffload\enum, "0", 0, %Off%
+HKR, Ndi\Params\TCPChecksumOffloadIPv4, ParamDesc, 0, %TCPChksumOffv4%
+HKR, Ndi\Params\TCPChecksumOffloadIPv4, Type, 0, "enum"
+HKR, Ndi\Params\TCPChecksumOffloadIPv4, Default, 0, "1"
+HKR, Ndi\Params\TCPChecksumOffloadIPv4\enum, "3", 0, %TXRXEna%
+HKR, Ndi\Params\TCPChecksumOffloadIPv4\enum, "2", 0, %RXEna%
+HKR, Ndi\Params\TCPChecksumOffloadIPv4\enum, "1", 0, %TXEna%
+HKR, Ndi\Params\TCPChecksumOffloadIPv4\enum, "0", 0, %Off%
+HKR, Ndi\Params\IPChecksumOffloadIPv4, ParamDesc, 0, %IPChksumOffv4%
+HKR, Ndi\Params\IPChecksumOffloadIPv4, Type, 0, "enum"
+HKR, Ndi\Params\IPChecksumOffloadIPv4, Default, 0, "1"
+HKR, Ndi\Params\IPChecksumOffloadIPv4\enum, "3", 0, %TXRXEna%
+HKR, Ndi\Params\IPChecksumOffloadIPv4\enum, "2", 0, %RXEna%
+HKR, Ndi\Params\IPChecksumOffloadIPv4\enum, "1", 0, %TXEna%
+HKR, Ndi\Params\IPChecksumOffloadIPv4\enum, "0", 0, %Off%
+HKR, Ndi\Params\UDPChecksumOffloadIPv4, ParamDesc, 0, %UDPChksumOffv4%
+HKR, Ndi\Params\UDPChecksumOffloadIPv4, Type, 0, "enum"
+HKR, Ndi\Params\UDPChecksumOffloadIPv4, Default, 0, "1"
+HKR, Ndi\Params\UDPChecksumOffloadIPv4\enum, "3", 0, %TXRXEna%
+HKR, Ndi\Params\UDPChecksumOffloadIPv4\enum, "2", 0, %RXEna%
+HKR, Ndi\Params\UDPChecksumOffloadIPv4\enum, "1", 0, %TXEna%
+HKR, Ndi\Params\UDPChecksumOffloadIPv4\enum, "0", 0, %Off%
+HKR, Ndi\Params\MaxRxBuffer, ParamDesc, 0, %NumRx%
+HKR, Ndi\Params\MaxRxBuffer, Type, 0, "int"
+HKR, Ndi\Params\MaxRxBuffer, Base, 0, "10"
+HKR, Ndi\Params\MaxRxBuffer, Min, 0, "16"
+HKR, Ndi\Params\MaxRxBuffer, Max, 0, "2048"
+HKR, Ndi\Params\MaxRxBuffer, Step, 0, "16"
+HKR, Ndi\Params\MaxRxBuffer, Default, 0, "512"
+HKR, Ndi\Params\MaxTxBuffer, ParamDesc, 0, %NumTx%
+HKR, Ndi\Params\MaxTxBuffer, Type, 0, "int"
+HKR, Ndi\Params\MaxTxBuffer, Base, 0, "10"
+HKR, Ndi\Params\MaxTxBuffer, Min, 0, "16"
+HKR, Ndi\Params\MaxTxBuffer, Max, 0, "1024"
+HKR, Ndi\Params\MaxTxBuffer, Step, 0, "16"
+HKR, Ndi\Params\MaxTxBuffer, Default, 0, "256"
+[ShutOn.params]
+HKR, Ndi\Params\ShutdownWake, ParamDesc, 0, %ShutDW%
+HKR, Ndi\Params\ShutdownWake, Type, 0, "enum"
+HKR, Ndi\Params\ShutdownWake, Default, 0, "1"
+HKR, Ndi\Params\ShutdownWake\enum, "1", 0, %On%
+HKR, Ndi\Params\ShutdownWake\enum, "0", 0, %Off%
+[ShutOff.params]
+HKR, Ndi\Params\ShutdownWake, ParamDesc, 0, %ShutDW%
+HKR, Ndi\Params\ShutdownWake, Type, 0, "enum"
+HKR, Ndi\Params\ShutdownWake, Default, 0, "0"
+HKR, Ndi\Params\ShutdownWake\enum, "1", 0, %On%
+HKR, Ndi\Params\ShutdownWake\enum, "0", 0, %Off%
+[L1c.CopyFiles]
+l1c51x86.sys,,,2
+[SourceDisksNames]
+1=%DriverDisk%,,,
+[SourceDisksFiles]
+l1c51x86.sys=1
+[DestinationDirs]
+L1c.CopyFiles=12
+DefaultDestDir=11
+[Strings]
+Atheros="Atheros"
+JumboFrame="Jumbo Frame"
+2KBMTU="2KB MTU"
+3KBMTU="3KB MTU"
+4KBMTU="4KB MTU"
+5KBMTU="5KB MTU"
+6KBMTU="6KB MTU"
+7KBMTU="7KB MTU"
+8KBMTU="8KB MTU"
+9KBMTU="9KB MTU"
+APSmode="APS mode"
+AZPower="802.3az"
+NetAddr="Network Address"
+MTU="Maximum Frame Size"
+TOff="Task Offload"
+MaxIrq="Max IRQ per Second"
+NumRx="Number of Rx Buffers"
+NumTx="Number of Tx Buffers"
+FlowCtrl="Flow Control"
+ShutDW="Shutdown Wakeup"
+MediaType="MediaType"
+Auto="Auto"
+10MHD="10Mbps Half Duplex"
+10MFD="10Mbps Full Duplex"
+100MHD="100Mbps Half Duplex"
+100MFD="100Mbps Full Duplex"
+WakeUpCapabilities="WakeUp Capabilities"
+None="None"
+LinkChange="Link Change"
+MagicPacket="Magic Packet"
+PatternMatch="Pattern Match"
+Link_Magic="LinkChange & MagicPacket"
+Link_Pattern="LinkChange & PatternMatch"
+Magic_Pattern="MagicPacket & PatternMatch"
+All="All"
+On="On"
+Off="Off"
+TXEna="Tx Enabled"
+RXEna="Rx Enabled"
+TXRXEna="Tx & Rx Enabled"
+IPChksumOffv4="IPv4 Checksum Offload"
+TCPChksumOffv4="TCP Checksum Offload (IPv4)"
+UDPChksumOffv4="UDP Checksum Offload (IPv4)"
+LsoOff="Large Send Offload"
+VLanID="VLAN ID"
+Atheros.L1c="Atheros AR8131 PCI-E Gigabit Ethernet Controller"
+Atheros.L2c="Atheros AR8132 PCI-E Fast Ethernet Controller"
+Atheros.L1d="Atheros AR8151 PCI-E Gigabit Ethernet Controller"
+Atheros.L2cb="Atheros AR8152 PCI-E Fast Ethernet Controller"
+L1c.Service.DispName="NDIS Miniport Driver for Atheros AR813x/AR815x PCI-E Ethernet Controller"
+DriverDisk="Atheros AR81xx Series PCI-E Ethernet Controller Installation Disk"
+HelpText="This Atheros network Controller connects you to the network."

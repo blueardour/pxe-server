@@ -1,0 +1,300 @@
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider=%Atheros%
+CatalogFile=l1e51x86.cat
+Compatible=1
+DriverVer=12/02/2009,1.0.0.41
+[Manufacturer]
+%Atheros%=Atheros
+[Atheros]
+%Atheros.L1e%=L1e.ndi, PCI\VEN_1969&DEV_1026
+%Atheros.L1e%=L2eRB.ndi, PCI\VEN_1969&DEV_1026&REV_F0
+%Atheros.L1e%=L1e.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_10261969&REV_B0
+%Atheros.L1e%=L2eRB.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_10261969&REV_F0
+%Atheros.L1e%=L1e.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_83041043&REV_B0
+%Atheros.L1e%=L1e.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_83391043&REV_B0
+%Atheros.L1e%=L1e.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_831C1043&REV_B0
+%Atheros.L1e%=L1e.ECS.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_10261019&REV_B0
+%Atheros.L1e%=L1e.ECS.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_00501B0A&REV_B0 ; Pegatron
+%Atheros.L1e%=L1e.ECS.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_00681B0A&REV_B0 ; Pegatron
+%Atheros.L1e%=L1e.PEGA.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_00821B0A&REV_B0 ; Pegatron
+%Atheros.L1e%=L1e.PEGA.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_00BE1B0A&REV_B0 ; Pegatron
+%Atheros.L1e%=L1e.WOLMagic.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_00631B0A&REV_B0 ; Pegatron
+%Atheros.L1e%=L1e.WOLMagic.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_00871B0A&REV_B0 ; Pegatron
+%Atheros.L1e%=L1e.PEGA.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_00911B0A&REV_B0 ; Pegatron
+%Atheros.L1e%=L1e.PEGA.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_00A51B0A&REV_B0 ; Pegatron
+%Atheros.L1e%=L1e.DisS5.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_15051043&REV_B0 ; ASUS
+%Atheros.L1e%=L1e.DisS5.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_14F51043&REV_B0 ; ASUS
+%Atheros.L1e%=L1e.DisS5.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_18211043&REV_B0 ; ASUS
+%Atheros.L1e%=L1e.DisS5.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_18221043&REV_B0 ; ASUS
+%Atheros.L1e%=L1e.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_202A1B0A&REV_B0 ; Pegatron_Colt
+%Atheros.L1e%=L1e.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_00B91B0A&REV_B0 ; Pegatron_Spring_Peak
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_002F1B0A&REV_B0 ; Unihan
+%Atheros.L1e%=L1e.kili.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_01461025&REV_B0 ; Kili
+%Atheros.L1e%=L2eRB.kili.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_01461025&REV_F0
+%Atheros.L1e%=L1e.kili.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_01451025&REV_B0 ; Teton
+%Atheros.L1e%=L2eRB.kili.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_01451025&REV_F0
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_01671025&REV_B0 ; KAL90
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_01281025&REV_B0 ; KAVH0
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_019C1025&REV_B0 ; KAV10
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_02101025&REV_B0 ; KAWH0
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_02111025&REV_B0 ; KBWH0
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_02121025&REV_B0 ; KAWF0
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_02131025&REV_B0 ; KAWG0
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_022C1025&REV_B0 ; ZG8
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_021B1025&REV_B0 ; KBLG0
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_02601025&REV_B0 ; KALG0
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_022E1025&REV_B0 ; KAW10
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_028D1025&REV_B0 ; HM50/70-PU
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_015E1025&REV_B0 ; ZK2
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_01661025&REV_B0 ; ZK3
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_02161025&REV_B0 ; HM20-YK
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_02141025&REV_B0 ; HM40-MV
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_019D1025&REV_B0 ;
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_02151025&REV_B0 ; HM40-YK
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_030D1025&REV_B0 ; HM41
+%Atheros.L1e%=L1e.zk.ndi, PCI\VEN_1969&DEV_1026&SUBSYS_0CD9105B&REV_B0 ; SZ902
+[L1e.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L1e.params, L1e.Params.WinNT, Common.Params, ShutOff.params, WOLDefault.params
+;CpyFiles=L1e.CopyFiles
+[L1e.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L1e.ShutOn.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L1e.pega.params, L1e.params, L1e.Params.WinNT, Common.Params, ShutOn.params, WOLDefault.params
+;CpyFiles=L1e.CopyFiles
+[L1e.ShutOn.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L1e.DisS5.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L1e.ecs.params, L1e.params, L1e.Params.WinNT, Common.Params, WOLDefault.params
+;CpyFiles=L1e.CopyFiles
+[L1e.DisS5.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L1e.WOLMagic.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L1e.pega.params, L1e.params, L1e.Params.WinNT, Common.Params, ShutOn.params, WOLMagic.params
+;CpyFiles=L1e.CopyFiles
+[L1e.WOLMagic.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L1e.ECS.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L1e.ecs.params, L1e.params, L1e.Params.WinNT, Common.Params, ShutOff.params, WOLDefault.params
+;CpyFiles=L1e.CopyFiles
+[L1e.ECS.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L1e.kili.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L1e.kili.params, L1e.params, L1e.Params.WinNT, Common.Params, ShutOff.params, WOLDefault.params
+;CpyFiles=L1e.CopyFiles
+[L1e.kili.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L1e.zk.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L1e.zk.params, L1e.params, L1e.Params.WinNT, Common.Params, ShutOff.params, WOLDefault.params
+;CpyFiles=L1e.CopyFiles
+[L1e.zk.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L1e.PEGA.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L1e.pega.params, L1e.params, L1e.Params.WinNT, Common.Params, ShutOff.params, WOLDefault.params
+;CpyFiles=L1e.CopyFiles
+[L1e.PEGA.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L2eRB.kili.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L1e.kili.params, L2eRB.params, L1e.Params.WinNT, Common.Params, ShutOff.params, WOLDefault.params
+;CpyFiles=L1e.CopyFiles
+[L2eRB.kili.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L2eRB.ndi.NT]
+Characteristics=0x84
+BusType=5 ;PCI
+AddReg=L1e.reg, L2eRB.params, L1e.Params.WinNT, Common.Params, ShutOff.params, WOLDefault.params
+;CpyFiles=L1e.CopyFiles
+[L2eRB.ndi.NT.Services]
+AddService=L1e, 2, L1e.Service, Common.EventLog
+[L1e.reg]
+HKR, Ndi, HelpText,, %HelpText%
+HKR, Ndi, Service, 0, "L1e"
+HKR, Ndi\Interfaces, UpperRange, 0, "ndis5"
+HKR, Ndi\Interfaces, LowerRange, 0, "ethernet"
+[L1e.Service]
+DisplayName=%L1e.Service.DispName%
+ServiceType=1 ;%SERVICE_KERNEL_DRIVER%
+StartType=3 ;%SERVICE_DEMAND_START%
+ErrorControl=1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\l1e51x86.sys
+LoadOrderGroup=NDIS
+[common.EventLog]
+AddReg=common.AddEventLog.reg
+[common.AddEventLog.reg]
+HKR,, EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\Drivers\l1e51x86.sys"
+HKR,, TypesSupported, 0x00010001, 7
+[L1e.ecs.params]
+HKR,, LedMode, 0x00010001, 1
+[L1e.kili.params]
+HKR,, LedMode, 0x00010001, 2 ; for Kili, Teton.
+[L1e.zk.params]
+HKR,, LedMode, 0x00010001, 3 ; for zk2, zk3.
+[L1e.pega.params]
+HKR,, LedMode, 0x00010001, 4 ;for Pegatron
+[L2eRB.params]
+HKR,, IsL2eRB, 0x00010001, 1
+HKR, Ndi\Params\MaxFrameSize, ParamDesc,, %MTU%
+HKR, Ndi\Params\MaxFrameSize, Type,, "int"
+HKR, Ndi\Params\MaxFrameSize, Base,, "10"
+HKR, Ndi\Params\MaxFrameSize, Min,, "500"
+HKR, Ndi\Params\MaxFrameSize, Max,, "1514"
+HKR, Ndi\Params\MaxFrameSize, Step,, "1"
+HKR, Ndi\Params\MaxFrameSize, Default,, "1514"
+[L1e.params]
+HKR, Ndi\Params\MaxFrameSize, ParamDesc,, %MTU%
+HKR, Ndi\Params\MaxFrameSize, Type,, "int"
+HKR, Ndi\Params\MaxFrameSize, Base,, "10"
+HKR, Ndi\Params\MaxFrameSize, Min,, "500"
+HKR, Ndi\Params\MaxFrameSize, Max,, "7168"
+HKR, Ndi\Params\MaxFrameSize, Step,, "1"
+HKR, Ndi\Params\MaxFrameSize, Default,, "1514"
+[Common.Params]
+HKR, Ndi\Params\APSmode, ParamDesc,, %APSmode%
+HKR, Ndi\Params\APSmode, Type,, "enum"
+HKR, Ndi\Params\APSmode, Default,, "0"
+HKR, Ndi\Params\APSmode\enum, "1",, %On%
+HKR, Ndi\Params\APSmode\enum, "0",, %Off%
+HKR, Ndi\Params\NetworkAddress, ParamDesc,, %NetAddr%
+HKR, Ndi\Params\NetworkAddress, Type,, "edit"
+HKR, Ndi\Params\NetworkAddress, LimitText,, "18"
+HKR, Ndi\Params\NetworkAddress, UpperCase,, "1"
+HKR, Ndi\Params\NetworkAddress, Default,, ""
+HKR, Ndi\Params\NetworkAddress, Optional,, "1"
+HKR, Ndi\Params\MaxInterrupt, ParamDesc,, %MaxIrq%
+HKR, Ndi\Params\MaxInterrupt, Type,, "int"
+HKR, Ndi\Params\MaxInterrupt, Base,, "10"
+HKR, Ndi\Params\MaxInterrupt, Min,, "1000"
+HKR, Ndi\Params\MaxInterrupt, Max,, "30000"
+HKR, Ndi\Params\MaxInterrupt, Step,, "200"
+HKR, Ndi\Params\MaxInterrupt, Default,, "5000"
+HKR, Ndi\Params\MediaType, ParamDesc,, %MediaType%
+HKR, Ndi\Params\MediaType, Type,, "enum"
+HKR, Ndi\Params\MediaType, Default,, "0"
+HKR, Ndi\Params\MediaType\enum, "0",, %Auto%
+HKR, Ndi\Params\MediaType\enum, "1",, %100MFD%
+HKR, Ndi\Params\MediaType\enum, "2",, %100MHD%
+HKR, Ndi\Params\MediaType\enum, "3",, %10MFD%
+HKR, Ndi\Params\MediaType\enum, "4",, %10MHD%
+HKR, Ndi\Params\FlowControl, ParamDesc,, %FlowCtrl%
+HKR, Ndi\Params\FlowControl, Type,, "enum"
+HKR, Ndi\Params\FlowControl, Default,, "1"
+HKR, Ndi\Params\FlowControl\enum, "1",, %On%
+HKR, Ndi\Params\FlowControl\enum, "0",, %Off%
+[WOLDefault.params]
+HKR, Ndi\Params\WakeUpCapability, ParamDesc,, %WakeUpCapabilities%
+HKR, Ndi\Params\WakeUpCapability, Type,, "enum"
+HKR, Ndi\Params\WakeUpCapability, Default,, "6"
+HKR, Ndi\Params\WakeUpCapability\enum, "0",, %None%
+HKR, Ndi\Params\WakeUpCapability\enum, "1",, %LinkChange%
+HKR, Ndi\Params\WakeUpCapability\enum, "2",, %MagicPacket%
+HKR, Ndi\Params\WakeUpCapability\enum, "4",, %PatternMatch%
+HKR, Ndi\Params\WakeUpCapability\enum, "3",, %Link_Magic%
+HKR, Ndi\Params\WakeUpCapability\enum, "5",, %Link_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "6",, %Magic_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "7",, %All%
+[WOLMagic.params]
+HKR, Ndi\Params\WakeUpCapability, ParamDesc,, %WakeUpCapabilities%
+HKR, Ndi\Params\WakeUpCapability, Type,, "enum"
+HKR, Ndi\Params\WakeUpCapability, Default,, "2"
+HKR, Ndi\Params\WakeUpCapability\enum, "0",, %None%
+HKR, Ndi\Params\WakeUpCapability\enum, "1",, %LinkChange%
+HKR, Ndi\Params\WakeUpCapability\enum, "2",, %MagicPacket%
+HKR, Ndi\Params\WakeUpCapability\enum, "4",, %PatternMatch%
+HKR, Ndi\Params\WakeUpCapability\enum, "3",, %Link_Magic%
+HKR, Ndi\Params\WakeUpCapability\enum, "5",, %Link_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "6",, %Magic_Pattern%
+HKR, Ndi\Params\WakeUpCapability\enum, "7",, %All%
+[ShutOn.params]
+HKR, Ndi\Params\ShutdownWake, ParamDesc,, %ShutDW%
+HKR, Ndi\Params\ShutdownWake, Type,, "enum"
+HKR, Ndi\Params\ShutdownWake\enum,1,, %On%
+HKR, Ndi\Params\ShutdownWake\enum,0,, %Off%
+HKR, Ndi\Params\ShutdownWake, Default,, "1"
+[ShutOff.params]
+HKR, Ndi\Params\ShutdownWake, ParamDesc,, %ShutDW%
+HKR, Ndi\Params\ShutdownWake, Type,, "enum"
+HKR, Ndi\Params\ShutdownWake\enum,1,, %On%
+HKR, Ndi\Params\ShutdownWake\enum,0,, %Off%
+HKR, Ndi\Params\ShutdownWake, Default,, "0"
+[L1e.Params.WinNT]
+HKR, Ndi\Params\TaskOffload, ParamDesc,, %TOff%
+HKR, Ndi\Params\TaskOffload, Type,, "enum"
+HKR, Ndi\Params\TaskOffload\enum,1,, %On%
+HKR, Ndi\Params\TaskOffload\enum,0,, %Off%
+HKR, Ndi\Params\TaskOffload, Default,, "1"
+HKR, Ndi\Params\MaxRxBuffer, ParamDesc,, %NumRx%
+HKR, Ndi\Params\MaxRxBuffer, Type,, "int"
+HKR, Ndi\Params\MaxRxBuffer, Base,, "10"
+HKR, Ndi\Params\MaxRxBuffer, Min,, "3"
+HKR, Ndi\Params\MaxRxBuffer, Max,, "64"
+HKR, Ndi\Params\MaxRxBuffer, Step,, "1"
+HKR, Ndi\Params\MaxRxBuffer, Default,, "6"
+HKR, Ndi\Params\MaxTxBuffer, ParamDesc,, %NumTx%
+HKR, Ndi\Params\MaxTxBuffer, Type,, "int"
+HKR, Ndi\Params\MaxTxBuffer, Base,, "10"
+HKR, Ndi\Params\MaxTxBuffer, Min,, "1"
+HKR, Ndi\Params\MaxTxBuffer, Max,, "32"
+HKR, Ndi\Params\MaxTxBuffer, Step,, "1"
+HKR, Ndi\Params\MaxTxBuffer, Default,, "2"
+[L1e.CopyFiles]
+l1e51x86.sys,,,2
+[SourceDisksNames]
+1=%DriverDisk%,,,
+[SourceDisksFiles]
+l1e51x86.sys=1
+[DestinationDirs]
+L1e.CopyFiles=12
+DefaultDestDir=11
+[Strings]
+Atheros="Atheros"
+APSmode="APS mode"
+NetAddr="Network Address"
+MTU="Maximum Frame Size"
+TOff="Task Offload"
+MaxIrq="Max IRQ per Second"
+NumRx="Number of Rx Buffers"
+NumTx="Number of Tx Buffers"
+FlowCtrl="Flow Control"
+ShutDW="Shutdown Wakeup"
+MediaType="MediaType"
+Auto="Auto"
+10MHD="10Mbps Half Duplex"
+10MFD="10Mbps Full Duplex"
+100MHD="100Mbps Half Duplex"
+100MFD="100Mbps Full Duplex"
+WakeUpCapabilities="WakeUp Capabilities"
+None="None"
+LinkChange="Link Change"
+MagicPacket="Magic Packet"
+PatternMatch="Pattern Match"
+Link_Magic="LinkChange & MagicPacket"
+Link_Pattern="LinkChange & PatternMatch"
+Magic_Pattern="MagicPacket & PatternMatch"
+All="All"
+On="On"
+Off="Off"
+Atheros.L1e="Atheros AR8121/AR8113/AR8114 PCI-E Ethernet Controller"
+L1e.Service.DispName="Miniport Driver for Atheros AR8121/AR8113/AR8114 PCI-E Ethernet Controller"
+DriverDisk="Atheros AR8121/AR8113/AR8114 PCI-E Ethernet Controller Installation Disk"
+HelpText="This Atheros network Controller connects you to the network."

@@ -1,0 +1,169 @@
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGUID={4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider=%Provider%
+DriverVer=10/08/2008,1.1.30.2
+CatalogFile=IAMT.cat
+[ControlFlags]
+ExcludeFromSelect=*
+[DestinationDirs]
+DefaultDestDir=10
+IAMTV_Files_Driver=12
+IAMT03_Files_Driver=12
+IAMTXP_Files_Driver=12
+IAMT2k_Files_Driver=12
+IAMT_Files_Uninstall=11
+[SourceDisksNames]
+1=%Location%,,,""
+[SourceDisksFiles]
+IAMTV.sys=1,,
+IAMT03.sys=1,,
+IAMTXP.sys=1,,
+IAMT2K.sys=1,,
+IAMT.din=1,,
+prounstl.exe=1
+[Manufacturer]
+%MfgName%=Intel, NTx86.6.0, NTx86.6.0.1, NTx86.5.2, NTx86.5.1
+[Intel.NTx86.6.0]
+%IAMT_DeviceDesc%=NO_DRV, PCI\VEN_8086&DEV_108E
+[Intel.NTx86.6.0.1]
+%IAMT_DeviceDesc%=IAMT_DDI_V, PCI\VEN_8086&DEV_108E
+[Intel.NTx86.5.2]
+%IAMT_DeviceDesc%=IAMT_DDI_03, PCI\VEN_8086&DEV_108E
+[Intel.NTx86.5.1]
+%IAMT_DeviceDesc%=IAMT_DDI_XP, PCI\VEN_8086&DEV_108E
+[Intel]
+%IAMT_DeviceDesc%=IAMT_DDI_2k, PCI\VEN_8086&DEV_108E
+[IAMT_DDI_V.NTx86]
+;CpyFiles=IAMTV_Files_Driver, IAMT_Files_Uninstall
+AddReg=IAMT_NT_AddReg, IAMT_UNINSTALL_AddReg
+[IAMT_DDI_V.NTx86.Services]
+Addservice=IAMTV, %FLG_ADDREG_NOCLOBBER%, IAMTV_Service, IAMTV_EventLog
+[IAMT_DDI_03.NTx86]
+;CpyFiles=IAMT03_Files_Driver, IAMT_Files_Uninstall
+AddReg=IAMT_NT_AddReg, IAMT_UNINSTALL_AddReg
+[IAMT_DDI_03.NTx86.Services]
+Addservice=IAMT03, %FLG_ADDREG_NOCLOBBER%, IAMT03_Service, IAMT03_EventLog
+[IAMT_DDI_XP.NTx86]
+;CpyFiles=IAMTXP_Files_Driver, IAMT_Files_Uninstall
+AddReg=IAMT_NT_AddReg, IAMT_UNINSTALL_AddReg
+[IAMT_DDI_XP.NTx86.Services]
+Addservice=IAMTXP, %FLG_ADDREG_NOCLOBBER%, IAMTXP_Service, IAMTXP_EventLog
+[IAMT_DDI_2k.NTx86]
+;CpyFiles=IAMT2k_Files_Driver, IAMT_Files_Uninstall
+AddReg=IAMT_NT_AddReg, IAMT_UNINSTALL_AddReg
+[IAMT_DDI_2k.NTx86.Services]
+Addservice=IAMT2K, %FLG_ADDREG_NOCLOBBER%, IAMT2K_Service, IAMT2K_EventLog
+[NO_DRV]
+AddReg=NoDrv.reg
+Include=machine.inf
+Needs=NO_DRV
+[NO_DRV.Services]
+Include=machine.inf
+Needs=NO_DRV.Services
+[NoDrv.reg]
+HKR,,Version,,"%DriverVer%"
+[IAMT_NT_AddReg]
+HKR,, WatchdogTimerTic, %REG_DWORD%, 120
+[IAMT_NT_AddReg.Security]
+"D:P(A;CI;GA;;;BA)(A;CI;GA;;;SY)"
+[IAMTV_EventLog]
+AddReg=IAMTV_EventLog_Reg
+[IAMTV_EventLog_Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\IAMTV.sys"
+HKR, , TypesSupported, 0x00010001, 7
+[IAMT03_EventLog]
+AddReg=IAMT03_EventLog_Reg
+[IAMT03_EventLog_Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\IAMT03.sys"
+HKR, , TypesSupported, 0x00010001, 7
+[IAMTXP_EventLog]
+AddReg=IAMTXP_EventLog_Reg
+[IAMTXP_EventLog_Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\IAMTXP.sys"
+HKR, , TypesSupported, 0x00010001, 7
+[IAMT2K_EventLog]
+AddReg=IAMT2K_EventLog_Reg
+[IAMT2K_EventLog_Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\IAMT2K.sys"
+HKR, , TypesSupported, 0x00010001, 7
+[IAMTV_Service]
+DisplayName=%IAMT_SvcDesc%
+ServiceType=%SERVICE_KERNEL_DRIVER%
+StartType=%SERVICE_DEMAND_START%
+ErrorControl=%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\IAMTV.sys
+LoadOrderGroup=Extended Base
+[IAMT03_Service]
+DisplayName=%IAMT_SvcDesc%
+ServiceType=%SERVICE_KERNEL_DRIVER%
+StartType=%SERVICE_DEMAND_START%
+ErrorControl=%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\IAMT03.sys
+LoadOrderGroup=Extended Base
+[IAMTXP_Service]
+DisplayName=%IAMT_SvcDesc%
+ServiceType=%SERVICE_KERNEL_DRIVER%
+StartType=%SERVICE_DEMAND_START%
+ErrorControl=%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\IAMTXP.sys
+LoadOrderGroup=Extended Base
+[IAMT2K_Service]
+DisplayName=%IAMT_SvcDesc%
+ServiceType=%SERVICE_KERNEL_DRIVER%
+StartType=%SERVICE_DEMAND_START%
+ErrorControl=%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\IAMT2K.sys
+LoadOrderGroup=Extended Base
+[IAMTV_Files_Driver]
+IAMTV.sys,,,2
+[IAMT03_Files_Driver]
+IAMT03.sys,,,2
+[IAMTXP_Files_Driver]
+IAMTXP.sys,,,2
+[IAMT2k_Files_Driver]
+IAMT2K.sys,,,2
+[IAMT_Files_Uninstall]
+IAMT.din,,,2
+[IAMT_UNINSTALL_AddReg]
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 108E, 0, "82573E KCS"
+HKLM,Software\Intel\Prounstl\Dins, IAMT.din, 0, "IAMT.Uninstall"
+HKLM,Software\Intel\Prounstl\Services, IAMTV, 0, "IAMTV.sys"
+HKLM,Software\Intel\Prounstl\Services, IAMT03, 0, "IAMT03.sys"
+HKLM,Software\Intel\Prounstl\Services, IAMTXP, 0, "IAMTXP.sys"
+HKLM,Software\Intel\Prounstl\Services, IAMT2K, 0, "IAMT2K.sys"
+[Strings]
+REG_SZ=0x00000000
+REG_MULTI_SZ=0x00010000
+REG_EXPAND_SZ=0x00020000
+REG_BINARY=0x00000001
+REG_DWORD=0x00010001
+REG_NONE=0x00020001
+SERVICE_KERNEL_DRIVER=0x00000001
+SERVICE_FILE_SYSTEM_DRIVER=0x00000002
+SERVICE_ADAPTER=0x00000004
+SERVICE_RECOGNIZER_DRIVER=0x00000008
+SERVICE_BOOT_START=0x0
+SERVICE_SYSTEM_START=0x1
+SERVICE_AUTO_START=0x2
+SERVICE_DEMAND_START=0x3
+SERVICE_DISABLED=0x4
+SERVICE_ERROR_IGNORE=0x00000000
+SERVICE_ERROR_NORMAL=0x00000001
+SERVICE_ERROR_SEVERE=0x00000002
+SERVICE_ERROR_CRITICAL=0x00000003
+FLG_ADDREG_NOCLOBBER=0x00000002
+FLG_ADDREG_DELVAL=0x00000004
+FLG_ADDREG_APPEND=0x00000008
+FLG_ADDREG_KEYONLY=0x00000010
+FLG_ADDREG_OVERWRITEONLY=0x00000020
+FLG_ADDREG_64BITKEY=0x00001000
+FLG_ADDREG_KEYONLY_COMMON=0x00002000
+FLG_ADDREG_32BITKEY=0x00004000
+Provider="Intel"
+MfgName="Intel"
+IAMT_DeviceDesc="Intel(R) Active Management Technology - KCS"
+IAMT_SvcDesc="Driver for Intel(R) Active Management Technology - KCS"
+Location="Intel(R) Active Management Technology Installation Source"

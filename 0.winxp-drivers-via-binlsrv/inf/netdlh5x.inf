@@ -1,0 +1,162 @@
+
+[version]
+Signature="$Windows NT$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider=%DLink%
+CatalogFile=dlh5x.cat
+DriverVer=02/15/2000,2.1.0.0
+[Manufacturer]
+%DLink%=DLink
+%Sundance%=Sundance
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_1186&DEV_1002&SUBSYS_10021186, \
+PCI\VEN_1186&DEV_1002&SUBSYS_10121186, \
+PCI\VEN_1186&DEV_1002, \
+PCI\VEN_13F0&DEV_0201
+[DLink]
+%DFE550TX.DeviceDesc%=dlh5x.ndi, PCI\VEN_1186&DEV_1002&SUBSYS_10021186 ;DLink DFE-550TX
+%DFE580TX.DeviceDesc%=dlh5x.ndi, PCI\VEN_1186&DEV_1002&SUBSYS_10121186 ;DLink DFE-580TX
+%DL10050.DeviceDesc%=dlh5x.ndi, PCI\VEN_1186&DEV_1002 ;DLink DL10050
+[Sundance]
+%ST201.DeviceDesc%=st201.ndi, PCI\VEN_13F0&DEV_0201 ;Sundance ST201
+[dlh5x.ndi]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+AddReg=dlh5x.reg, alta.nt.reg, alta.param.reg
+;CpyFiles=alta.CopyFiles
+[dlh5x.ndi.Services]
+AddService=DLH5X, 2, dlh5x.Service, common.EventLog
+[st201.ndi]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+AddReg=st201.reg, alta.nt.reg, alta.param.reg
+;CpyFiles=alta.CopyFiles
+[st201.ndi.Services]
+AddService=DLH5X, 2, st201.Service, common.EventLog
+[dlh5x.reg]
+HKR, , AdapterCFID, 0, "10021186"
+[st201.reg]
+HKR, , AdapterCFID, 0, "020113F0"
+[alta.nt.reg]
+HKR, , AdapterType, 0, "5"
+HKR, , MediaType, 0, "1"
+HKR, Ndi, Service, , "DLH5X"
+HKR, Ndi\Interfaces, LowerRange, , "ethernet"
+HKR, Ndi\Interfaces, UpperRange, , "ndis5"
+[alta.param.reg]
+HKR, Ndi\params\RxBuffer, ParamDesc, , %RxBuffer%
+HKR, Ndi\params\RxBuffer, default, , "16"
+HKR, Ndi\params\RxBuffer, type, , "dword"
+HKR, Ndi\params\RxBuffer, min, , "4"
+HKR, Ndi\params\RxBuffer, max, , "32"
+HKR, Ndi\params\RxBuffer, step, , "4"
+HKR, Ndi\params\TxBuffer, ParamDesc, , %TxBuffer%
+HKR, Ndi\params\TxBuffer, default, , "16"
+HKR, Ndi\params\TxBuffer, type, , "dword"
+HKR, Ndi\params\TxBuffer, min, , "4"
+HKR, Ndi\params\TxBuffer, max, , "32"
+HKR, Ndi\params\TxBuffer, step, , "4"
+HKR, Ndi\params\NoCableIndication, ParamDesc, , %NoCableIndication%
+HKR, Ndi\params\NoCableIndication, default, , "0"
+HKR, Ndi\params\NoCableIndication, type, , "enum"
+HKR, Ndi\params\NoCableIndication\enum, 0, , %Disabled%
+HKR, Ndi\params\NoCableIndication\enum, 1, , %Enabled%
+HKR, Ndi\params\NetworkAddress, ParamDesc, , %NetworkAddress%
+HKR, Ndi\params\NetworkAddress, type, , "edit"
+HKR, Ndi\params\NetworkAddress, LimitText, , "12"
+HKR, Ndi\params\NetworkAddress, UpperCase, , "1"
+HKR, Ndi\params\NetworkAddress, default, , ""
+HKR, Ndi\params\NetworkAddress, optional, , "1"
+HKR, Ndi\params\ConnectionType, ParamDesc, , %ConnectionType%
+HKR, Ndi\params\ConnectionType, default, , "0"
+HKR, Ndi\params\ConnectionType, type, , "enum"
+HKR, Ndi\params\ConnectionType\enum, 0, , %Autosense%
+HKR, Ndi\params\ConnectionType\enum, 1, , %10BaseT%
+HKR, Ndi\params\ConnectionType\enum, 2, , %10BaseTFD%
+HKR, Ndi\params\ConnectionType\enum, 3, , %100BaseTx%
+HKR, Ndi\params\ConnectionType\enum, 4, , %100BaseTxFD%
+HKR, Ndi\params\TxStartThreshold, ParamDesc, , %TxStartTheshold%
+HKR, Ndi\params\TxStartThreshold, default, , "8188"
+HKR, Ndi\params\TxStartThreshold, type, , "enum"
+HKR, Ndi\params\TxStartThreshold\enum, 256, , "256"
+HKR, Ndi\params\TxStartThreshold\enum, 512, , "512"
+HKR, Ndi\params\TxStartThreshold\enum, 768, , "768"
+HKR, Ndi\params\TxStartThreshold\enum, 1024, , "1024"
+HKR, Ndi\params\TxStartThreshold\enum, 8188, , %StoreAndForward%
+HKR, Ndi\params\EnableTagging, ParamDesc, , %EnableTagging%
+HKR, Ndi\params\EnableTagging, default, , "0"
+HKR, Ndi\params\EnableTagging, type, , "enum"
+HKR, Ndi\params\EnableTagging\enum, 0, , %Disabled%
+HKR, Ndi\params\EnableTagging\enum, 1, , %Enabled%
+HKR, Ndi\params\VLANID, ParamDesc, , %VLANID%
+HKR, Ndi\params\VLANID, default, , "3"
+HKR, Ndi\params\VLANID, type, , "dword"
+HKR, Ndi\params\VLANID, min, , "0"
+HKR, Ndi\params\VLANID, max, , "4094"
+HKR, Ndi\params\VLANID, step, , "1"
+HKR, Ndi\params\EnableGVRP, ParamDesc, , %EnableGVRP%
+HKR, Ndi\params\EnableGVRP, default, , "1"
+HKR, Ndi\params\EnableGVRP, type, , "enum"
+HKR, Ndi\params\EnableGVRP\enum, 0, , %Disabled%
+HKR, Ndi\params\EnableGVRP\enum, 1, , %Enabled%
+[dlh5x.Service]
+DisplayName=%Dlh5x.Service.DispName%
+ServiceType=1 ; %SERVICE_KERNEL_DRIVER%
+StartType=3 ; %SERVICE_AUTO_START%
+ErrorControl=1 ; %SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\dlh5xnd5.sys
+LoadOrderGroup=NDIS
+AddReg=TextModeFlags.reg
+[st201.Service]
+DisplayName=%St201.Service.DispName%
+ServiceType=1 ; %SERVICE_KERNEL_DRIVER%
+StartType=3 ; %SERVICE_AUTO_START%
+ErrorControl=1 ; %SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\dlh5xnd5.sys
+LoadOrderGroup=NDIS
+AddReg=TextModeFlags.reg
+[common.EventLog]
+AddReg=common.AddEventLog.reg
+[common.AddEventLog.reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystenRoot%%\System32\netevent.dll"
+HKR, , TypesSupported, 0x00010001, 7
+[TextModeFlags.reg]
+HKR, , TextModeFlags, 0x00010001, 0x0001
+[alta.CopyFiles]
+dlh5xnd5.sys,,,2
+[DestinationDirs]
+DefaultDestDir=12
+alta.CopyFiles=12
+[SourceDisksNames]
+50=%DriverDisketteName%,"NETDLH5X.inf"
+[SourceDisksFiles]
+netdlh5x.inf=50
+dlh5xnd5.sys=50
+[Strings]
+DLink="D-Link"
+Sundance="Sundance"
+RxBuffer="Receive Buffers"
+TxBuffer="Transmit Buffers"
+NoCableIndication="No Cable Indication"
+NetworkAddress="Network Address"
+ConnectionType="Connection Type"
+Disabled="Disabled"
+Enabled="Enabled"
+Autosense="AutoSense"
+10BaseT="10Base-T Half Duplex"
+10BaseTFD="10Base-T Full Duplex"
+100BaseTx="100Base-Tx Half Duplex"
+100BaseTxFD="100Base-Tx Full Duplex"
+TxStartTheshold="Tx Threshold"
+StoreAndForward="Store and forward"
+EnableTagging="802.1Q/1P VLAN tagging"
+VLANID="VLAN ID"
+EnableGVRP="GVRP"
+DL10050.DeviceDesc="D-Link DL10050 based 10/100 Adapter"
+DFE550TX.DeviceDesc="D-Link DFE-550TX FAST Ethernet 10/100 Adapter"
+DFE580TX.DeviceDesc="D-Link DFE-580TX 4 Port Server Adapter"
+ST201.DeviceDesc="Sundance ST201 based PCI Fast Ethernet Adapter"
+Dlh5x.Service.DispName="D-Link DL10050 based Adapter NT Driver"
+St201.Service.DispName="Sundance ST201 based Adapter NT Driver"
+DriverDisketteName="D-Link DFE-550TX Adapter Driver Diskette"

@@ -1,0 +1,86 @@
+; ****************************************************************************
+; ****************************************************************************
+; **    Filename:  DMODUSB.INF                                              
+; **    Abstract:  Windows* Server 2000 and later, x86-based system INF File for 
+; **               Digilent USB devices                     
+; **    Last Update: May 11, 2009 (Version 2.1)
+; ****************************************************************************
+; ****************************************************************************
+  
+ 
+[Version] 
+Signature   = "$Windows NT$" 
+Class       = USB
+ClassGUID   = {36fc9e60-c465-11cf-8056-444553540000} 
+Provider    = %DGLNT% 
+CatalogFile = dmodusb.cat
+DriverVer   = 05/11/2009,2.1
+
+[SourceDisksNames]
+0=%Desc%
+
+[SourceDisksFiles]
+dmodusb.sys=0,, 
+
+[DestinationDirs] 
+DmodUsb.Files.Ext = 12 
+
+[Manufacturer] 
+%DGLNT%=DGLNT
+
+[DGLNT]
+%DigilentUsbDeviceDesc% =DmodUsb,USB\VID_1443&PID_0007
+%DonboardUsbDesc%       =DmodUsb,USB\VID_1443&PID_0005
+%DmodUsbDesc%           =DmodUsb,USB\VID_1443&PID_0003
+%DcabUSBDesc%           =DmodUsb,USB\VID_1443&PID_0001
+
+[DmodUsb] 
+CopyFiles = DmodUsb.Files.Ext
+
+[DmodUsb.Services] 
+AddService = dmodusb,0x00000002,DmodUsb_AddService, 
+
+[DmodUsb_AddService] 
+ServiceType = %SERVICE_KERNEL_DRIVER% 
+StartType = %SERVICE_DEMAND_START% 
+ErrorControl = %SERVICE_ERROR_IGNORE% 
+ServiceBinary = %12%\dmodusb.sys 
+AddReg         = DmodUsb.AddReg
+LoadOrderGroup = Base
+
+[DmodUsb.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,dmodusb.sys
+HKR,"Parameters","MaximumBulkTransferSize",0x10001,262144
+HKR,"Parameters","DebugLevel",0x10001,2
+HKR,"Parameters","BulkUsbEnable",0x10001,0
+
+[DmodUsb.Files.Ext] 
+dmodusb.sys
+
+[Strings] 
+
+;  *******Localizable Strings******* 
+DGLNT= "Digilent" 
+Desc= "Digilent USB drivers" 
+DigilentUsbDeviceDesc= "Digilent USB Device"
+DonboardUsbDesc= "Digilent Onboard USB"
+DmodUsbDesc= "Digilent USB JTAG Module" 
+DcabUSBDesc= "Digilent USB Jtag Cable" 
+DusbDesc= "Digilent USB Device" 
+
+;  *******Non Localizable Strings******* 
+SERVICE_BOOT_START = 0x0 
+SERVICE_SYSTEM_START = 0x1 
+SERVICE_AUTO_START = 0x2 
+SERVICE_DEMAND_START = 0x3 
+SERVICE_DISABLED = 0x4 
+
+SERVICE_KERNEL_DRIVER = 0x1 
+SERVICE_ERROR_IGNORE = 0x0 
+SERVICE_ERROR_NORMAL = 0x1 
+SERVICE_ERROR_SEVERE = 0x2 
+SERVICE_ERROR_CRITICAL = 0x3 
+
+REG_EXPAND_SZ = 0x00020000 
+REG_DWORD = 0x00010001 

@@ -1,0 +1,268 @@
+
+[version]
+Signature="$Windows NT$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider=%Intel%
+CatalogFile=ixgb325.cat
+DriverVer=11/09/2006,2.1.18.0
+[Manufacturer]
+%Intel%=Intel, NTx86, NTIA64, NTAmd64, NTx86.6.0 ; prevent installation Non i32
+[Intel] ; 2K
+%D1048.LR.Description%=D1048.50i32, PCI\VEN_8086&DEV_1048&SUBSYS_A01F8086
+%D1048.LR.Description%=D1048.50i32, PCI\VEN_8086&DEV_1048&SUBSYS_A11F8086
+%D1048.Generic.Description%=D1048.50i32, PCI\VEN_8086&DEV_1048
+%D1A48.SR.Description%=D1048.50i32, PCI\VEN_8086&DEV_1A48&SUBSYS_A01F8086
+%D1A48.SR.Description%=D1048.50i32, PCI\VEN_8086&DEV_1A48&SUBSYS_A11F8086
+%D1A48.Generic.Description%=D1048.50i32, PCI\VEN_8086&DEV_1A48
+%D1B48.LR.Description%=D1048.50i32, PCI\VEN_8086&DEV_1B48&SUBSYS_A01F8086
+%D1B48.LR.Description%=D1048.50i32, PCI\VEN_8086&DEV_1B48&SUBSYS_A11F8086
+%D1B48.Generic.Description%=D1048.50i32, PCI\VEN_8086&DEV_1B48
+[Intel.NTx86] ; XP & WS03
+%D1048.LR.Description%=D1048.51i32, PCI\VEN_8086&DEV_1048&SUBSYS_A01F8086
+%D1048.LR.Description%=D1048.51i32, PCI\VEN_8086&DEV_1048&SUBSYS_A11F8086
+%D1048.Generic.Description%=D1048.51i32, PCI\VEN_8086&DEV_1048
+%D109E.LR.Description%=D1048.51i32, PCI\VEN_8086&DEV_109E&SUBSYS_A00C8086
+%D109E.LR.Description%=D1048.51i32, PCI\VEN_8086&DEV_109E&SUBSYS_A10C8086
+%D109E.Generic.Description%=D1048.51i32, PCI\VEN_8086&DEV_109E
+%D1A48.SR.Description%=D1048.51i32, PCI\VEN_8086&DEV_1A48&SUBSYS_A01F8086
+%D1A48.SR.Description%=D1048.51i32, PCI\VEN_8086&DEV_1A48&SUBSYS_A11F8086
+%D1A48.Generic.Description%=D1048.51i32, PCI\VEN_8086&DEV_1A48
+%D1B48.LR.Description%=D1048.51i32, PCI\VEN_8086&DEV_1B48&SUBSYS_A01F8086
+%D1B48.LR.Description%=D1048.51i32, PCI\VEN_8086&DEV_1B48&SUBSYS_A11F8086
+%D1B48.Generic.Description%=D1048.51i32, PCI\VEN_8086&DEV_1B48
+[Intel.NTIA64]
+[Intel.NTAmd64]
+[Intel.NTx86.6.0]
+[D1048.50i32.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Obsolete.DelReg
+AddReg=Default.reg, Uninstall.50i32.reg
+;CpyFiles=ixgb.50i32.CopyFiles, ixgbmsg.CopyFiles, Uninstall.50i32.CopyFiles
+[D1048.50i32.NTx86.Services]
+AddService=ixgb, 2, ixgb.50i32.Service, ixgb.50i32.EventLog
+[D1048.50i32.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[D1048.51i32]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Obsolete.DelReg
+AddReg=Default.reg, Uninstall.51i32.reg
+AddReg=NDIS51.reg
+;CpyFiles=ixgb.51i32.CopyFiles, ixgbmsg.CopyFiles, Uninstall.51i32.CopyFiles
+[D1048.51i32.Services]
+AddService=ixgb, 2, ixgb.51i32.Service, ixgb.51i32.EventLog
+[D1048.51i32.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[D1048.51i32.HW]
+Include=machine.inf
+Needs=PciIoSpaceNotRequired
+[Obsolete.DelReg]
+HKR, Ndi\Params\RxDescriptorCount
+HKR,,RxDescriptorCount
+HKR, PROSetNdi\NdiExt\params\RxDescriptorCount
+HKR, Ndi\Params\TxDescriptorCount
+HKR,,TxDescriptorCount
+HKR, PROSetNdi\NdiExt\params\TxDescriptorCount
+[Default.reg]
+HKR, Ndi\Interfaces, UpperRange, 0, "ndis5"
+HKR, Ndi\Interfaces, LowerRange, 0, "ethernet"
+HKR, Ndi, Service, 0, "IXGB"
+HKR, Ndi\Params\ChecksumRxIp, ParamDesc, 0, %ChecksumRxIp%
+HKR, PROSetNdi\NdiExt\Params\ChecksumRxIp, MiniHelp, 0, %ChecksumRxIpMiniHelp%
+HKR, Ndi\Params\ChecksumRxIp, default, 0, "1"
+HKR, Ndi\Params\ChecksumRxIp\Enum, "0", 0, %Off%
+HKR, Ndi\Params\ChecksumRxIp\Enum, "1", 0, %On%
+HKR, Ndi\Params\ChecksumRxIp, type, 0, "enum"
+HKR, Ndi\Params\ChecksumRxTcp, ParamDesc, 0, %ChecksumRxTcp%
+HKR, PROSetNdi\NdiExt\Params\ChecksumRxTcp, MiniHelp, 0, %ChecksumRxTcpMiniHelp%
+HKR, Ndi\Params\ChecksumRxTcp, default, 0, "1"
+HKR, Ndi\Params\ChecksumRxTcp\Enum, "0", 0, %Off%
+HKR, Ndi\Params\ChecksumRxTcp\Enum, "1", 0, %On%
+HKR, Ndi\Params\ChecksumRxTcp, type, 0, "enum"
+HKR, Ndi\Params\ChecksumTxIp, ParamDesc, 0, %ChecksumTxIp%
+HKR, PROSetNdi\NdiExt\Params\ChecksumTxIp, MiniHelp, 0, %ChecksumTxIpMiniHelp%
+HKR, Ndi\Params\ChecksumTxIp, default, 0, "1"
+HKR, Ndi\Params\ChecksumTxIp\Enum, "0", 0, %Off%
+HKR, Ndi\Params\ChecksumTxIp\Enum, "1", 0, %On%
+HKR, Ndi\Params\ChecksumTxIp, type, 0, "enum"
+HKR, Ndi\Params\ChecksumTxTcp, ParamDesc, 0, %ChecksumTxTcp%
+HKR, PROSetNdi\NdiExt\Params\ChecksumTxTcp, MiniHelp, 0, %ChecksumTxTcpMiniHelp%
+HKR, Ndi\Params\ChecksumTxTcp, default, 0, "1"
+HKR, Ndi\Params\ChecksumTxTcp\Enum, "0", 0, %Off%
+HKR, Ndi\Params\ChecksumTxTcp\Enum, "1", 0, %On%
+HKR, Ndi\Params\ChecksumTxTcp, type, 0, "enum"
+HKR, Ndi\Params\MaxFrameSize, ParamDesc, 0, %JumboFrames%
+HKR, PROSetNdi\NdiExt\params\MaxFrameSize, MiniHelp, 0, %JumboFramesMiniHelp%
+HKR, Ndi\Params\MaxFrameSize, default, 0, "1514"
+HKR, Ndi\Params\MaxFrameSize\Enum, "1514", 0, %Disabled%
+HKR, Ndi\Params\MaxFrameSize\Enum, "4088", 0, %Bytes4088%
+HKR, Ndi\Params\MaxFrameSize\Enum, "9014", 0, %Bytes9014%
+HKR, Ndi\Params\MaxFrameSize\Enum, "16128", 0, %Bytes16128%
+HKR, Ndi\Params\MaxFrameSize, type, 0, "enum"
+HKR,, MaxFrameSize, 2, "1514"
+HKR, Ndi\params\NetworkAddress, ParamDesc, 0, %LAA%
+HKR, PROSetNdi\NdiExt\params\NetworkAddress, MiniHelp, 0, %LAAMiniHelp%
+HKR, Ndi\params\NetworkAddress, Default, 0, ""
+HKR, Ndi\params\NetworkAddress, type, 0, "edit"
+HKR, NDI\params\NetworkAddress, LimitText, 0, "12"
+HKR, NDI\params\NetworkAddress, UpperCase, 0, "1"
+HKR, NDI\params\NetworkAddress, optional, 0, "1"
+HKR, Ndi\params\NumRxDescriptors, ParamDesc, 0, %RxDescriptorCount%
+HKR, PROSetNdi\NdiExt\params\NumRxDescriptors, MiniHelp, 0, %RxDescriptorCountMiniHelp%
+HKR, Ndi\params\NumRxDescriptors, default, 0, "256"
+HKR, Ndi\params\NumRxDescriptors\Enum, "64", 0, " 64"
+HKR, Ndi\params\NumRxDescriptors\Enum, "128", 0, " 128"
+HKR, Ndi\params\NumRxDescriptors\Enum, "256", 0, " 256"
+HKR, Ndi\params\NumRxDescriptors\Enum, "512", 0, " 512"
+HKR, Ndi\params\NumRxDescriptors, type, 0, "enum"
+HKR, Ndi\params\NumTxDescriptors, ParamDesc, 0, %TxDescriptorCount%
+HKR, PROSetNdi\NdiExt\params\NumTxDescriptors, MiniHelp, 0, %TxDescriptorCountMiniHelp%
+HKR, Ndi\params\NumTxDescriptors, default, 0, "512"
+HKR, Ndi\params\NumTxDescriptors\Enum, "64", 0, " 64"
+HKR, Ndi\params\NumTxDescriptors\Enum, "128", 0, " 128"
+HKR, Ndi\params\NumTxDescriptors\Enum, "256", 0, " 256"
+HKR, Ndi\params\NumTxDescriptors\Enum, "512", 0, " 512"
+HKR, Ndi\params\NumTxDescriptors\Enum, "1024", 0, " 1024"
+HKR, Ndi\params\NumTxDescriptors\Enum, "2048", 0, " 2048"
+HKR, Ndi\params\NumTxDescriptors\Enum, "4096", 0, " 4096"
+HKR, Ndi\params\NumTxDescriptors\Enum, "8192", 0, " 8192"
+HKR, Ndi\params\NumTxDescriptors\Enum, "16384", 0, "16384"
+HKR, Ndi\params\NumTxDescriptors, type, 0, "enum"
+HKR, Ndi\Params\TaggingMode, ParamDesc, 0, %TaggingMode%
+HKR, PROSetNdi\NdiExt\params\TaggingMode, MiniHelp, 0, %TaggingModeMiniHelp%
+HKR, Ndi\Params\TaggingMode, default, 0, "0"
+HKR, Ndi\Params\TaggingMode\Enum, "0", 0, %Disabled%
+HKR, Ndi\Params\TaggingMode\Enum, "1", 0, %Enabled%
+HKR, Ndi\Params\TaggingMode, type, 0, "enum"
+HKR,, TaggingMode, 2, "0"
+HKR,, MulticastFilterType,0, "0"
+HKR,, CustomMessages, 0, "1"
+HKR,, VlanFiltering, 0, "1"
+[NDIS51.reg]
+HKR, Ndi\Params\TcpSegmentation, ParamDesc, 0, %TcpSegmentation%
+HKR, PROSetNdi\NdiExt\Params\TcpSegmentation, MiniHelp, 0, %TcpSegmentationMiniHelp%
+HKR, Ndi\Params\TcpSegmentation, default, 0, "1"
+HKR, Ndi\Params\TcpSegmentation\Enum, "0", 0, %Off%
+HKR, Ndi\Params\TcpSegmentation\Enum, "1", 0, %On%
+HKR, Ndi\Params\TcpSegmentation, type, 0, "enum"
+[EventLog.50i32.reg]
+HKR,, EventMessageFile, 0x00020000, \
+%EventLogMessageDllPath_50i32%
+[EventLog.51i32.reg]
+HKR,, EventMessageFile, 0x00020000, \
+%EventLogMessageDllPath_51i32%
+[EventLog.Default.reg]
+HKR,, TypesSupported, 0x00010001, 7
+[Uninstall.50i32.reg]
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1048, 0, "82597 EX"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1A48, 0, "82597 EX"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1B48, 0, "82597 EX"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 109E, 0, "82597 EX"
+HKLM,Software\Intel\Prounstl\Dins, ixgb325.din, 0, "8259x.Uninstall"
+HKLM,Software\Intel\Prounstl\Services, IXGB, 0, "ixgb325.sys"
+[Uninstall.51i32.reg]
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1048, 0, "82597 EX"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1A48, 0, "82597 EX"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1B48, 0, "82597 EX"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 109E, 0, "82597 EX"
+HKLM,Software\Intel\Prounstl\Dins, ixgb3251.din, 0, "8259x.Uninstall"
+HKLM,Software\Intel\Prounstl\Services, IXGB, 0, "ixgb3251.sys"
+[ixgb.50i32.Service]
+DisplayName=%ixgb.Service.DisplayName%
+ServiceType=1 ;%SERVICE_KERNEL_DRIVER%
+StartType=3 ;%SERVICE_DEMAND_START%
+ErrorControl=1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\ixgb325.sys
+LoadOrderGroup=NDIS
+[ixgb.51i32.Service]
+DisplayName=%ixgb.Service.DisplayName%
+ServiceType=1 ;%SERVICE_KERNEL_DRIVER%
+StartType=3 ;%SERVICE_DEMAND_START%
+ErrorControl=1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\ixgb3251.sys
+LoadOrderGroup=NDIS
+[ixgb.50i32.EventLog]
+AddReg=EventLog.Default.reg, EventLog.50i32.reg
+[ixgb.51i32.EventLog]
+AddReg=EventLog.Default.reg, EventLog.51i32.reg
+[CoInstaller_CopyFiles]
+NicCo2.dll,,,0x00000010 ;don't overwrite
+NicInst.dll
+[CoInstaller_AddReg]
+HKR,, CoInstallers32, 0x00010000,"NicCo2.dll,NicCoInstallerEntry"
+HKR,, NicCoPlugins, 0x00010000, "NicInst.dll,NicCoInstallerEntry"
+[CoInK.reg]
+HKR,, CoInstallFlag, 0x00010001, "0x00000000"
+[ixgb.50i32.CopyFiles]
+ixgb325.sys,,,2
+[ixgb.51i32.CopyFiles]
+ixgb3251.sys,,,2
+[ixgbmsg.CopyFiles]
+ixgbmsg.dll,,,2
+[Uninstall.50i32.CopyFiles]
+ixgb325.din,,,2
+[Uninstall.51i32.CopyFiles]
+ixgb3251.din,,,2
+[DestinationDirs]
+DefaultDestDir=11
+ixgb.50i32.CopyFiles=12
+ixgb.51i32.CopyFiles=12
+Uninstall.50i32.CopyFiles=11
+Uninstall.51i32.CopyFiles=11
+CoInstaller_CopyFiles=11
+ixgbmsg.CopyFiles=11
+[SourceDisksNames]
+1=%DiskName%,,,
+[SourceDisksFiles]
+ixgb325.din=1
+ixgb325.sys=1
+ixgb3251.din=1
+ixgb3251.sys=1
+NicCo2.dll=1
+NicInst.dll=1
+ixgbmsg.dll=1
+[Strings]
+EventLogMessageDllPath_50i32="%SystemRoot%\System32\netevent.dll;%SystemRoot%\System32\drivers\ixgb325.sys"
+EventLogMessageDllPath_51i32="%SystemRoot%\System32\netevent.dll;%SystemRoot%\System32\drivers\ixgb3251.sys"
+ChecksumTxIp="Offload Transmit IP Checksum"
+ChecksumTxTcp="Offload Transmit TCP Checksum"
+ChecksumRxIp="Offload Receive IP Checksum"
+ChecksumRxTcp="Offload Receive TCP Checksum"
+TcpSegmentation="Offload TCP Segmentation"
+TxDescriptorCount="Transmit Descriptors"
+RxDescriptorCount="Receive Descriptors"
+TaggingMode="QoS Packet Tagging"
+On="On"
+Off="Off"
+Enabled="Enabled"
+Disabled="Disabled"
+Bytes4088="4088 Bytes"
+Bytes16128="16128 Bytes"
+Bytes9014="9014 Bytes"
+LAA="Locally Administered Address"
+JumboFrames="Jumbo Frames"
+ChecksumRxIpMiniHelp="Allows the adapter to verify the IP checksum of incoming packets. This improves IP receive performance."
+ChecksumRxTcpMiniHelp="Allows the adapter to verify the TCP checksum of incoming packets. This improves TCP receive performance."
+ChecksumTxIpMiniHelp="Allows the adapter to compute the IP checksum of outgoing packets. This improves IP transmit performance."
+ChecksumTxTcpMiniHelp="Allows the adapter to compute the TCP Checksum of outgoing packets. This improves TCP transmit performance."
+JumboFramesMiniHelp="Enables sending larger packets on Ethernet networks."
+LAAMiniHelp="Allows you to change the adapter's MAC address."
+RxDescriptorCountMiniHelp="The number of receive buffers and descriptors that the driver allocates for received packets."
+TaggingModeMiniHelp="Send and receive IEEE Tagged frames (802.3ac/802.1p/802.1Q)."
+TcpSegmentationMiniHelp="Allows the adapter to offload the task of segmenting TCP messages and improves CPU utilization."
+TxDescriptorCountMiniHelp="The number of hardware resources in memory used to send packets."
+Intel="Intel"
+DiskName="Intel(R) PRO/10GbE Driver Disk"
+ixgb.Service.DisplayName="Intel(R) PRO/10GbE Network Connection Driver"
+D1048.LR.Description="Intel(R) PRO/10GbE LR Server Adapter"
+D1048.Generic.Description="Intel(R) 82597-based 10 Gigabit Adapter"
+D109E.LR.Description="Intel(R) PRO/10GbE CX4 Server Adapter"
+D109E.Generic.Description="Intel(R) 82597-based CX4 10 Gigabit Adapter"
+D1A48.SR.Description="Intel(R) PRO/10GbE SR Server Adapter"
+D1A48.Generic.Description="Intel(R) 82597-based 10 Gigabit Adapter"
+D1B48.LR.Description="Intel(R) PRO/10GbE LR Server Adapter"
+D1B48.Generic.Description="Intel(R) 82597-based 10 Gigabit Adapter"

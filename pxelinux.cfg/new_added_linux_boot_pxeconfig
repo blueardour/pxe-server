@@ -1,0 +1,61 @@
+
+label   ubuntu-lucid-i386
+menu    label --- Install Ubuntu-lucid-desktop-i386
+kernel  15-lucid-i386/vmlinuz
+append  initrd=15-lucid-i386/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-lucid-amd64
+menu    label --- Install Ubuntu-lucid-desktop-amd64
+kernel  16-lucid-amd64/vmlinuz
+append  initrd=16-lucid-amd64/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-oneiric-i386
+menu    label --- Install Ubuntu-oneiric-desktop-i386
+kernel  17-oneiric-i386/vmlinuz
+append  initrd=17-oneiric-i386/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-oneiric-amd64
+menu    label --- Install Ubuntu-oneiric-desktop-amd64
+kernel  18-oneiric-amd64/vmlinuz
+append  initrd=18-oneiric-amd64/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-precise-i386
+menu    label --- Install Ubuntu-precise-desktop-i386
+kernel  19-precise-i386/vmlinuz
+append  initrd=19-precise-i386/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-precise-amd64
+menu    label --- Install Ubuntu-precise-desktop-amd64
+kernel  20-precise-amd64/vmlinuz
+append  initrd=20-precise-amd64/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-quantal-i386
+menu    label --- Install Ubuntu-quantal-desktop-i386
+kernel  21-quantal-i386/vmlinuz
+append  initrd=21-quantal-i386/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-quantal-amd64
+menu    label --- Install Ubuntu-quantal-desktop-amd64
+kernel  22-quantal-amd64/vmlinuz
+append  initrd=22-quantal-amd64/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-raring-i386
+menu    label --- Install Ubuntu-raring-desktop-i386
+kernel  23-raring-i386/vmlinuz
+append  initrd=23-raring-i386/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-raring-amd64
+menu    label --- Install Ubuntu-raring-desktop-amd64
+kernel  24-raring-amd64/vmlinuz
+append  initrd=24-raring-amd64/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-saucy-i386
+menu    label --- Install Ubuntu-saucy-desktop-i386
+kernel  25-saucy-i386/vmlinuz
+append  initrd=25-saucy-i386/initrd.lz ramdisk_size=9216 noapic acpi=off
+
+label   ubuntu-saucy-amd64
+menu    label --- Install Ubuntu-saucy-desktop-amd64
+kernel  26-saucy-amd64/vmlinuz
+append  initrd=26-saucy-amd64/initrd.lz ramdisk_size=9216 noapic acpi=off
+

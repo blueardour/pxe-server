@@ -1,0 +1,127 @@
+
+[version]
+Signature="$Windows NT$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider=%DLink%
+DriverVer=06/24/1999, 1.0.0.0
+[Manufacturer]
+%DLink%=DLink
+[DLink]
+%LXT1001.DeviceDesc%=LXT1ND5.ndi, PCI\VEN_1394&DEV_0001&SUBSYS_48001186
+[LXT1ND5.ndi]
+AddReg=LXT1ND5.id.reg, JT1ND5Flags.reg, JT1ND5.params, JT1ND5.win.reg
+DeviceID="PCI\VEN_1394&DEV_0001"
+DriverVer=06/24/1999, 1.0.0.0
+[LXT1ND5.ndi.NT]
+Characteristics=0x84
+BusType=5
+AddReg=JT1ND5.reg, JT1ND5.Cfg.params
+;CpyFiles=JT1ND5.CopyFiles, JT1ND5.CopyInf, JT1ND5.CopyCfgDll
+DriverVer=06/24/1999, 1.0.0.0
+[LXT1ND5.id.reg]
+HKR, Ndi, DeviceID, 0, "PCI\VEN_1394&DEV_0001"
+HKR,,AdapterCFID,,00011394
+[JT1ND5Flags.reg]
+HKR,Ndi\params\NetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\PermanentNetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\DuplexMode,flag,1,20,00,00,00
+HKR,Ndi\params\Speed,flag,1,20,00,00,00
+HKR,Ndi\params\PHYInterface,flag,1,20,00,00,00
+[JT1ND5.Cfg.params]
+HKR,,EnumPropPages32, 0, "DgeCfgDll.dll,JatoProp"
+[JT1ND5.params]
+HKR,Ndi\params\NetworkAddress,ParamDesc,,"NetworkAddress"
+HKR,Ndi\params\NetworkAddress,type,,edit
+HKR,Ndi\params\NetworkAddress,LimitText,,12
+HKR,Ndi\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,Ndi\params\NetworkAddress,optional,,1
+HKR,Ndi\params\PermanentNetworkAddress,ParamDesc,,"PermanentNetworkAddress"
+HKR,Ndi\params\PermanentNetworkAddress,type,,edit
+HKR,Ndi\params\PermanentNetworkAddress,LimitText,,12
+HKR,Ndi\params\PermanentNetworkAddress,UpperCase,,1
+HKR,Ndi\params\PermanentNetworkAddress,default,,""
+HKR,Ndi\params\PermanentNetworkAddress,optional,,1
+HKR,Ndi\params\DuplexMode,ParamDesc,,"DuplexMode"
+HKR,Ndi\params\DuplexMode,type,,enum
+HKR,Ndi\params\DuplexMode,default,,0
+HKR,Ndi\params\DuplexMode\enum,0,,"Auto Negotiate"
+HKR,Ndi\params\DuplexMode\enum,1,,"Half Duplex"
+HKR,Ndi\params\DuplexMode\enum,2,,"Full Duplex"
+HKR,Ndi\params\Speed,ParamDesc,,"Speed"
+HKR,Ndi\params\Speed,type,,enum
+HKR,Ndi\params\Speed,default,,0
+HKR,Ndi\params\Speed\enum,0,,"Auto Negotiate"
+HKR,Ndi\params\Speed\enum,1,," 10 Mbit"
+HKR,Ndi\params\Speed\enum,2,," 100 Mbit"
+HKR,Ndi\params\Speed\enum,3,,"1000 Mbit"
+HKR,Ndi\params\PHYInterface,ParamDesc,,"PHYInterface"
+HKR,Ndi\params\PHYInterface,type,,enum
+HKR,Ndi\params\PHYInterface,default,,0
+HKR,Ndi\params\PHYInterface\enum,0,,"Auto Negotiate"
+HKR,Ndi\params\PHYInterface\enum,1,,"PCS"
+HKR,Ndi\params\PHYInterface\enum,2,,"MII"
+HKR,Ndi\params\PHYInterface\enum,3,,"GMII"
+[JT1ND5.reg]
+HKR, Ndi, Service, 0, "JT1ND"
+HKR, Ndi\Interfaces, DefUpper, 0, "ndis5"
+HKR, Ndi\Interfaces, DefLower, 0, "ethernet"
+HKR, Ndi\Interfaces, UpperRange, 0, "ndis5"
+HKR, Ndi\Interfaces, LowerRange, 0, "ethernet"
+[LXT1ND5.ndi.NT.Services]
+AddService=JT1ND, 2, JT1ND5.Service, common.EventLog
+[JT1ND5.Service]
+DisplayName=%JT1ND5.Service.DispName%
+ServiceType=1 ;%SERVICE_KERNEL_DRIVER%
+StartType=3 ;%SERVICE_DEMAND_START%
+ErrorControl=1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\DGEND5.sys
+LoadOrderGroup=NDIS
+AddReg=TextModeFlags.reg
+[common.EventLog]
+AddReg=common.AddEventLog.reg
+[common.AddEventLog.reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported, 0x00010001, 7
+[TextModeFlags.reg]
+HKR, , TextModeFlags, 0x00010001, 0x0001
+[JT1ND5.win.reg]
+HKR, , DevLoader, 0, "*ndis"
+HKR, , DeviceVxDs, 0, dgend5.sys
+HKR, , EnumPropPages, 0, "netdi.dll,EnumPropPages"
+HKR, Ndi\Interfaces,DefUpper, 0, "ndis3"
+HKR, Ndi\Interfaces,DefLower, 0, "ethernet"
+HKR, Ndi\Interfaces,UpperRange, 0, "ndis3"
+HKR, Ndi\Interfaces,LowerRange, 0, "ethernet"
+HKR, NDIS, LogDriverName, 0, "JT1ND"
+HKR, NDIS, MajorNdisVersion, 1, 03
+HKR, NDIS, MinorNdisVersion, 1, 01
+HKR, Ndi\Install, ndis3, 0, "JT1ND5.install"
+[SourceDisksNames]
+1=%L1NETDISKNAME%,,,
+[SourceDisksFiles]
+DGEND5.sys=1
+netdge.inf=1
+[JT1ND5.install]
+;CpyFiles=JT1ND5.win.CopyFiles, JT1ND5.CopyInf
+[JT1ND5.CopyCfgExe]
+DgeCfgDll.Exe
+[JT1ND5.CopyCfgDll]
+[JT1ND5.CopyFiles]
+DGEND5.sys,,,2
+[JT1ND5.win.CopyFiles]
+DGEND5.sys
+[JT1ND5.CopyInf]
+netdge.inf
+[DestinationDirs]
+JT1ND5.CopyFiles=12
+JT1ND5.win.CopyFiles=11
+JT1ND5.CopyInf=17 ; LDID_INF
+JT1ND5.CopyCfgExe=11
+JT1ND5.CopyCfgDll=11
+[Strings]
+DLink="D-Link"
+LXT1001.DeviceDesc="D-Link DGE-500SX Giga-Ether Adapter"
+JT1ND5.Service.DispName="D-Link DGE-500SX Giga-Ether Adapter Driver"
+L1NETDISKNAME="D-Link DGE-500SX Giga-Ether Adapter Driver Disk"

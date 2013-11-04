@@ -1,0 +1,123 @@
+;*******************************************************************************
+; Copyright 2000-2004 Broadcom Corporation.
+;
+; Module Description:
+;    Broadcom Load Balancing Fail Over driver INF file for 32-bit Windows 2K & XP.
+;
+; History:
+;    07/06/04 Pierre M. Laroche
+;       Merged with win2k .inf
+;    03/21/02 Hao-Yang Feng
+;       First release
+;*******************************************************************************
+
+[Version]
+signature  = "$Windows NT$"
+Class      = Net
+ClassGUID  = {4d36e972-e325-11ce-bfc1-08002be10318}
+CatalogFile = netbi32m.cat
+Provider   = %BRCM%
+DriverVer  = 05/22/2009,6.3.13
+
+
+[Manufacturer]
+%BRCM% = Broadcom, NTx86.5.1
+
+
+[Broadcom]
+%BLFM_DESC% = BlfmW2k.Install, BRCM_BLFM
+
+
+[Broadcom.NTx86.5.1]
+%BLFM_DESC% = Blfm.Install, BRCM_BLFM
+
+
+[ControlFlags]
+ExcludeFromSelect = BRCM_BLFM
+
+
+;*******************************************************************************
+; WinXP install section
+;*******************************************************************************
+
+[Blfm.Install.NTx86]
+AddReg          = Blfm.Install.AddReg, Blfm.Install.Params
+Characteristics = 0x80a1  ; NCF_FORCE_NDIS_NOTIFY | NCF_VIRTUAL | NCF_NOT_USER_REMOVABLE
+
+[Blfm.Install.NTx86.Services]
+AddService = Blfm, 0x2, Blfm.AddService, Blfm.EventLog
+
+[Blfm.AddService]
+DisplayName    = %BLFM_DESC%
+ServiceType    = 1            ; SERVICE_KERNEL_DRIVER
+StartType      = 3            ; SERVICE_DEMAND_START
+ErrorControl   = 1            ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\baspxp32.sys
+Addreg         = bcmPnpInstallReg
+
+[bcmPnpInstallReg]
+HKR,,product_version,0,"12.8.0"
+
+[Blfm.EventLog]
+AddReg = Blfm.AddEventLog.Reg
+
+[Blfm.AddEventLog.Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll;%%SystemRoot%%\System32\drivers\baspxp32.sys"
+HKR, , TypesSupported  , 0x00010001, 7
+
+
+;*******************************************************************************
+; Win2k install section
+;*******************************************************************************
+
+[BlfmW2k.Install.NT]
+AddReg          = Blfm.Install.AddReg, Blfm.Install.Params
+Characteristics = 0x80a1  ; NCF_FORCE_NDIS_NOTIFY | NCF_VIRTUAL | NCF_NOT_USER_REMOVABLE
+
+[BlfmW2k.Install.NT.Services]
+AddService = Blfm, 0x2, BlfmW2k.AddService, BlfmW2k.EventLog
+
+[BlfmW2k.AddService]
+DisplayName    = %BLFM_DESC%
+ServiceType    = 1            ; SERVICE_KERNEL_DRIVER
+StartType      = 3            ; SERVICE_DEMAND_START
+ErrorControl   = 1            ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\baspw2k.sys
+Addreg         = bcmPnpInstallReg
+
+[bcmPnpInstallReg]
+HKR,,product_version,0,"12.8.0"
+
+
+[BlfmW2k.EventLog]
+AddReg = BlfmW2k.AddEventLog.Reg
+
+[BlfmW2k.AddEventLog.Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll;%%SystemRoot%%\System32\drivers\baspw2k.sys"
+HKR, , TypesSupported  , 0x00010001, 7
+
+;*******************************************************************************
+; Common install section
+;*******************************************************************************
+
+[Blfm.Install.AddReg]
+HKR, Ndi,            Service,    0, "Blfm"
+HKR, Ndi\Interfaces, UpperRange, 0, "ndis5"
+HKR, Ndi\Interfaces, LowerRange, 0, "ethernet"
+
+[Blfm.Install.Params]
+;HKR, Parameters, ParameterName,  0x10000, "MultiSz", "Parameter", "Value"
+;HKR, Parameters, ParameterName2, 0x10001, 4
+
+[SourceDisksNames]
+1 = %DISK_DESC%,,,
+
+;*******************************************************************************
+; Localizable string section.
+;*******************************************************************************
+
+[Strings]
+BRCM            = "Broadcom"
+DISK_DESC       = "Broadcom Advanced Server Program Driver Diskette"
+BLFM_DESC       = "BASP Virtual Adapter"
+

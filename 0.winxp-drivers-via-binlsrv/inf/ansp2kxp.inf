@@ -1,0 +1,100 @@
+
+[Version]
+Signature="$Windows NT$"
+Class=NetTrans
+ClassGUID={4D36E975-E325-11CE-BFC1-08002BE10318}
+Provider=%V_Intel%
+CatalogFile=ians2kxp.cat
+DriverVer=05/20/2009,8.6.19.0
+[Manufacturer]
+%V_Intel%=Intel, NT.5.1, NTIA64, NTAMD64
+[ControlFlags]
+ExcludeFromSelect=*
+[Intel.NT.5.1]
+%iANSProtocol.Desc%=iANSProtocol.ndi.NT.5.1, iANSProtocol
+[Intel.NTIA64]
+[Intel.NTAMD64]
+[iANSProtocol.ndi.NT.5.1]
+AddReg=iANSProtocol.ndi.AddReg.wxp
+Characteristics=0x00
+;CpyFiles=iANSProtocol.ndi.CopyFiles.wxp
+[iANSProtocol.ndi.CopyFiles.wxp]
+ianswxp.sys,,,2
+iansmsg.dll,,,2
+[iANSProtocol.ndi.AddReg.wxp]
+HKR, Ndi, ClsId, , {B9849E51-3495-11D3-883A-0004AC066F24}
+HKR, Ndi, ComponentDll,, "PRONtObj.dll"
+HKR, Ndi, HelpText, , %iANSProtocol_HELP%
+HKR, Ndi, Service, ,"iANSProtocol"
+HKR, Ndi\Interfaces, UpperRange, , "tdi"
+HKR, Ndi\Interfaces, LowerRange, , "ndis5,ndisatm"
+[iANSProtocol.ndi.NT.5.1.Services]
+AddService=iANSProtocol, 0, Install.AddService.iANSProtocol.wxp, NetEventLog.wxp
+[Install.AddService.iANSProtocol.wxp]
+DisplayName=%iANSProtocol.Desc%
+ServiceType=%SERVICE_KERNEL_DRIVER%
+StartType=%SERVICE_DEMAND_START%
+ErrorControl=%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\ianswxp.sys
+LoadOrderGroup=NDIS
+AddReg=iANSProtocol.AddService.AddReg.wxp
+Description=%iANSProtocol.Desc%
+[iANSProtocol.AddService.AddReg.wxp]
+HKR,Parameters\Adapters,,%FLG_ADDREG_KEYONLY%
+HKR,Parameters\Interfaces,,%FLG_ADDREG_KEYONLY%
+HKR,,"TextModeFlags",%REG_DWORD%,0x0001
+[NetEventLog.wxp]
+AddReg=NetEventLog.AddReg.wxp
+[NetEventLog.AddReg.wxp]
+HKR,,EventMessageFile,0x00020000, %CustomizedEventMessageFile_wxp%
+HKR,,TypesSupported,0x00010001,7
+[iANSProtocol.ndi.NT.5.1.Remove.Services]
+DelService=iANSProtocol
+[DestinationDirs]
+DefaultDestDir=11
+iANSProtocol.ndi.CopyFiles.wxp=12
+[SourceDisksNames]
+1=%DISKNAME%,,,
+[SourceDisksFiles]
+ianswxp.sys=1
+iansmsg.dll=1
+[No_DRV]
+[Strings]
+CustomizedEventMessageFile_wxp="%SystemRoot%\System32\drivers\ianswxp.sys"
+CustomizedEventMessageFile_w32e="%SystemRoot%\System32\drivers\iansw32e.sys"
+CustomizedEventMessageFile_w64="%SystemRoot%\System32\drivers\iansw64.sys"
+iANSProtocol_HELP="Intel(R) Advanced Network Services Protocol is used for advanced features like teaming and virtual LAN"
+DISKNAME="Intel(R) Advanced Network Services CD-ROM or floppy disk"
+V_Intel="Intel"
+iANSProtocol.Desc="Intel(R) Advanced Network Services Protocol"
+SERVICE_KERNEL_DRIVER=0x00000001
+SERVICE_FILE_SYSTEM_DRIVER=0x00000002
+SERVICE_ADAPTER=0x00000004
+SERVICE_RECOGNIZER_DRIVER=0x00000008
+SERVICE_WIN32_OWN_PROCESS=0x00000010
+SERVICE_WIN32_SHARE_PROCESS=0x00000020
+SERVICE_INTERACTIVE_PROCESS=0x00000100
+SERVICE_INTERACTIVE_SHARE_PROCESS=0x00000120
+SERVICE_BOOT_START=0x00000000
+SERVICE_SYSTEM_START=0x00000001
+SERVICE_AUTO_START=0x00000002
+SERVICE_DEMAND_START=0x00000003
+SERVICE_DISABLED=0x00000004
+SERVICE_ERROR_IGNORE=0x00000000
+SERVICE_ERROR_NORMAL=0x00000001
+SERVICE_ERROR_SEVERE=0x00000002
+SERVICE_ERROR_CRITICAL=0x00000003
+NCF_VIRTUAL=0x0001
+NCF_WRAPPER=0x0002
+NCF_PHYSICAL=0x0004
+NCF_HIDDEN=0x0008
+NCF_NO_SERVICE=0x0010
+NCF_NOT_USER_REMOVABLE=0x0020
+NCF_HAS_UI=0x0080
+NCF_MODEM=0x0100
+REG_MULTI_SZ=0x10000
+REG_EXPAND_SZ=0x20000
+REG_DWORD=0x10001
+SPSVCINST_TAGTOFRONT=0x1
+SPSVCINST_ASSOCSERVICE=0x2
+FLG_ADDREG_KEYONLY=0x00000010
