@@ -20,19 +20,21 @@ DisableAdminAccountOnDomainJoin = 1
   ;perform a fully unattended install, which uses the winnt.sif answer file
   UnattendMode=FullUnattended
 
-  ;; for sata driver
-  OemPreinstall=Yes
-  OemPnPDriversPath="drivers\sata\"
-  ;; end
-
-  OemSkipEula=Yes
-
   Repartition=No
   FileSystem=*
 
-  UnattendSwitch="yes"
+  ;; for sata driver
+  OemSkipEula=Yes
+  OemPreinstall=Yes
+  OemPnPDriversPath="drivers"
+
+  UnattendSwitch="Yes"
   WaitForReboot="No"
+
   DriverSigningPolicy=Ignore
+
+  ;;install windows path
+  TargetPath=\WINDOWS
 
 [RemoteInstall]
   Repartition=No
@@ -45,7 +47,7 @@ DisableAdminAccountOnDomainJoin = 1
 
 [SetupData]  
 OsLoadOptions = "/fastdetect"  
-SetupSourceDevice = "\Device\LanmanRedirector\192.168.1.1\tftproot\os-cd\winxp-en-x64"
+SetupSourceDevice = "\Device\LanmanRedirector\192.168.1.1\tftproot\os-cd\winxp-en-x86"
  
    
 [GuiUnattended]  
@@ -56,7 +58,7 @@ SetupSourceDevice = "\Device\LanmanRedirector\192.168.1.1\tftproot\os-cd\winxp-e
     OemSkipWelcome=1  
   
 [UserData]  
-    ProductKey=VCFQD-V9FX9-46WVH-K3CD4-4J3JM
+    ProductKey=CM3HY-26VYW-6JRYC-X66GX-JVY2D  
     FullName="admin"  
     OrgName="Asia"  
     ComputerName=*  

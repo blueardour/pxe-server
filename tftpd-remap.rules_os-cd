@@ -1,0 +1,74 @@
+
+
+ri ^[a-z]:	 
+rg \\ / 	 # Convert backslashes to slashes
+rg \# @ 	 # Convert hash marks to @ signs
+rg /../ /..no../ # Convert /../ to /..no../
+rg A a
+rg B b
+rg C c
+rg D d
+rg E e
+rg F f
+rg G g
+rg H h
+rg I i
+rg J j
+rg K k
+rg L l
+rg M m
+rg N n
+rg O o
+rg P p
+rg Q q
+rg R r
+rg S s
+rg T t
+rg U u
+rg V v
+rg W w
+rg X x
+rg Y y
+rg Z z
+r  ^/(.*) \1
+
+
+re ^xp64e.0$      10.winxp-x64-en/xp64e.0
+re ^xp64e$        10.winxp-x64-en/xp64e
+re ^ntdxp64e.wxp$ 10.winxp-x64-en/ntdxp64e.wxp
+re ^xp64e.sif$    10.winxp-x64-en/xp64e.sif
+
+re ^xp86e.0$      13.winxp-x86-en/xp86e.0
+re ^xp86e$        13.winxp-x86-en/xp86e
+re ^ntdxp86e.wxp$ 13.winxp-x86-en/ntdxp86e.wxp
+re ^xp86e.sif$    13.winxp-x86-en/xp86e.sif
+
+# network card driver
+re (.*)/i386/iastor.sys$   0.winxp-drivers-via-binlsrv/drivers/iastor.sys
+re (.*)/i386/e1e5032.sys$  0.winxp-drivers-via-binlsrv/drivers/e1e5032.sys
+re (.*)/i386/e100bnt5.sys$ 0.winxp-drivers-via-binlsrv/drivers/e100bnt5.sys
+re (.*)/i386/pcntpci5.sys$ 0.winxp-drivers-via-binlsrv/drivers/pcntpci5.sys
+re (.*)/i386/rtl39a64.sys$ 0.winxp-drivers-via-binlsrv/drivers/rtl39a64.sys
+re (.*)/i386/rtl69a64.sys$ 0.winxp-drivers-via-binlsrv/drivers/rtl69a64.sys
+re (.*)/i386/rtl8029.sys$  0.winxp-drivers-via-binlsrv/drivers/rtl8029.sys
+re (.*)/i386/rtl8139.sys$  0.winxp-drivers-via-binlsrv/drivers/rtl8139.sys
+
+re (.*)/i686/iastor.sys$   0.winxp-drivers-via-binlsrv/drivers64/iastor.sys
+re (.*)/i686/e1e5032.sys$  0.winxp-drivers-via-binlsrv/drivers64/e1e5032.sys
+re (.*)/i686/e100bnt5.sys$ 0.winxp-drivers-via-binlsrv/drivers64/e100bnt5.sys
+re (.*)/i686/pcntpci5.sys$ 0.winxp-drivers-via-binlsrv/drivers64/pcntpci5.sys
+re (.*)/i686/rtl39a64.sys$ 0.winxp-drivers-via-binlsrv/drivers64/rtl39a64.sys
+re (.*)/i686/rtl69a64.sys$ 0.winxp-drivers-via-binlsrv/drivers64/rtl69a64.sys
+re (.*)/i686/rtl8029.sys$  0.winxp-drivers-via-binlsrv/drivers64/rtl8029.sys
+re (.*)/i686/rtl8139.sys$  0.winxp-drivers-via-binlsrv/drivers64/rtl8139.sys
+
+re ^10.winxp-x64-en/i686/txtsetup.si_$ 10.winxp-x64-en/i686/txtsetup.si_  
+re ^10.winxp-x64-en/i686/txtsetup.sif$ 10.winxp-x64-en/i686/txtsetup.sif
+re ^10.winxp-x64-en/i686 os-cd/winxp-en-x64/amd64
+re ^os-cd/winxp-en-x64/i686/txtsetup.sif$ 10.winxp-x64-en/i686/txtsetup.sif
+
+re ^13.winxp-x86-en/i386/txtsetup.si_$ 13.winxp-x86-en/i386/txtsetup.si_  
+re ^13.winxp-x86-en/i386/txtsetup.sif$ 13.winxp-x86-en/i386/txtsetup.sif
+re ^13.winxp-x86-en/i386 os-cd/winxp-en-x86/i386
+re ^os-cd/winxp-en-x86/i386/txtsetup.sif$ 13.winxp-x86-en/i386/txtsetup.sif
+
