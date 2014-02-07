@@ -1,2 +1,4 @@
 1.upper letter become little letter after mount ISO file
 
+2. get ip failed on virtualbox (bridge network) on dhcp-server when is ethernet wire is unplugged
+
