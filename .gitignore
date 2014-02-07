@@ -10,7 +10,9 @@
 /utils/syslinux
 /utils/test
 
+# pxe config
 /pxelinux.cfg/default
+/menu.lst/default
 
 # only add the *.inf file
 /0.winxp-drivers-via-binlsrv/inf/*

@@ -32,7 +32,7 @@ kernel 	/Ubuntu10.10/vmlinuz  boot=casper iso-scan/filename=/Ubuntu10.10/ubuntu-
 initrd 	/Ubuntu10.10/initrd.lz
 
 title Diskless Ubuntu 10.10 
-kernel (pd)/14.diskless-linux/kernel root=/dev/nfs boot=nfs rw init=/bin/bash nfsroot=219.219.218.30:/nfs_root/diskless1 panic=20 ip=dhcp
+kernel (pd)/14.diskless-linux/kernel root=/dev/nfs boot=nfs nfsroot=219.219.218.30:/nfs_root/ubuntu-10.10-i386 ip=dhcp panic=20
 initrd (pd)/14.diskless-linux/initrd
 
 title Reboot
