@@ -1,9 +1,11 @@
 # ! /bin/bash
 
-if [ $# -ge 1 ];then path=$1; else path=/tftproot/0.winxp-drivers-via-binlsrv/drivers; fi
+path=/tftp_root/0.winxp-drivers-via-binlsrv/drivers
+find $path -type f | awk -F/ '{print "re (.*)/i386/"$NF"$  0.winxp-drivers-via-binlsrv/drivers/"$NF}'
 
-echo "Gen work path:=$path"
+echo -e "\r\n\r\n"
 
-find $path -type f | awk -F/ '{print "re ^1.winxp-x86-ch/i386/"$NF"$  0.winxp-drivers-via-binlsrv/drivers/"$NF}'
+path=/tftp_root/0.winxp-drivers-via-binlsrv/drivers64
+find $path -type f | awk -F/ '{print "re (.*)/i686/"$NF"$  0.winxp-drivers-via-binlsrv/drivers64/"$NF}'
 
 
