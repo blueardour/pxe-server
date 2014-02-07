@@ -1,6 +1,8 @@
 
 # os-cd
-/os-cd
+/os-cd/winxp-en-x64
+/os-cd/winxp-en-x86
+/os-cd/winxp-zh-x86
 
 # syslinux
 /utils/binl-server/ris-linux-0.4
