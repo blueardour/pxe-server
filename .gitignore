@@ -8,6 +8,7 @@
 /utils/syslinux
 /utils/test
 
+/pxelinux.cfg/default
 
 # only add the *.inf file
 /0.winxp-drivers-via-binlsrv/inf/*
@@ -30,6 +31,7 @@
 /1.winxp-x86-ch/tmp
 /1.winxp-x86-ch/*.txt
 /1.winxp-x86-ch/*.cache
+/1.winxp-x86-ch/xp86c.sif
  
 # 2.win7-x86-en/
 /2.win7-x86-en/*
@@ -58,6 +60,7 @@
 /10.winxp-x64-en/amd64/*
 !/10.winxp-x64-en/amd64/txtsetup.sif
 /10.winxp-x64-en/i386/*
+/10.winxp-x64-en/xp64e.sif
  
 # 11.win-pe/
 # file size should not exceed 100M for GitHub
@@ -68,6 +71,7 @@
 # 13.winxp-x86-en/
 /13.winxp-x86-en/i386/*
 !/13.winxp-x86-en/i386/txtsetup.sif
+/13.winxp-x86-en/xp86e.sif
  
 /14.diskless-linux/*
 /14.diskless-linux/boot/Bak*
