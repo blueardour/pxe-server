@@ -31,6 +31,10 @@ label	winxp-x64-en
 menu	label ^5---Install WinXP-X64-EN
 kernel	10.winxp-x64-en/xp64e.0
 
+label	winxp-x86-zh
+menu	label ^6---Install WinXP-X86-ZH
+kernel	1.winxp-x86-ch/xp86c.0
+
 label	diskless-linux
 menu	label ^a---DiskLess Ubuntu10.10
 kernel	14.diskless-linux/kernel

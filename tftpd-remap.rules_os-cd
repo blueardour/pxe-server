@@ -36,14 +36,17 @@ r  ^/(.*) \1
 re ^xp64e$        10.winxp-x64-en/xp64e
 re ^ntdxp64e.wxp$ 10.winxp-x64-en/ntdxp64e.wxp
 re ^xp64e.sif$    10.winxp-x64-en/xp64e.sif
-re ^os-cd/winxp-en-x64/i686 os-cd/winxp-en-x64/amd64
 re ^os-cd/winxp-en-x64/i686/txtsetup.sif$ 10.winxp-x64-en/i686/txtsetup.sif
+re ^os-cd/winxp-en-x64/i686 os-cd/winxp-en-x64/amd64
 
 re ^xp86e$        13.winxp-x86-en/xp86e
 re ^ntdxp86e.wxp$ 13.winxp-x86-en/ntdxp86e.wxp
 re ^xp86e.sif$    13.winxp-x86-en/xp86e.sif
 re ^os-cd/winxp-en-x86/i386/txtsetup.sif$ 13.winxp-x86-en/i386/txtsetup.sif
 
+re ^xp86c$        1.winxp-x86-zh/xp86c
+re ^ntdxp86c.wxp$ 1.winxp-x86-zh/ntdxp86c.wxp
+re ^xp86c.sif$    1.winxp-x86-zh/xp86c.sif
 
 # extra driver
 re (.*)/i386/iastor.sys$   0.winxp-drivers-via-binlsrv/drivers/iastor.sys

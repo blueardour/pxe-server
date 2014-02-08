@@ -4126,7 +4126,7 @@ hschelpw.chm = 100,,,,,,,21,0,0,hschelp.chm
 hscsp_w3.cab = 100,,,,,,,,3,3 
 hscupd.exe = 100,,,,,,,,3,3 
 
-hscmui.cab = 100,,,,,,,,3,3 
+
 
 htable.xsl = 100,,,,,,,,3,3    
 htblsort.xsl = 1,,,,,,,,3,3  
@@ -9372,6 +9372,11 @@ stikynot.exe        = 2,,,,,,,,3,3
 
 
 
+chslex.bin        = 2,,,,,,,,3,3,Chslm.lex.bin
+chswdic.bin       = 2,,,,,,,,3,3,Chslm.wdic2.bin
+ImChxLm.dll       = 2,,,,,,,,3,3
+mshwchs.dll       = 2,,,,,,,,3,3
+mshwchsr.dll      = 2,,,,,,,,3,3
 
 
 
@@ -9412,11 +9417,6 @@ stikynot.exe        = 2,,,,,,,,3,3
 
 
 
-
-
-
-
-mshwuk.dll          = 2,,,,,,,,3,3
 
 
 
@@ -10776,187 +10776,693 @@ winshfhc.dll = 100,,,,,,,2,0,0
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[SourceDisksFiles]
+kbdycl.dll   = 1,,,,,,_x,2,1
+kbdycc.dll   = 1,,,,,,_x,2,1
+kbdvntc.dll  = 1,,,,,,_x,2,1
+kbduzb.dll   = 1,,,,,,_x,2,1
+kbdsl.dll    = 1,,,,,,_x,2,1
+kbdsl1.dll   = 1,,,,,,_x,2,1
+kbdro.dll    = 1,,,,,,_x,2,1
+kbdru.dll    = 1,,,,,,_x,2,1
+kbdru1.dll   = 1,,,,,,_x,2,1
+kbdtat.dll   = 1,,,,,,_x,2,1
+kbdtuf.dll   = 1,,,,,,_x,2,1
+kbdtuq.dll   = 1,,,,,,_x,2,1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [WinntDirectories]
-700 = system32\mui\0401
-701 = system32\mui\0404
-702 = system32\mui\0405
-703 = system32\mui\0406
-704 = system32\mui\0407
-705 = system32\mui\0408
-706 = system32\mui\040b
-707 = system32\mui\040C
-708 = system32\mui\040D
-709 = system32\mui\040e
-710 = system32\mui\0410
-711 = system32\mui\0411
-712 = system32\mui\0412
-713 = system32\mui\0413
-714 = system32\mui\0414
-715 = system32\mui\0415
-716 = system32\mui\0416
-717 = system32\mui\0419
-718 = system32\mui\041D
-719 = system32\mui\041f
-720 = system32\mui\0804
-721 = system32\mui\0816
-722 = system32\mui\0C0A
-723 = system32\mui\0402
-724 = system32\mui\0418
-725 = system32\mui\041a
-726 = system32\mui\041b
-727 = system32\mui\041e
-728 = system32\mui\0424
-729 = system32\mui\0425
-730 = system32\mui\0426
-731 = system32\mui\0427
-243 = system32\en
-244 = system32\scripting
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+204 = System32\IME\PINTLGNT
+205 = IME\CHSIME\APPLETS
+220 = IME\SHARED
+221 = IME\SHARED\RES
+243 = system32\zh-CHS
+244 = system32\zh-cn
 
 [SourceDisksFiles]
-kbdycl.dll   = 1,,,,,,_5,2,1
-kbdycc.dll   = 1,,,,,,_5,2,1
-kbdvntc.dll  = 1,,,,,,_5,2,1
-kbduzb.dll   = 1,,,,,,_5,2,1
-kbdsl.dll    = 1,,,,,,_5,2,1
-kbdsl1.dll   = 1,,,,,,_5,2,1
-kbdro.dll    = 1,,,,,,_5,2,1
-kbdru.dll    = 1,,,,,,_5,2,1
-kbdru1.dll   = 1,,,,,,_5,2,1
-kbdtat.dll   = 1,,,,,,_5,2,1
-kbdtuf.dll   = 1,,,,,,_5,2,1
-kbdtuq.dll   = 1,,,,,,_5,2,1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[SourceDisksFiles]
-big5.nls     = 1,,,,,,,,3,3
-bopomofo.nls = 1,,,,,,,,3,3
+sprs0804.dll = 100,,,,,,,2,0,0,xpsp1res.dll,1,2
+sprt0804.dll = 100,,,,,,,2,0,0,xpsp2res.dll,1,2
+spru0804.dll = 100,,,,,,,2,0,0,xpsp3res.dll,1,2
+obrs0804.dll = 100,,,,,,,2,0,0,xpob2res.dll,1,2
 c_10003.nls  = 1,,,,,,,,3,3
 c_1361.nls   = 1,,,,,,,,3,3
 config.nt = 1,,,,,,,2,2       
-edit.com     = 1,,,,,,,2,1,0
-edit.hlp     = 1,,,,,,,2,1,0
+edit.com  = 1,,,,,,,2,1,0
+edit.hlp  = 1,,,,,,,2,1,0
 kbd101.dll   = 100,,,,,,,2,1
 kbd101a.dll  = 1,,,,,,,2,1
 kbd101b.dll  = 1,,,,,,,2,1
@@ -10976,139 +11482,23 @@ kbdnecnt.dll = 1,,,,,,,2,1
 f3ahvoas.dll = 100,,,,,,,2,1
 signin.hlp   = 1,,,,,,,21,0,0    
 kbdhid.sys   = 100,,,,,,4_,4,1,3,,1,4
-ksc.nls      = 1,,,,,,,2,1,3
 mouhid.sys   = 1,,,,,,,4,1,3,,1,4
-noise.chs	= 1,,,,,,_x,2,0,0
-noise.cht	= 1,,,,,,_x,2,0,0
-prc.nls      = 1,,,,,,,,3,3
-prcp.nls     = 1,,,,,,,,3,3
-xjis.nls     = 1,,,,,,,,3,3
-
-[SourceDisksFiles.x86]
-
-
-
-
-
-[SourceDisksFiles]
-
-
-muisetup.exe   = 100,,,,,,,123,0,0
-
-xpsp1res.dll = 100,,,,,,,2,0,0,,1,2
-spra0401.dll = 100,,,,,,,700,0,0,xpsp1res.dll,1,2
-spra0404.dll = 100,,,,,,,701,0,0,xpsp1res.dll,1,2
-spra0405.dll = 100,,,,,,,702,0,0,xpsp1res.dll,1,2
-spra0406.dll = 100,,,,,,,703,0,0,xpsp1res.dll,1,2
-spra0407.dll = 100,,,,,,,704,0,0,xpsp1res.dll,1,2
-spra0408.dll = 100,,,,,,,705,0,0,xpsp1res.dll,1,2
-spra040b.dll = 100,,,,,,,706,0,0,xpsp1res.dll,1,2
-spra040C.dll = 100,,,,,,,707,0,0,xpsp1res.dll,1,2
-spra040D.dll = 100,,,,,,,708,0,0,xpsp1res.dll,1,2
-spra040e.dll = 100,,,,,,,709,0,0,xpsp1res.dll,1,2
-spra0410.dll = 100,,,,,,,710,0,0,xpsp1res.dll,1,2
-spra0411.dll = 100,,,,,,,711,0,0,xpsp1res.dll,1,2
-spra0412.dll = 100,,,,,,,712,0,0,xpsp1res.dll,1,2
-spra0413.dll = 100,,,,,,,713,0,0,xpsp1res.dll,1,2
-spra0414.dll = 100,,,,,,,714,0,0,xpsp1res.dll,1,2
-spra0415.dll = 100,,,,,,,715,0,0,xpsp1res.dll,1,2
-spra0416.dll = 100,,,,,,,716,0,0,xpsp1res.dll,1,2
-spra0419.dll = 100,,,,,,,717,0,0,xpsp1res.dll,1,2
-spra041D.dll = 100,,,,,,,718,0,0,xpsp1res.dll,1,2
-spra041f.dll = 100,,,,,,,719,0,0,xpsp1res.dll,1,2
-spra0804.dll = 100,,,,,,,720,0,0,xpsp1res.dll,1,2
-spra0816.dll = 100,,,,,,,721,0,0,xpsp1res.dll,1,2
-spra0C0A.dll = 100,,,,,,,722,0,0,xpsp1res.dll,1,2
-spra0402.dll = 100,,,,,,,723,0,0,xpsp1res.dll,1,2
-spra0418.dll = 100,,,,,,,724,0,0,xpsp1res.dll,1,2
-spra041a.dll = 100,,,,,,,725,0,0,xpsp1res.dll,1,2
-spra041b.dll = 100,,,,,,,726,0,0,xpsp1res.dll,1,2
-spra041e.dll = 100,,,,,,,727,0,0,xpsp1res.dll,1,2
-spra0424.dll = 100,,,,,,,728,0,0,xpsp1res.dll,1,2
-spra0425.dll = 100,,,,,,,729,0,0,xpsp1res.dll,1,2
-spra0426.dll = 100,,,,,,,730,0,0,xpsp1res.dll,1,2
-spra0427.dll = 100,,,,,,,731,0,0,xpsp1res.dll,1,2
-
-xpsp2res.dll = 100,,,,,,,2,0,0,,1,2
-sprb0401.dll = 100,,,,,,,700,0,0,xpsp2res.dll,1,2
-sprb0404.dll = 100,,,,,,,701,0,0,xpsp2res.dll,1,2
-sprb0405.dll = 100,,,,,,,702,0,0,xpsp2res.dll,1,2
-sprb0406.dll = 100,,,,,,,703,0,0,xpsp2res.dll,1,2
-sprb0407.dll = 100,,,,,,,704,0,0,xpsp2res.dll,1,2
-sprb0408.dll = 100,,,,,,,705,0,0,xpsp2res.dll,1,2
-sprb040b.dll = 100,,,,,,,706,0,0,xpsp2res.dll,1,2
-sprb040C.dll = 100,,,,,,,707,0,0,xpsp2res.dll,1,2
-sprb040D.dll = 100,,,,,,,708,0,0,xpsp2res.dll,1,2
-sprb040e.dll = 100,,,,,,,709,0,0,xpsp2res.dll,1,2
-sprb0410.dll = 100,,,,,,,710,0,0,xpsp2res.dll,1,2
-sprb0411.dll = 100,,,,,,,711,0,0,xpsp2res.dll,1,2
-sprb0412.dll = 100,,,,,,,712,0,0,xpsp2res.dll,1,2
-sprb0413.dll = 100,,,,,,,713,0,0,xpsp2res.dll,1,2
-sprb0414.dll = 100,,,,,,,714,0,0,xpsp2res.dll,1,2
-sprb0415.dll = 100,,,,,,,715,0,0,xpsp2res.dll,1,2
-sprb0416.dll = 100,,,,,,,716,0,0,xpsp2res.dll,1,2
-sprb0419.dll = 100,,,,,,,717,0,0,xpsp2res.dll,1,2
-sprb041D.dll = 100,,,,,,,718,0,0,xpsp2res.dll,1,2
-sprb041f.dll = 100,,,,,,,719,0,0,xpsp2res.dll,1,2
-sprb0804.dll = 100,,,,,,,720,0,0,xpsp2res.dll,1,2
-sprb0816.dll = 100,,,,,,,721,0,0,xpsp2res.dll,1,2
-sprb0C0A.dll = 100,,,,,,,722,0,0,xpsp2res.dll,1,2
-sprb041b.dll = 100,,,,,,,726,0,0,xpsp2res.dll,1,2
-sprb0424.dll = 100,,,,,,,728,0,0,xpsp2res.dll,1,2
-
-xpsp3res.dll = 100,,,,,,,2,0,0,,1,2
-sprc0401.dll = 100,,,,,,,700,0,0,xpsp3res.dll,1,2
-sprc0404.dll = 100,,,,,,,701,0,0,xpsp3res.dll,1,2
-sprc0405.dll = 100,,,,,,,702,0,0,xpsp3res.dll,1,2
-sprc0406.dll = 100,,,,,,,703,0,0,xpsp3res.dll,1,2
-sprc0407.dll = 100,,,,,,,704,0,0,xpsp3res.dll,1,2
-sprc0408.dll = 100,,,,,,,705,0,0,xpsp3res.dll,1,2
-sprc040b.dll = 100,,,,,,,706,0,0,xpsp3res.dll,1,2
-sprc040C.dll = 100,,,,,,,707,0,0,xpsp3res.dll,1,2
-sprc040D.dll = 100,,,,,,,708,0,0,xpsp3res.dll,1,2
-sprc040e.dll = 100,,,,,,,709,0,0,xpsp3res.dll,1,2
-sprc0410.dll = 100,,,,,,,710,0,0,xpsp3res.dll,1,2
-sprc0411.dll = 100,,,,,,,711,0,0,xpsp3res.dll,1,2
-sprc0412.dll = 100,,,,,,,712,0,0,xpsp3res.dll,1,2
-sprc0413.dll = 100,,,,,,,713,0,0,xpsp3res.dll,1,2
-sprc0414.dll = 100,,,,,,,714,0,0,xpsp3res.dll,1,2
-sprc0415.dll = 100,,,,,,,715,0,0,xpsp3res.dll,1,2
-sprc0416.dll = 100,,,,,,,716,0,0,xpsp3res.dll,1,2
-sprc0419.dll = 100,,,,,,,717,0,0,xpsp3res.dll,1,2
-sprc041D.dll = 100,,,,,,,718,0,0,xpsp3res.dll,1,2
-sprc041f.dll = 100,,,,,,,719,0,0,xpsp3res.dll,1,2
-sprc0804.dll = 100,,,,,,,720,0,0,xpsp3res.dll,1,2
-sprc0816.dll = 100,,,,,,,721,0,0,xpsp3res.dll,1,2
-sprc0C0A.dll = 100,,,,,,,722,0,0,xpsp3res.dll,1,2
-sprc041b.dll = 100,,,,,,,726,0,0,xpsp3res.dll,1,2
-sprc0424.dll = 100,,,,,,,728,0,0,xpsp3res.dll,1,2
-
-xpob2res.dll = 100,,,,,,,2,0,0,,1,2
-obrb0401.dll = 100,,,,,,,700,0,0,xpob2res.dll,1,2
-obrb0404.dll = 100,,,,,,,701,0,0,xpob2res.dll,1,2
-obrb0405.dll = 100,,,,,,,702,0,0,xpob2res.dll,1,2
-obrb0406.dll = 100,,,,,,,703,0,0,xpob2res.dll,1,2
-obrb0407.dll = 100,,,,,,,704,0,0,xpob2res.dll,1,2
-obrb0408.dll = 100,,,,,,,705,0,0,xpob2res.dll,1,2
-obrb040b.dll = 100,,,,,,,706,0,0,xpob2res.dll,1,2
-obrb040C.dll = 100,,,,,,,707,0,0,xpob2res.dll,1,2
-obrb040D.dll = 100,,,,,,,708,0,0,xpob2res.dll,1,2
-obrb040e.dll = 100,,,,,,,709,0,0,xpob2res.dll,1,2
-obrb0410.dll = 100,,,,,,,710,0,0,xpob2res.dll,1,2
-obrb0411.dll = 100,,,,,,,711,0,0,xpob2res.dll,1,2
-obrb0412.dll = 100,,,,,,,712,0,0,xpob2res.dll,1,2
-obrb0413.dll = 100,,,,,,,713,0,0,xpob2res.dll,1,2
-obrb0414.dll = 100,,,,,,,714,0,0,xpob2res.dll,1,2
-obrb0415.dll = 100,,,,,,,715,0,0,xpob2res.dll,1,2
-obrb0416.dll = 100,,,,,,,716,0,0,xpob2res.dll,1,2
-obrb0419.dll = 100,,,,,,,717,0,0,xpob2res.dll,1,2
-obrb041D.dll = 100,,,,,,,718,0,0,xpob2res.dll,1,2
-obrb041f.dll = 100,,,,,,,719,0,0,xpob2res.dll,1,2
-obrb0804.dll = 100,,,,,,,720,0,0,xpob2res.dll,1,2
-obrb0816.dll = 100,,,,,,,721,0,0,xpob2res.dll,1,2
-obrb0C0A.dll = 100,,,,,,,722,0,0,xpob2res.dll,1,2
-obrb041b.dll = 100,,,,,,,726,0,0,xpob2res.dll,1,2
-obrb0424.dll = 100,,,,,,,728,0,0,xpob2res.dll,1,2
+prfc0804.dat = 1,,,,,,,2,2,0
+prfh0804.dat = 1,,,,,,,2,2,0
+prfd0804.dat = 1,,,,,,,2,0,0
+prfi0804.dat = 1,,,,,,,2,0,0
+xjis.nls     = 1,,,,,,,2,0,0
+ksc.nls      = 1,,,,,,,2,0,0
+prc.nls      = 1,,,,,,,2,0,0
+prcp.nls     = 1,,,,,,,2,0,0
+big5.nls     = 1,,,,,,,2,0,0
+bopomofo.nls = 1,,,,,,,2,0,0
+imegen.tpl   = 100,,,,,,,2,0,0
+imegen.chm   = 1,,,,,,,21,3,3
+imegen.exe   = 100,,,,,,,2,3,3
+netus.hlp    = 1,,,,,,,2,1,0
+mfc40chs.dll = 1,,,,,,,2,0,0,mfc40loc.dll
+mfc42chs.dll = 1,,,,,,,2,0,0,mfc42loc.dll
 
 
 lvnmbd.ttf      = 1,,,,,,,,3,3,,1,22
@@ -11165,548 +11555,187 @@ ssef1256.fon    = 1,,,,,,,22,0
 vgas1256.fon    = 1,,,,,,,22,0
 
 
-wmerrenu.dll   =1,,,,,,,2,0,0     
-
-
-
-eplrcz00.dll = 1,,,,,,,,3,3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+dwil2052.dll = 1,,,,,,,108,0,0,dwintl.dll
+
+
+jschs.dll    = 1,,,,,,,2,0,0     
+scochs.dll   = 1,,,,,,,2,0,0     
+scrrnchs.dll = 1,,,,,,,2,0,0     
+vbschs.dll   = 1,,,,,,,2,0,0     
+wshchs.dll   = 1,,,,,,,2,0,0     
+
+
+
+wmerrCHS.dll    = 1,,,,,,,2,0,0     
+
+wmprfCHS.prx    = 1,,,,,,,1,0,0     
+
+
+bootfont.bin = 1,,,,,,_x,1,3
+app936.fon    = 1,,,,,,,22,0,0
+vga936.fon    = 1,,,,,,,22,0,0
+svgasys.fon   = 1,,,,,,,22,0,0
+svgafix.fon   = 1,,,,,,,22,0,0
+s8514fix.fon  = 1,,,,,,,22,3,3
+s8514oem.fon  = 1,,,,,,,22,3,3
+s8514sys.fon  = 1,,,,,,,22,3,3
+simsun.ttc    = 100,,,,,,,22,0,0
+simhei.ttf    = 1,,,,,,,22,0,0
+simkai.ttf    = 1,,,,,,,22,0,0
+simfang.ttf   = 1,,,,,,,22,0,0
+
+WINABC.CNT     = 1,,,,,,,2,0,0
+WINABC.HLP     = 1,,,,,,,2,0,0
+WINABC.CWD     = 1,,,,,,,2,0,0
+WINABC.IME     = 100,,,,,,,2,0,0
+WINABC.OVL     = 1,,,,,,,2,0,0
+WINGB.CHM      = 1,,,,,,,21,0,0
+WINGB.IME      = 100,,,,,,,2,0,0
+WINIME.CHM     = 1,,,,,,,21,0,0
+WINPY.CHM      = 1,,,,,,,21,0,0
+WINPY.IME      = 100,,,,,,,2,0,0
+WINPY.MB       = 1,,,,,,,2,0,0
+WINSP.CHM      = 1,,,,,,,21,0,0
+WINSP.IME      = 100,,,,,,,2,0,0
+WINSP.MB       = 1,,,,,,,2,0,0
+WINZM.CHM      = 1,,,,,,,21,0,0
+WINZM.IME      = 100,,,,,,,2,0,0
+WINZM.MB       = 1,,,,,,,2,0,0
+
+PINTLGNT.IME   = 100,,,,,,,2,0,0
+PINTLPHR.EXE   = 100,,,,,,,204,0,0
+IMSCINST.EXE   = 100,,,,,,,204,0,0
+PMIGRATE.DLL   = 100,,,,,,,204,0,0
+PINTLGC.IMD    = 100,,,,,,,204,0,0
+PINTLGD.IMD    = 100,,,,,,,204,0,0
+PINTLGDX.IMD   = 100,,,,,,,204,0,0
+PINTLGI.IMD    = 100,,,,,,,204,0,0
+PINTLGIX.IMD   = 100,,,,,,,204,0,0
+PINTLGL.IMD    = 100,,,,,,,204,0,0
+PINTLGNE.CHM   = 100,,,,,,,204,0,0
+PINTLGNT.CHM   = 100,,,,,,,204,0,0
+PINTLGR.IMD    = 100,,,,,,,204,0,0
+PINTLGS.IMD    = 100,,,,,,,204,0,0
+
+PINTLCSD.DIC   = 100,,,,,,,205,0,0
+PINTLCSK.DIC   = 100,,,,,,,205,0,0
+PINTLCSA.DLL   = 100,,,,,,,205,0,0
+PINTLCSD.DLL   = 100,,,,,,,205,0,0
+PINTLPAD.CHM   = 1,,,,,,,21,0,0
+PINTLPAD.HLP   = 1,,,,,,,2,0,0
+PINTLPAE.CHM   = 1,,,,,,,21,0,0
+PINTLPAE.HLP   = 1,,,,,,,2,0,0
+
+
+
+imepadsm.dll  = 7,,,,,,,220,0,0
+imepadsv.exe  = 7,,,,,,,220,0,0
+imlang.dll    = 107,,,,,,,220,0,0
+imepaden.hlp  = 7,,,,,,,220,0,0
+padrs804.dll  = 100,,,,,,,221,0,0
+
+
+ChsBrKr.dll    = 1,,,,,,,2,0,0
+noise.chs      = 1,,,,,,_x,2,0,0
+noise.cht	= 1,,,,,,_x,2,0,0
+
+
+
+ep2l52kc.gpd = 1,,,,,,,11,3,3
+ep2l55kc.gpd = 1,,,,,,,11,3,3
+ep2l86kc.gpd = 1,,,,,,,11,3,3
+ep2n20kc.gpd = 1,,,,,,,11,3,3
+epageres.dll = 1,,,,,,,11,3,3
+epageres.ini = 1,,,,,,,11,3,3
+epdlq1kc.gpd = 1,,,,,,,11,3,3
+epdlq2kc.gpd = 1,,,,,,,11,3,3
+epdlq3kc.gpd = 1,,,,,,,11,3,3
+epepcres.dll = 1,,,,,,,11,3,3
+eplq15kc.gpd = 1,,,,,,,11,3,3
+eplq162c.gpd = 1,,,,,,,11,3,3
+eplq163c.gpd = 1,,,,,,,11,3,3
+eplq164c.gpd = 1,,,,,,,11,3,3
+eplq16kc.gpd = 1,,,,,,,11,3,3
+eplq18kc.gpd = 1,,,,,,,11,3,3
+eplq192c.gpd = 1,,,,,,,11,3,3
+eplq19kc.gpd = 1,,,,,,,11,3,3
+eplq26kc.gpd = 1,,,,,,,11,3,3
+eplq30kc.gpd = 1,,,,,,,11,3,3
+eplq58kc.gpd = 1,,,,,,,11,3,3
+eplq67kc.gpd = 1,,,,,,,11,3,3
+eplq67pc.gpd = 1,,,,,,,11,3,3
+eplrcz00.dll = 1,,,,,,,11,3,3
+eplvcd0a.dll = 1,,,,,,,11,3,3
+eplvcd0a.ini = 1,,,,,,,11,3,3
+eplvcd0t.gpd = 1,,,,,,,11,3,3
+eplvcd0u.gpd = 1,,,,,,,11,3,3
+eplvcd0v.gpd = 1,,,,,,,11,3,3
+epmj51c.gpd  = 1,,,,,,,11,3,3
+epmj80kc.gpd = 1,,,,,,,11,3,3
+epndvk01.gpd = 1,,,,,,,11,3,3
+epndvk03.gpd = 1,,,,,,,11,3,3
+epndvk09.gpd = 1,,,,,,,11,3,3
+epndvk0a.gpd = 1,,,,,,,11,3,3
+epndvk14.gpd = 1,,,,,,,11,3,3
+eprstres.dll = 1,,,,,,,11,3,3
+fudp36ec.gpd = 1,,,,,,,11,3,3
+fudp83ec.gpd = 1,,,,,,,11,3,3
+fudp84ec.gpd = 1,,,,,,,11,3,3
+fudp85ec.gpd = 1,,,,,,,11,3,3
+fudp96ec.gpd = 1,,,,,,,11,3,3
+fudpcres.dll = 1,,,,,,,11,3,3
+gw4000c.gpd  = 1,,,,,,,11,3,3
+gw4100c.gpd  = 1,,,,,,,11,3,3
+gw4200c.gpd  = 1,,,,,,,11,3,3
+gw5360pc.gpd = 1,,,,,,,11,3,3
+gw5380pc.gpd = 1,,,,,,,11,3,3
+gw6320c.gpd  = 1,,,,,,,11,3,3
+gw6330c.gpd  = 1,,,,,,,11,3,3
+gw6360pc.gpd = 1,,,,,,,11,3,3
+gw6370pc.gpd = 1,,,,,,,11,3,3
+gw6380pc.gpd = 1,,,,,,,11,3,3
+gw63cres.dll = 1,,,,,,,11,3,3
+hplj4lcc.gpd = 1,,,,,,,11,3,3
+hplj4vcc.gpd = 1,,,,,,,11,3,3
+ln6cc.gpd    = 1,,,,,,,11,3,3
+ln6cpc.gpd   = 1,,,,,,,11,3,3
+lnlj6mc.gpd  = 1,,,,,,,11,3,3
+lnlj6pc.gpd  = 1,,,,,,,11,3,3
+lnlj6ppc.gpd = 1,,,,,,,11,3,3
+ok532scc.gpd = 1,,,,,,,11,3,3
+ok533scc.gpd = 1,,,,,,,11,3,3
+ok553scc.gpd = 1,,,,,,,11,3,3
+ok563spc.gpd = 1,,,,,,,11,3,3
+ok8320cc.gpd = 1,,,,,,,11,3,3
+ok8330cc.gpd = 1,,,,,,,11,3,3
+ok8358sc.gpd = 1,,,,,,,11,3,3
+ok8360cc.gpd = 1,,,,,,,11,3,3
+ok8368sc.gpd = 1,,,,,,,11,3,3
+ok8370cc.gpd = 1,,,,,,,11,3,3
+ok8570cc.gpd = 1,,,,,,,11,3,3
+okiscres.dll = 1,,,,,,,11,3,3
+pcl5zres.dll = 1,,,,,,,11,3,3
+pscrptfe.ntf = 100,,,,,,,11,3,3
+snst20c.gpd  = 1,,,,,,,11,3,3
+st24cres.dll = 1,,,,,,,11,3,3
+star100c.gpd = 1,,,,,,,11,3,3
+star240c.gpd = 1,,,,,,,11,3,3
+star320c.gpd = 1,,,,,,,11,3,3
+star322c.gpd = 1,,,,,,,11,3,3
+star32pc.gpd = 1,,,,,,,11,3,3
+star440c.gpd = 1,,,,,,,11,3,3
+star540c.gpd = 1,,,,,,,11,3,3
+star54pc.gpd = 1,,,,,,,11,3,3
+star640c.gpd = 1,,,,,,,11,3,3
+star660c.gpd = 1,,,,,,,11,3,3
+stc3242c.gpd = 1,,,,,,,11,3,3
+stcr320c.gpd = 1,,,,,,,11,3,3
+stcr324c.gpd = 1,,,,,,,11,3,3
+
+
+
+femgrate.exe  = 100,,,,,,,2,0,0
+femgrate.inf  = 1,,,,,,,20,0,0
 
 
 
@@ -16417,36 +16446,36 @@ vgaf1257.fon = 1,,,,,,,22,0
 
 
 [Strings]
-MyPicturesScreenSaver = "My Pictures Screen Saver.scr"
-ViewChannelsSCF = "View Channels.scf"
-ShowDesktopSCF = "Show Desktop.scf"
+MyPicturesScreenSaver = "图片收藏屏幕保护程序.scr"
+ViewChannelsSCF = "查看频道.scf"
+ShowDesktopSCF = "显示桌面.scf"
 srgb    = "sRGB Color Space Profile.icm"
-XPBalln = "Windows XP Balloon.wav"
-XPBatCrt = "Windows XP Battery Critical.wav"
-XPBatLow = "Windows XP Battery Low.wav"
-XPBlkPop = "Windows XP Pop-up Blocked.wav"
-XPCrtStp = "Windows XP Critical Stop.wav"
-XPDef = "Windows XP Default.wav"
-XPDing = "Windows XP Ding.wav"
-XPError = "Windows XP Error.wav"
-XPExcl = "Windows XP Exclamation.wav"
-XPHdFail = "Windows XP Hardware Fail.wav"
-XPHdInst = "Windows XP Hardware Insert.wav"
-XPHdRem = "Windows XP Hardware Remove.wav"
-XPInfBar = "Windows XP Information Bar.wav"
-XPLogoff = "Windows XP Logoff Sound.wav"
-XPLogon = "Windows XP Logon Sound.wav"
-XPMenu = "Windows XP Menu Command.wav"
-XPMin = "Windows XP Minimize.wav"
-XPNotify = "Windows XP Notify.wav"
-XPPrint = "Windows XP Print complete.wav"
-XPRecycl = "Windows XP Recycle.wav"
-XPRestor = "Windows XP Restore.wav"
-XPRingin = "Windows XP Ringin.wav"
-XPRngout = "Windows XP Ringout.wav"
-XPShutdn = "Windows XP Shutdown.wav"
-XPStart = "Windows XP Start.wav"
-XPStartU = "Windows XP Startup.wav"
+XPBalln = "Windows XP 气球.wav"
+XPBatCrt = "Windows XP 电池电力严重短缺.wav"
+XPBatLow = "Windows XP 电池不足.wav"
+XPBlkPop = "Windows XP 弹出窗口已阻止.wav"
+XPCrtStp = "Windows XP 关键性终止.wav"
+XPDef = "Windows XP 默认值.wav"
+XPDing = "Windows XP 叮当声.wav"
+XPError = "Windows XP 错误.wav"
+XPExcl = "Windows XP 惊叹号.wav"
+XPHdFail = "Windows XP 硬件故障.wav"
+XPHdInst = "Windows XP 硬件插入.wav"
+XPHdRem = "Windows XP 硬件删除.wav"
+XPInfBar = "Windows XP 信息栏.wav"
+XPLogoff = "Windows XP 注销音.wav"
+XPLogon = "Windows XP 登录音.wav"
+XPMenu = "Windows XP 菜单命令.wav"
+XPMin = "Windows XP 最小化.wav"
+XPNotify = "Windows XP 通知.wav"
+XPPrint = "Windows XP 打印结束.wav"
+XPRecycl = "Windows XP 回收.wav"
+XPRestor = "Windows XP 还原.wav"
+XPRingin = "Windows XP 电话拨入声.wav"
+XPRngout = "Windows XP 电话拨出声.wav"
+XPShutdn = "Windows XP 关机.wav"
+XPStart = "Windows XP 开始.wav"
+XPStartU = "Windows XP 启动.wav"
 
 
 
@@ -16461,10 +16490,10 @@ XPStartU = "Windows XP Startup.wav"
 jpndir = "\langpack\jpn"
 kordir = "\langpack\kor"
 chtdir = "\langpack\cht"
-chsdir = "\langpack\chs"
+chsdir = ""
 
 
-MUI_PRIMARY_LANG_ID_DIR = "system32\mui\0009"
+MUI_PRIMARY_LANG_ID_DIR = "system32\mui\0804"
 
 
 cdname = "Windows XP Professional CD-ROM"
@@ -21201,6 +21230,35 @@ InfName=biosinfo.inf
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [nls]
 
 
@@ -21210,15 +21268,15 @@ InfName=biosinfo.inf
 
 
 
-AnsiCodepage     = c_1252.nls,1252
-OemCodepage      = c_437.nls,437,c_850.nls,850
-MacCodepage      = c_10000.nls,10000
-UnicodeCasetable = l_intl.nls,0409
+AnsiCodepage     = c_936.nls,936
+OemCodepage      = c_936.nls,936
+MacCodepage      = c_10008.nls,10008
+UnicodeCasetable = l_intl.nls,0804
 OemHalFont       = vgaoem.fon
-DefaultLayout    = 00000409
+DefaultLayout    = 00000804
 
 [Keyboard]
-STANDARD = "XT, AT, or Enhanced Keyboard (83-104 keys)",files.i8042,i8042prt
+STANDARD = "XT, AT或增强型键盘 (83-104 键)",files.i8042,i8042prt
 kbdhid   = "USB Keyboard",files.kbdhid,kbdhid
 USB      = "USB Keyboard",files.kbdhid,kbdhid
 
@@ -21226,77 +21284,45 @@ USB      = "USB Keyboard",files.kbdhid,kbdhid
 
 [Files.BackupOnOverwrite]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[FontListE]
+"宋体 & 新宋体 (TrueType)"                 = SIMSUN.TTC
+"黑体 (TrueType)"                          = SIMHEI.TTF
+"楷体 (TrueType)"                          = SIMKAI.TTF
+"仿宋体 (TrueType)"                        = SIMFANG.TTF
+
+["Keyboard Layout"]
+00000804 = "美式键盘(中文)"
+
+[Files.KeyboardLayout]
+00000804 = KBDUS.DLL,2
+
+[Files.DeleteOnUpgrade]
+eudcedit.exe    , 2
+eudcedit.cnt    , 2
+eudcedit.hlp    , 2
+winclock.exe    , 5
+cime.cpl        , 2
+fetools.inf     , 20
+fsvga.sys     , 4
+
+[FileFlags]
+app936.fon    = 16
+s8514fix.fon  = 16
+s8514oem.fon  = 16
+s8514sys.fon  = 16
+svgafix.fon   = 16
+svgasys.fon   = 16
+vga936.fon    = 16
+xjis.nls      = 16
+ksc.nls       = 16
+prc.nls       = 16
+prcp.nls      = 16
+big5.nls      = 16
+bopomofo.nls  = 16
+c_10008.nls   = 16
+
+[SystemPartitionFiles]
+bootfont.bin,"\"
 
 
 
@@ -21702,68 +21728,68 @@ mouhid = "HID Mouse Filter Driver"
 "Microsoft Sans Serif (TrueType)"          = MICROSS.TTF
 
 ["Keyboard Layout"]
-0000041C = "Albanian"
-00000423 = "Belarusian"
-00000813 = "Belgian Dutch"
-0000080C = "Belgian French"
-00000416 = "Brazilian (ABNT)"
-00000402 = "Bulgarian"
-00010402 = "Bulgarian Latin"
-00001009 = "Canadian English (Multilingual)"
-00000C0C = "Canadian French"
-00010C0C = "Canadian French (Multilingual)"
-0000041a = "Croatian"
-00000405 = "Czech"
-00010405 = "Czech (QWERTY)"
-00000406 = "Danish"
-00000413 = "Dutch"
-00000425 = "Estonian"
-0000040B = "Finnish"
-0000040C = "French"
-00000407 = "German"
-00010407 = "German (IBM)"
-00000408 = "Greek"
-00050408 = "Greek Latin"
-00010408 = "Greek (220)"
-00030408 = "Greek (220) Latin"
-00020408 = "Greek (319)"
-00040408 = "Greek (319) Latin"
-0000040E = "Hungarian"
-0001040E = "Hungarian 101-key"
-0000040F = "Icelandic"
-00001809 = "Irish"
-00000410 = "Italian"
-00010410 = "Italian (142)"
-0000080A = "Latin American"
-00000426 = "Latvian"
-00010426 = "Latvian (QWERTY)"
-00000427 = "Lithuanian"
-00000414 = "Norwegian"
-00000415 = "Polish (Programmers)"
-00010415 = "Polish (214)"
-00000816 = "Portuguese"
-00000418 = "Romanian"
-00000419 = "Russian"
-00010419 = "Russian (Typewriter)"
-00000C1A = "Serbian Cyrillic"
-00010C1A = "Serbian Latin"
-0000041B = "Slovak"
-0001041B = "Slovak (QWERTY)"
-00000424 = "Slovenian"
-0000040A = "Spanish"
-0001040A = "Spanish variation"
-0000041D = "Swedish"
-0000100C = "Swiss French"
-00000807 = "Swiss German"
-0001041F = "Turkish F"
-0000041F = "Turkish Q"
-00000422 = "Ukrainian"
-00000809 = "United Kingdom"
-00000409 = "US"
-00010409 = "US-Dvorak"
-00030409 = "US-Dvorak for left hand"
-00040409 = "US-Dvorak for right hand"
-00020409 = "US-International"
+0000041C = "阿尔巴尼亚语"
+00000423 = "白俄罗斯语"
+00000813 = "比利时荷兰语"
+0000080C = "比利时法语"
+00000416 = "巴西 (ABNT)"
+00000402 = "保加利亚语"
+00010402 = "保加利亚语 (拉丁文)"
+00001009 = "加拿大英语 (多语种)"
+00000C0C = "加拿大法语"
+00010C0C = "加拿大法语 (多语种)"
+0000041a = "克罗地亚语"
+00000405 = "捷克语"
+00010405 = "捷克语 (QWERTY)"
+00000406 = "丹麦语"
+00000413 = "荷兰语"
+00000425 = "爱沙尼亚语"
+0000040B = "芬兰语"
+0000040C = "法语"
+00000407 = "德语"
+00010407 = "德语 (IBM)"
+00000408 = "希腊语"
+00050408 = "希腊语 (拉丁文)"
+00010408 = "希腊语 (220)"
+00030408 = "希腊 (220) 拉丁文"
+00020408 = "希腊语 (319)"
+00040408 = "希腊语 (319) 拉丁文"
+0000040E = "匈牙利语"
+0001040E = "匈牙利语 101-键"
+0000040F = "冰岛语"
+00001809 = "爱尔兰语"
+00000410 = "意大利语"
+00010410 = "意大利语 (142)"
+0000080A = "拉丁美洲语"
+00000426 = "拉脱维亚语"
+00010426 = "拉脱维亚语 (QWERTY)"
+00000427 = "立陶宛语"
+00000414 = "挪威语"
+00000415 = "波兰语 (程序员)"
+00010415 = "波兰语 (214)"
+00000816 = "葡萄牙语"
+00000418 = "罗马尼亚语"
+00000419 = "俄语"
+00010419 = "俄语 (打字员)"
+00000C1A = "塞尔维亚语 (西里尔文)"
+00010C1A = "塞尔维亚语 (拉丁文)"
+0000041B = "斯洛伐克语"
+0001041B = "斯洛伐克语 (QWERTY)"
+00000424 = "斯洛文尼亚语"
+0000040A = "西班牙语"
+0001040A = "西班牙变体语"
+0000041D = "瑞典语"
+0000100C = "瑞士法语"
+00000807 = "瑞士德语"
+0001041F = "土耳其语 F"
+0000041F = "土耳其语 Q"
+00000422 = "乌克兰语"
+00000809 = "英国英语"
+00000409 = "美国英语"
+00010409 = "美国英语-Dvorak"
+00030409 = "美国英语-Dvorak (惯用左手)"
+00040409 = "美国英语-Dvorak (惯用右手)"
+00020409 = "美国英语-国际"
 
 [DiskDrivers]
 dmboot   = "Dynamic Volume Support (dmboot)"
@@ -21862,18 +21888,18 @@ e_isa_up    = "Standard PC",files.none
 
 
 [Display]
-forcevga = "Standard VGA (640x480, 16 colors)",files.none
-vga      = "Auto Detect",files.none
+forcevga = "标准 VGA (640x480, 16 颜色)",files.none
+vga      = "自动检测",files.none
 sglfb      = "Cobalt",files.sglfb
 
 [Mouse]
-msps2 = "Microsoft Mouse Port Mouse (includes BallPoint)",files.i8042,i8042prt
-lgps2 = "Logitech Mouse Port Mouse",files.i8042,i8042prt
-msinp = "Microsoft InPort Bus Mouse",files.inport,inport
+msps2 = "Microsoft 鼠标端口鼠标 (包括 BallPoint)",files.i8042,i8042prt
+lgps2 = "Logitech 鼠标端口鼠标",files.i8042,i8042prt
+msinp = "Microsoft 输入总线鼠标",files.inport,inport
 msbpser = "Microsoft BallPoint Serial Mouse",files.sermouse,sermouse
-lgser = "Logitech Serial Mouse",files.sermouse,sermouse
+lgser = "Logitech 串行鼠标",files.sermouse,sermouse
 none = "No Mouse or Other Pointing Device",files.none,""
-mouhid = "USB Mouse",files.mouhid,mouhid
+mouhid = "USB 鼠标",files.mouhid,mouhid
 msser = "Microsoft Serial Mouse",files.sermouse,sermouse
 ps2 = "Mouse Port Mouse",files.i8042,i8042prt
 sermouse = "Serial Mouse",files.sermouse,sermouse
@@ -21887,6 +21913,7 @@ wks_id   = "Microsoft Windows XP Professional"
 wks_id_vga = "Microsoft Windows XP Professional [VGA mode]"
 cancel_id = "Cancel Windows XP Setup"
 9x_id = "Microsoft Windows"
+
 
 
 
@@ -21926,9 +21953,6 @@ PFDocSpace      =   81112
 
 
 
-351WinDirSpace   =   80000
-40WinDirSpace    =   76486
-50WinDirSpace    =  599028
 
 
 
@@ -21955,6 +21979,9 @@ PFDocSpace      =   81112
 
 
 
+351WinDirSpace   =  100000
+40WinDirSpace    =  173024
+50WinDirSpace    =  702144
 
 
 
@@ -22002,60 +22029,41 @@ PFDocSpace      =   81112
 
 
 
-TempDirSpace512  =    491114496,13448704
-TempDirSpace1K   =    492655616,13496320
-TempDirSpace2K   =    495745024,13568000
-TempDirSpace4K   =    502579200,13787136
-TempDirSpace8K   =    517693440,14008320
-TempDirSpace16K  =    551944192,15024128
-TempDirSpace32K  =    623116288,17170432
-TempDirSpace64K  =    778502144,21561344
-TempDirSpace128K =   1110966272,31719424
-TempDirSpace256K =   1811677184,52953088
 
 
 
 
-WinDirSpace512  =      1210261
-WinDirSpace1K   =      1212853
-WinDirSpace2K   =      1218400
-WinDirSpace4K   =      1229524
-WinDirSpace8K   =      1252560
-WinDirSpace16K  =      1302832
-WinDirSpace32K  =      1403872
-WinDirSpace64K  =      1647104
-WinDirSpace128K =      2190720
-WinDirSpace256K =      3366656
 
 
-[SourceDisksFiles]
-iastor.sys= 1,,,,,,4_,4,1,,,1,4
 
-[HardwareIdsDatabase]
-PCI\VEN_8086&DEV_27C3&CC_0104 = "iaStor"
-PCI\VEN_8086&DEV_27C6&CC_0104 = "iaStor"
-PCI\VEN_8086&DEV_2822&CC_0104 = "iaStor"
-PCI\VEN_8086&DEV_282A&CC_0104 = "iaStor"
-PCI\VEN_8086&DEV_27C1&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_27C5&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_2929&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_3A02&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_3A22&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_3B29&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_3B2F&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_3B22&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_1C02&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_1C03&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_1E02&CC_0106 = "iaStor"
-PCI\VEN_8086&DEV_1E03&CC_0106 = "iaStor"
 
-[SCSI.Load]
-iaStor = iaStor.sys,4
 
-[SCSI]
-iaStor = "Intel(R) 7 Series Chipset Family SATA AHCI Controller"
+TempDirSpace512  =    535560192,13448704
+TempDirSpace1K   =    537122816,13496320
+TempDirSpace2K   =    540235776,13568000
+TempDirSpace4K   =    547213312,13787136
+TempDirSpace8K   =    562634752,14008320
+TempDirSpace16K  =    596869120,15024128
+TempDirSpace32K  =    669876224,17170432
+TempDirSpace64K  =    829161472,21561344
+TempDirSpace128K =    1169555456,31719424
+TempDirSpace256K =   1889533952,52953088
 
 
 
 
+WinDirSpace512  =      1288649
+WinDirSpace1K   =      1291273
+WinDirSpace2K   =      1296888
+WinDirSpace4K   =      1308112
+WinDirSpace8K   =      1331296
+WinDirSpace16K  =      1382368
+WinDirSpace32K  =      1482528
+WinDirSpace64K  =      1725952
+WinDirSpace128K =      2270464
+WinDirSpace256K =      3457536
 
+
+
+
+

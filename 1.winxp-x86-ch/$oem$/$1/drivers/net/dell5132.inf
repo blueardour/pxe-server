@@ -1,0 +1,984 @@
+[version]
+Signature="$Windows NT$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider=%Intel%
+CatalogFile=e1e5132.cat
+DriverVer=04/13/2007,9.8.20.0
+[Manufacturer]
+%Intel%=Intel
+[ControlFlags]
+ExcludeFromSelect=\
+PCI\VEN_8086&DEV_105E&SUBSYS_125E8086,\
+PCI\VEN_8086&DEV_105E,\
+PCI\VEN_8086&DEV_105F&SUBSYS_115F8086,\
+PCI\VEN_8086&DEV_105F&SUBSYS_125F8086,\
+PCI\VEN_8086&DEV_105F,\
+PCI\VEN_8086&DEV_105E&SUBSYS_704E103C,\
+PCI\VEN_8086&DEV_105F&SUBSYS_704F103C,\
+PCI\VEN_8086&DEV_1060,\
+PCI\VEN_8086&DEV_107D&SUBSYS_10928086,\
+PCI\VEN_8086&DEV_107E&SUBSYS_10948086,\
+PCI\VEN_8086&DEV_107F,\
+PCI\VEN_8086&DEV_10B9&SUBSYS_10838086,\
+PCI\VEN_8086&DEV_10B9&SUBSYS_10938086,\
+PCI\VEN_8086&DEV_10A4&SUBSYS_10A48086,\
+PCI\VEN_8086&DEV_10A4&SUBSYS_11A48086,\
+PCI\VEN_8086&DEV_10A5&SUBSYS_10A58086,\
+PCI\VEN_8086&DEV_10A5&SUBSYS_10A68086,\
+PCI\VEN_8086&DEV_10BC&SUBSYS_10BC8086,\
+PCI\VEN_8086&DEV_10BC&SUBSYS_11BC8086
+[Intel]
+%E108BEC.DeviceDesc%=E108B.ndi, PCI\VEN_8086&DEV_108B&SUBSYS_01A71028
+%E108BEC.DeviceDesc%=E108B.ndi, PCI\VEN_8086&DEV_108C&SUBSYS_01A71028
+%E109AEC.DeviceDesc%=E109A.ndi, PCI\VEN_8086&DEV_109A&SUBSYS_01A71028
+%E108BEC.DeviceDesc%=E108B.ndi, PCI\VEN_8086&DEV_108B&SUBSYS_01D11028
+%E108BEC.DeviceDesc%=E108B.ndi, PCI\VEN_8086&DEV_108C&SUBSYS_01D11028
+%E109AEC.DeviceDesc%=E109A.ndi, PCI\VEN_8086&DEV_109A&SUBSYS_01D11028
+%E1049NC.DeviceDesc%=E1049.ndi, PCI\VEN_8086&DEV_1049&SUBSYS_02321028
+%E104ANC.DeviceDesc%=E104A.ndi, PCI\VEN_8086&DEV_104A&SUBSYS_01D91028
+%E104BNC.DeviceDesc%=E104A.ndi, PCI\VEN_8086&DEV_104B&SUBSYS_01DB1028
+%E104CNC.DeviceDesc%=E104C.ndi, PCI\VEN_8086&DEV_104C&SUBSYS_01E31028
+%E104CNC.DeviceDesc%=E104C.ndi, PCI\VEN_8086&DEV_104C&SUBSYS_01DC1028
+%E10C4NC.DeviceDesc%=E104C.ndi, PCI\VEN_8086&DEV_104C&SUBSYS_01DD1028
+%E294CNC.DeviceDesc%=E294C.ndi, PCI\VEN_8086&DEV_294C&SUBSYS_02151028
+%E10BDNC.DeviceDesc%=E10BD.ndi, PCI\VEN_8086&DEV_10BD&SUBSYS_02111028
+[Intel.NTx86.5.1]
+%E108BEC.DeviceDesc%=E108B.ndi.5.1, PCI\VEN_8086&DEV_108B&SUBSYS_01A71028
+%E108BEC.DeviceDesc%=E108B.ndi.5.1, PCI\VEN_8086&DEV_108C&SUBSYS_01A71028
+%E109AEC.DeviceDesc%=E109A.ndi.5.1, PCI\VEN_8086&DEV_109A&SUBSYS_01A71028
+%E108BEC.DeviceDesc%=E108B.ndi.5.1, PCI\VEN_8086&DEV_108B&SUBSYS_01D11028
+%E108BEC.DeviceDesc%=E108B.ndi.5.1, PCI\VEN_8086&DEV_108C&SUBSYS_01D11028
+%E109AEC.DeviceDesc%=E109A.ndi.5.1, PCI\VEN_8086&DEV_109A&SUBSYS_01D11028
+%E1049NC.DeviceDesc%=E1049.ndi.5.1, PCI\VEN_8086&DEV_1049&SUBSYS_02321028
+%E104ANC.DeviceDesc%=E104A.ndi.5.1, PCI\VEN_8086&DEV_104A&SUBSYS_01D91028
+%E104BNC.DeviceDesc%=E104A.ndi.5.1, PCI\VEN_8086&DEV_104B&SUBSYS_01DB1028
+%E104CNC.DeviceDesc%=E104C.ndi.5.1, PCI\VEN_8086&DEV_104C&SUBSYS_01DC1028
+%E10C4NC.DeviceDesc%=E104C.ndi.5.1, PCI\VEN_8086&DEV_104C&SUBSYS_01DD1028
+%E104CNC.DeviceDesc%=E104C.ndi.5.1, PCI\VEN_8086&DEV_104C&SUBSYS_01E31028
+%E294CNC.DeviceDesc%=E294C.ndi.5.1, PCI\VEN_8086&DEV_294C&SUBSYS_02151028
+%E10BDNC.DeviceDesc%=E10BD.ndi.5.1, PCI\VEN_8086&DEV_10BD&SUBSYS_02111028
+[Intel.NTIA64]
+[Intel.NTAMD64]
+[Intel.NTx86.6.0]
+[E105E.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg, ResetLink.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+AddReg=WakeOnSlot.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E105E.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E105E.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMPW.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E105F.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg, ResetLink.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+AddReg=WakeOnSlot.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E105F.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E105F.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMPW.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E107D.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg, ResetLink.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E107D.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E107D.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E107E.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg, ResetLink.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E107E.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E107E.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E108B.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Copper.reg, Copper1000.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg, Ert.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E108B.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E108B.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E109A.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Copper.reg, Copper1000.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg, Ert.reg
+AddReg=L1aggressive.reg, 109A_JumboFrames.reg, 109A_RDTR.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E109A.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E109A.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E1096.ndi]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E1096.ndi.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E1096.ndi.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E1098.ndi]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E1098.ndi.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E1098.ndi.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E104A.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E104A.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E104A.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E1049.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E1049.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E1049.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10BD.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg, JumboFrames.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E10BD.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E10BD.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E294C.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E294C.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E294C.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E104C.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E104C.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E104C.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10BA.ndi]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E10BA.ndi.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E10BA.ndi.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10BB.ndi]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E10BB.ndi.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E10BB.ndi.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10A4.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg, ResetLink.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamBridge.reg, JumboFrames.reg
+AddReg=WakeOnPort.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E10A4.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E10A4.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMP.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10A5.ndi.NTx86]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.win2k
+AddReg=82571EB.reg, ResetLink.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamBridge.reg, JumboFrames.reg
+AddReg=WakeOnPort.reg
+;CpyFiles=win2k.CopyFiles, win2k.UninstallProg.CopyFiles
+[E10A5.ndi.NTx86.Services]
+AddService=e1express, 2, win2k.Service, win2k.EventLog
+[E10A5.ndi.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMP.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E105E.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+AddReg=WakeOnSlot.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E105E.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E105E.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMPW.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E105E_NoIO.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+AddReg=WakeOnSlot.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E105E_NoIO.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E105E_NoIO.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMPW.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E105E_NoIO.ndi.5.1.HW]
+Include=machine.inf
+Needs=PciIoSpaceNotRequired
+[E105F.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+AddReg=WakeOnSlot.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E105F.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E105F.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMPW.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E105F_NoIO.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+AddReg=WakeOnSlot.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E105F_NoIO.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E105F_NoIO.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMPW.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E105F_NoIO.ndi.5.1.HW]
+Include=machine.inf
+Needs=PciIoSpaceNotRequired
+[E107D.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E107D.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E107D.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKS.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E107D_NoIO.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E107D_NoIO.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E107D_NoIO.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKS.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E107D_NoIO.ndi.5.1.HW]
+Include=machine.inf
+Needs=PciIoSpaceNotRequired
+[E107E.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E107E.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E107E.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKS.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E107E_NoIO.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E107E_NoIO.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E107E_NoIO.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKS.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E107E_NoIO.ndi.5.1.HW]
+Include=machine.inf
+Needs=PciIoSpaceNotRequired
+[E108B.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg, Ert.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E108B.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E108B.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E109A.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg, Ert.reg
+AddReg=L1aggressive.reg, 109A_JumboFrames.reg, 109A_RDTR.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E109A.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E109A.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E1096.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E1096.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E1096.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKS.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E1098.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamNoBridge.reg, JumboFrames.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E1098.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E1098.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKS.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E104A.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E104A.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E104A.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E1049.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, ACBS.reg, AcDcLink.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E1049.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E1049.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoIn82566M.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10BD.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg, JumboFrames.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E10BD.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E10BD.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E294C.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E294C.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E294C.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E104C.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=Powermgmt.reg, EnablePME.reg, Client.reg, DriverInfoAddReg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E104C.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E104C.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInK.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10BA.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E10BA.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E10BA.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKS.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10BB.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=JumboFrames.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E10BB.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E10BB.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKS.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10A4.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, Copper.reg, Copper1000.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamBridge.reg, JumboFrames.reg
+AddReg=WakeOnPort.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E10A4.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E10A4.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMP.reg
+;CpyFiles=CoInstaller_CopyFiles
+[E10A5.ndi.5.1]
+Characteristics=0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType=5 ; PCI
+Port1FunctionNumber=0
+DelReg=Advanced.DelReg
+AddReg=e1e.reg, tso.reg, SPD.reg, Advanced.reg, Uninstall.reg, Uninstall.reg.winxp
+AddReg=82571EB.reg, ResetLink.reg, RSS.reg
+AddReg=Powermgmt.reg, Client.reg, DriverInfoAddReg
+AddReg=EteamBridge.reg, JumboFrames.reg
+AddReg=WakeOnPort.reg
+;CpyFiles=winxp.CopyFiles, winxp.UninstallProg.CopyFiles
+[E10A5.ndi.5.1.Services]
+AddService=e1express, 2, winxp.Service, winxp.EventLog
+[E10A5.ndi.5.1.CoInstallers]
+AddReg=CoInstaller_AddReg, CoInKMP.reg
+;CpyFiles=CoInstaller_CopyFiles
+[DriverInfoAddReg]
+HKLM,Software\InstalledOptions\%DriverOEM%\%DriverFamily%\%DriverMfgr%\%DriverProduct%,Description,,%DriverDescription%
+HKLM,Software\InstalledOptions\%DriverOEM%\%DriverFamily%\%DriverMfgr%\%DriverProduct%,CurrentVer,,%DriverOEMVersion%
+HKLM,Software\InstalledOptions\%DriverOEM%\%DriverFamily%\%DriverMfgr%\%DriverProduct%,Ver_%DriverOEMVersion%,,%DriverVersionID%
+HKLM,Software\InstalledOptions\%DriverOEM%\%DriverFamily%\%DriverMfgr%\%DriverProduct%, BaseDriverFileName,,%BaseDriverFileName%
+HKLM,Software\InstalledOptions\%DriverOEM%\%DriverFamily%\%DriverMfgr%\%DriverProduct%, BaseDriverFileVersion,,%BaseDriverFileVersion%
+[e1e.reg]
+HKR, Ndi\Interfaces, UpperRange, 0, "ndis5"
+HKR, Ndi\Interfaces, LowerRange, 0, "ethernet"
+HKR, Ndi, Service, 0, "e1express"
+HKR, Ndi\Params\FlowControl, ParamDesc, 0, %FlowControl%
+HKR, PROSetNdi\NdiExt\Params\FlowControl, MiniHelp, 0, %FlowControlMiniHelp%
+HKR, Ndi\Params\FlowControl, default, 0, "3"
+HKR, Ndi\Params\FlowControl\Enum, "0", 0, %FlowControl_None%
+HKR, Ndi\Params\FlowControl\Enum, "1", 0, %FlowControl_RxOnly%
+HKR, Ndi\Params\FlowControl\Enum, "2", 0, %FlowControl_TxOnly%
+HKR, Ndi\Params\FlowControl\Enum, "3", 0, %FlowControl_Full%
+HKR, Ndi\Params\FlowControl, type, 0, "enum"
+HKR,, NumTxDescriptors, 0, "512"
+HKR,, NumRxDescriptors, 0, "256"
+HKR,, ChecksumTxTcp, 0, "1"
+HKR,, ChecksumRxTcp, 0, "1"
+HKR,, LogLinkStateEvent, 0, "51"
+HKR,, WaitAutoNegComplete,0, "0"
+HKR,, ChecksumRxIp, 0, "1"
+HKR,, ITR, 0, "65535"
+HKR,, ChecksumTxIp, 0, "1"
+HKR,, PciScanMethod, 0, "3"
+HKR,, TxIntDelay, 0, "28"
+HKR,, MulticastFilterType,0, "0"
+HKR,, CustomMessages, 0, "1"
+HKR,, VlanFiltering, 0, "1"
+HKR,, ReduceSpeedOnPowerDown, 0, "1"
+HKR,, AutoPowerSaveModeEnabled, 0, "0"
+HKR,, SavePowerNowEnabled, 0, "1"
+[tso.reg]
+HKR,, TcpSegmentation, 0, "1"
+[82571EB.reg]
+HKR,, InterruptsAutoMask, 0, "1"
+HKR,, InterruptAsserted, 0, "1"
+[Copper.reg]
+HKR, Ndi\params\SpeedDuplex, ParamDesc, 0, %SpeedDuplex%
+HKR, Ndi\params\SpeedDuplex, default, 0, "0"
+HKR, Ndi\params\SpeedDuplex, type, 0, "enum"
+HKR, Ndi\params\SpeedDuplex\enum, "0", 0, %AutoDetect%
+HKR, Ndi\params\SpeedDuplex\enum, "1", 0, %10Mb_Half_Duplex%
+HKR, Ndi\params\SpeedDuplex\enum, "2", 0, %10Mb_Full_Duplex%
+HKR, Ndi\params\SpeedDuplex\enum, "3", 0, %100Mb_Half_Duplex%
+HKR, Ndi\params\SpeedDuplex\enum, "4", 0, %100Mb_Full_Duplex%
+HKR, PROSetNdi\NdiExt\params\SpeedDuplex, MiniHelp, 0, %AutoNegMiniHelp%
+HKR, PROSetNdi\NdiExt\Params\SpeedDuplex, ExposeLevel, 0, "3"
+HKR, PROSetNdi\Params\AutoNegAdvertised, ParamDesc, 0, %AutoNegAdvertised%
+HKR, PROSetNdi\Params\AutoNegAdvertised, MiniHelp, 0, %AutoNegAdvertisedMiniHelp%
+HKR, PROSetNdi\Params\AutoNegAdvertised, default, 0, "47"
+HKR, PROSetNdi\Params\AutoNegAdvertised\Enum, "1", 0, %Advertise_10_Half%
+HKR, PROSetNdi\Params\AutoNegAdvertised\Enum, "2", 0, %Advertise_10_Full%
+HKR, PROSetNdi\Params\AutoNegAdvertised\Enum, "4", 0, %Advertise_100_Half%
+HKR, PROSetNdi\Params\AutoNegAdvertised\Enum, "8", 0, %Advertise_100_Full%
+HKR, PROSetNdi\Params\AutoNegAdvertised\Enum, "47", 0, %AutoNegAdvSpdDefault%
+HKR, PROSetNdi\Params\AutoNegAdvertised, type, 0, "bitfield"
+HKR, PROSetNdi\Params\AutoNegAdvertised, ExposeLevel, 0, "3"
+HKR,, AutoNegAdvertised, 2, "47"
+HKR,, AdaptiveIFS, 0, "0"
+[Copper1000.reg]
+HKR, Ndi\params\SpeedDuplex\enum, "5", 0, %1000Mb_Full_Duplex%
+HKR, PROSetNdi\Params\AutoNegAdvertised\Enum, "32", 0, %Advertise_1000_Full%
+HKR,, MasterSlave, 0, "0"
+[EteamNoBridge.reg]
+[EteamBridge.reg]
+[SPD.reg]
+HKR,, SPDEnabled, 0, "1"
+[ACBS.reg]
+HKR,, ACBSInitDelay, 0, "7"
+HKR,, ACBSMode, 0, "1"
+[AcDcLink.reg]
+HKR,, AutoPowerSaveModeEnabled, 0, "1"
+[Advanced.reg]
+HKR, Ndi\Params\TaggingMode, ParamDesc, 0, %TaggingMode%
+HKR, Ndi\Params\TaggingMode, default, 0, "0"
+HKR, Ndi\Params\TaggingMode\Enum, "0", 0, %Disabled%
+HKR, Ndi\Params\TaggingMode\Enum, "1", 0, %Enabled%
+HKR, Ndi\Params\TaggingMode, type, 0, "enum"
+HKR,, TaggingMode, 2, "0"
+HKR, PROSetNdi\NdiExt\Params\TaggingMode, MiniHelp, 0, %TaggingModeMiniHelp%
+[Ert.reg]
+HKR,, ERT,0, "0"
+[JumboFrames.reg]
+HKR,, MaxFrameSize, 0, "1514"
+[109A_JumboFrames.reg]
+HKR,, MaxFrameSize, 0, "1514"
+[EnablePME.reg]
+HKR,, EnablePME, 0, "1"
+[Powermgmt.reg]
+HKR,, EnablePME, 0, "2"
+HKR, Ndi\Params\WakeOn, ParamDesc, 0, %WakeOnSettings%
+HKR, Ndi\Params\WakeOn\Enum, "0", 0, %Disabled%
+HKR, Ndi\Params\WakeOn\Enum, "6", 0, %WakeOnMagicPacket%
+HKR, Ndi\Params\WakeOn\Enum, "116", 0, %WakeOnDirectedPacket%
+HKR, Ndi\Params\WakeOn\Enum, "118", 0, %WakeOnMagicAndDirectedPackets%
+HKR, Ndi\Params\WakeOn\Enum, "246", 0, %OSControlled%
+HKR, Ndi\Params\WakeOn, type, 0, "enum"
+HKR, PROSetNdi\NdiExt\Params\WakeOn, MiniHelp, 0, %WakeOnHelp%
+HKR,, WakeOnLink, 0, "0"
+[Client.reg]
+HKR, Ndi\Params\WakeOn, default, 0, "118"
+HKR,, WakeOn, 2, "118"
+[ResetLink.reg]
+HKR,, ResetLinkWA, 0, "1"
+[RSS.reg]
+HKR,, RssMode, 0, "65535"
+[WakeOnSlot.reg]
+HKR,, WakeOnSlot, 0, 0
+[WakeOnPort.reg]
+HKR,, WakeOnPort, 0x00010001, 0
+[Uninstall.reg]
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 105E, 0, "82571 EB"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 105F, 0, "82571 EB"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1060, 0, "82571 EB"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 107D, 0, "82572 EI"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 107E, 0, "82572 EI"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 107F, 0, "82572 EI"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 108B, 0, "82572E"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 108C, 0, "82572E"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1096, 0, "ESB2 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1098, 0, "ESB2 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 109A, 0, "82573L"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 1049, 0, "ICH8 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 104A, 0, "ICH8 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 104B, 0, "ICH8 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 104C, 0, "ICH8 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 104D, 0, "ICH8 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10B9, 0, "82572 EI"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10BA, 0, "ESB2 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10BB, 0, "ESB2 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10BD, 0, "ICH9 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10A4, 0, "82571 EB"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10A5, 0, "82571 EB"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10BC, 0, "82571 EB"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10C0, 0, "ICH9 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10C2, 0, "ICH9 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10C3, 0, "ICH9 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10C4, 0, "ICH8 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 10C5, 0, "ICH8 LAN"
+HKLM,Software\Intel\Prounstl\SupportedDevices\8086, 294C, 0, "ICH9 LAN"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\PROSet,DisplayName, 0, %Intel(R)_PRO_Network_Adapters_and_Drivers%
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\PROSet,UninstallString, 0, "Prounstl.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\PROSet,DisplayIcon, 0x00020000, "%SystemRoot%\system32\Prounstl.exe"
+[Uninstall.reg.win2k]
+HKLM,Software\Intel\Prounstl\Dins, e1e5032.din, 0, "8254x.Uninstall"
+HKLM,Software\Intel\Prounstl\Services, e1express, 0, "e1e5032.sys"
+[Uninstall.reg.winxp]
+HKLM,Software\Intel\Prounstl\Dins, e1e5132.din, 0, "8254x.Uninstall"
+HKLM,Software\Intel\Prounstl\Services, e1express, 0, "e1e5132.sys"
+[win2k.CopyFiles]
+e1e5032.sys,,,2
+[win2k.UninstallProg.CopyFiles]
+Prounstl.exe,,,2
+e1e5032.din,,,2
+[win2k.Service]
+DisplayName=%E1Express.Service.DispName%
+ServiceType=1 ;%SERVICE_KERNEL_DRIVER%
+StartType=3 ;%SERVICE_DEMAND_START%
+ErrorControl=1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\e1e5032.sys
+LoadOrderGroup=NDIS
+[winxp.CopyFiles]
+e1e5132.sys,,,2
+[winxp.UninstallProg.CopyFiles]
+Prounstl.exe,,,2
+e1e5132.din,,,2
+[winxp.Service]
+DisplayName=%E1Express.Service.DispName%
+ServiceType=1 ;%SERVICE_KERNEL_DRIVER%
+StartType=3 ;%SERVICE_DEMAND_START%
+ErrorControl=1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\e1e5132.sys
+LoadOrderGroup=NDIS
+[win2k.EventLog]
+AddReg=win2k.AddEventLog.reg
+[win2k.AddEventLog.reg]
+HKR, , EventMessageFile, 0x00020000, %EventLogMessageDllPath_win2ke%
+HKR, , TypesSupported, 0x00010001, 7
+[winxp.EventLog]
+AddReg=winxp.AddEventLog.reg
+[winxp.AddEventLog.reg]
+HKR, , EventMessageFile, 0x00020000, %EventLogMessageDllPath_winxpe%
+HKR, , TypesSupported, 0x00010001, 7
+[CoInstaller_CopyFiles]
+NicCo.dll,,, 0x00000010 ;don't overwrite
+NicInstE.dll
+e1000msg.dll
+NicEtCoE.dll
+[CoInstaller_AddReg]
+HKR,, CoInstallers32, 0x00010000, "NicCo.dll,NicCoInstallerEntry"
+HKR,, NicCoPlugins, 0x00010000, "NicInstE.dll,NicCoInstallerEntry","NicEtCoE.dll,ExpressTeamingCoInstallerEntry"
+[CoInK.reg]
+HKR,, CoInstallFlag, 0x00010001, 0x80000001
+[CoInKMPW.reg]
+HKR,, CoInstallFlag, 0x00010001, 0x80001401
+[CoInKMP.reg]
+HKR,, CoInstallFlag, 0x00010001, 0x80001C01
+[CoInKS.reg]
+HKR,, CoInstallFlag, 0x00010001, 0x80001001
+[CoIn82566M.reg]
+HKR,, CoInstallFlag, 0x00010001, 0x8000C001
+[DestinationDirs]
+DefaultDestDir=11
+win2k.CopyFiles=12
+win2k.UninstallProg.CopyFiles=11
+winxp.CopyFiles=12
+winxp.UninstallProg.CopyFiles=11
+CoInstaller_CopyFiles=11
+[SourceDisksNames]
+1=%DISKNAME%,,,
+[SourceDisksFiles]
+e1e5032.din=1
+e1e5032.sys=1
+e1e5132.din=1
+e1e5132.sys=1
+e1000msg.dll=1
+NicCo.dll=1
+NicInstE.dll=1
+NicEtCoE.dll=1
+prounstl.exe=1
+[Advanced.DelReg]
+HKR, Ndi\Params
+HKR, PROSetNdi\Params
+HKR, PROSetNdi\NdiExt
+HKR,,ExpressTeaming
+HKR,,EtFlags
+[L1aggressive.reg]
+HKR,, EnhancedASPMPowersaver, 0, "0"
+[109A_RDTR.reg]
+HKR,, RxPacketDelayTimer, 0, "32"
+[Strings]
+EventLogMessageDllPath_win2ke="%SystemRoot%\System32\netevent.dll;%SystemRoot%\System32\drivers\e1e5032.sys"
+EventLogMessageDllPath_winxpe="%SystemRoot%\System32\netevent.dll;%SystemRoot%\System32\drivers\e1e5132.sys"
+EventLogMessageDllPath_52i32="%SystemRoot%\System32\netevent.dll;%SystemRoot%\System32\drivers\e1e5232.sys"
+Advertise_10_Half="Advertise 10 Half"
+Advertise_10_Full="Advertise 10 Full"
+Advertise_100_Half="Advertise 100 Half"
+Advertise_100_Full="Advertise 100 Full"
+Advertise_1000_Full="Advertise 1000 Full"
+AutoNegAdvSpdDefault="Advertise Speed Default"
+AutoNegAdvertised="Negotiable Speeds and Duplexes"
+AutoDetect="Auto Detect"
+SpeedDuplex="Link Speed & Duplex"
+10Mb_Half_Duplex="10Mbps/Half Duplex"
+10Mb_Full_Duplex="10Mbps/Full Duplex"
+100Mb_Half_Duplex="100Mbps/Half Duplex"
+100Mb_Full_Duplex="100Mbps/Full Duplex"
+1000Mb_Full_Duplex="Auto-negotiate 1000Mbps"
+AnsLoaded="ANS Loaded"
+ChecksumTxIp="Offload Transmit IP Checksum"
+ChecksumTxTcp="Offload Transmit TCP Checksum"
+ChecksumRxTcp="Offload Receive TCP Checksum"
+ChecksumRxIp="Offload Receive IP Checksum"
+TcpSegmentation="Offload TCP Segmentation"
+FlowControl="Flow Control"
+FlowControl_None="Off"
+FlowControl_RxOnly="Respond"
+FlowControl_TxOnly="Generate"
+FlowControl_Full="Generate & Respond"
+LargeMemoryEnabled="Large Memory Enabled"
+NumTxDescriptors="Transmit Descriptors"
+NumRxDescriptors="Receive Descriptors"
+TaggingMode="QoS Packet Tagging"
+RssMode="Receive-Side Scaling"
+On="On"
+Off="Off"
+Enabled="Enabled"
+Disabled="Disabled"
+Bytes4088="4088 Bytes"
+Bytes16128="16128 Bytes"
+Bytes9014="9014 Bytes"
+LAA="Locally Administered Address"
+JumboFrames="Jumbo Frames"
+AdaptiveIFS="Adaptive Inter-Frame Spacing"
+AdaptiveIFSMiniHelp="Compensates for excessive Ethernet packet collisions by controlling back-to-back timing."
+AutoConnectBatterySaver="Auto Connect Battery Saver"
+EnabledInDC="Enabled In DC"
+EnabledInACandDC="Enabled In AC & DC"
+AcDcLinkStep="Link Speed Battery Saver"
+Enable_PME="Enable PME"
+No_Action="No Action"
+HardwareDefault="Hardware Default"
+WakeOnSettings="Wake on Settings"
+WakeOnDirectedPacket="Wake on Directed Packet"
+WakeOnMagicPacket="Wake on Magic Packet"
+WakeOnMagicAndDirectedPackets="Wake on Magic & Directed"
+OSControlled="OS Controlled"
+WakeOnLinkSettings="Wake on Link Settings"
+Forced="Forced"
+WakeOnLAA="Wake on LAA"
+WakeOnArp="Wake on ARP"
+WakeOnNBT="Wake on NBT Query"
+LogLinkState="Log Link State Event"
+SmartPowerDown="Smart Power Down"
+InterruptThrottleRate="Interrupt Moderation Rate"
+Adaptive="Adaptive"
+Extreme="Extreme"
+Minimal="Minimal"
+High="High"
+Medium="Medium"
+Low="Low"
+GigabitMasterMode="Force Master Mode"
+GigabitSlaveMode="Force Slave Mode"
+MasterSlaveMode="Gigabit Master Slave Mode"
+ExpressTeaming="Express Teaming"
+TeamingDisabled="Teaming Disabled"
+ExpressTeamPorts="Express Team Ports"
+WaitAutoNegComplete="Wait for Link"
+FlowControlMiniHelp="Pauses packet transmission on receipt of full flow control frame and sends full flow control frame to notify the other side to stop transmission."
+AutoNegMiniHelp="The adapter can either negotiate with its link partner or force the speed and duplex. The link partner must match the setting chosen!"
+AutoNegAdvertisedMiniHelp="This can be used to restrict the speeds and duplexes advertised to a link partner during autonegotiation."
+ChecksumTxTcpMiniHelp="Allows the adapter to compute TCP or UDP checksum of transmitted packets. May improve TCP and UDP transmit performance."
+ChecksumRxTcpMiniHelp="Allows the adapter to verify the TCP checksum of incoming packets. May improve TCP receive performance."
+ChecksumTxIpMiniHelp="Allows the adapter to compute IP checksum of transmitted packets. May improve IP transmit performance."
+ChecksumRxIpMiniHelp="Allows the adapter to verify the IP checksum of incoming packets. May improves IP receive performance."
+TcpSegmentationMiniHelp="Allows the adapter to offload the task of segmenting TCP messages. May improve CPU utilization."
+NumRxDescriptorsMiniHelp="Sets the number of buffers the driver uses when copying data to protocol memory. Increasing this value can enhance receive performance, but also consumes system memory. Use the default if performance is not an issue."
+NumTxDescriptorsMiniHelp="Sets the number of data segments that enable the adapter to track transmit packets. Increasing this value can improve transmit performance, but also consumes system memory. Use the default if performance is not an issue."
+JumboFramesMiniHelp="Enables sending larger Ethernet packets on gigabit networks."
+TaggingModeMiniHelp="Enables sending and receiving of IEEE Tagged frames (802.3ac/802.1p/802.1Q), which include priority and VLAN indicators."
+LAAMiniHelp="Allows you to configure a custom MAC address for the adapter."
+EnablePMEHelp="Enables/disables wake-up from Advanced Power Management (APM) sleep states."
+WakeOnHelp="Determines how to wake the system."
+WakeOnLinkHelp="Allows wake-up from APM power management when link is reconnected."
+LogLinkStateMiniHelp="Enables/disables recording of the link state message to the Event Viewer."
+SmartPowerDownMiniHelp="Minimizes power consumption by enabling the adapter to enter a deep sleep mode when it does not have a valid link or when the operating system is in Suspend mode."
+ITRMiniHelp="Determines rate at which the controller moderates interrupts. Default is optimized for common configurations. Changing this setting may improve performance for some configurations."
+MasterSlaveModeMiniHelp="Determines IEEE 802.3ab Master-Slave resolution during gigabit auto-negotiation. Default is recommended for most configurations. Forcing a setting can break link if partner is not configured correctly."
+WaitAutoNegCompleteMiniHelp="Determines whether the driver waits for link to be detected before finishing initialization. Select Auto Detect to let the driver control the setting for copper or fiber adapters."
+RssModeMiniHelp="Distribute packet receive processing over 2 processors."
+Intel="Intel"
+E1Express.Service.DispName="Intel(R) PRO/1000 PCI Express Network Connection Driver"
+DISKNAME="Intel(R) PRO/1000 Driver Disk"
+Intel(R)_PRO_Network_Adapters_and_Drivers="Intel(R) PRO Network Connections Drivers"
+DriverMfgr="Intel" ; IHV name
+DriverVersionID="12.1" ; The IHV driver version
+BaseDriverFileName="e1e5032.SYS (Win2K) and e1e5132.SYS (WinXP)" ; Key file for version
+BaseDriverFileVersion="9.8.20.0" ; version of key file
+DriverOEM="DELL" ; name of the OEM
+DriverFamily="NIC" ; device family (NIC, Storage, Video...)
+DriverProduct="Intel(R) PRO Family Adapters" ; Specific Name of device (chipset, for example)
+DriverDescription="Intel PRO-1000 PCIExpress Adapter driver for Windows 2000 and Windows XP" ; Description of device (product name, OS or system supported)
+DriverOEMVersion="A00" ; OEM-specified version
+E108BEC.DeviceDesc="Intel(R) PRO/1000 PM Network Connection"
+E109AEC.DeviceDesc="Intel(R) PRO/1000 PL Network Connection"
+E1096NC.DeviceDesc="Intel(R) PRO/1000 EB Network Connection with I/O Acceleration"
+E1098BC.DeviceDesc="Intel(R) PRO/1000 EB Backplane Connection with I/O Acceleration"
+E105ENC.DeviceDesc="Intel(R) PRO/1000 PT Dual Port Network Connection"
+E105ESC.DeviceDesc="Intel(R) PRO/1000 PT Dual Port Server Connection"
+E105ESA.DeviceDesc="Intel(R) PRO/1000 PT Dual Port Server Adapter"
+E105FSA.DeviceDesc="Intel(R) PRO/1000 PF Dual Port Server Adapter"
+E1060SC.DeviceDesc="Intel(R) PRO/1000 PB Dual Port Server Connection"
+E107DSA.DeviceDesc="Intel(R) PRO/1000 PT Server Adapter"
+E107DNC.DeviceDesc="Intel(R) PRO/1000 PT Network Connection"
+E107ESA.DeviceDesc="Intel(R) PRO/1000 PF Server Adapter"
+E107ESC.DeviceDesc="Intel(R) PRO/1000 PF Network Connection"
+E107FSC.DeviceDesc="Intel(R) PRO/1000 PB Server Connection"
+E10B9DA.DeviceDesc="Intel(R) PRO/1000 PT Desktop Adapter"
+E1049NC.DeviceDesc="Intel(R) 82566MM Gigabit Network Connection"
+E104ANC.DeviceDesc="Intel(R) 82566DM Gigabit Network Connection"
+E104BNC.DeviceDesc="Intel(R) 82566DC Gigabit Network Connection"
+E104DNC.DeviceDesc="Intel(R) 82566MC Gigabit Network Connection"
+E104CNC.DeviceDesc="Intel(R) 82562V 10/100 Network Connection"
+E10C4NC.DeviceDesc="Intel(R) 82562GT 10/100 Network Connection"
+E10C5NC.DeviceDesc="Intel(R) 82562G 10/100 Network Connection"
+E10BDNC.DeviceDesc="Intel(R) 82566DM-2 Gigabit Network Connection"
+E294CNC.DeviceDesc="Intel(R) 82566DC-2 Gigabit Network Connection"
+E10C0NC.DeviceDesc="Intel(R) 82562V-2 10/100 Network Connection"
+E10C2NC.DeviceDesc="Intel(R) 82562G-2 10/100 Network Connection"
+E10C3NC.DeviceDesc="Intel(R) 82562GT-2 10/100 Network Connection"
+E10BANC.DeviceDesc="Intel(R) PRO/1000 EB1 Network Connection with I/O Acceleration"
+E10BBNC.DeviceDesc="Intel(R) PRO/1000 EB1 Backplane Connection with I/O Acceleration"
+E10A4SA.DeviceDesc="Intel(R) PRO/1000 PT Quad Port Server Adapter"
+E10A5SA.DeviceDesc="Intel(R) PRO/1000 PF Quad Port Server Adapter"
+E10BCSA.DeviceDesc="Intel(R) PRO/1000 PT Quad Port LP Server Adapter"
