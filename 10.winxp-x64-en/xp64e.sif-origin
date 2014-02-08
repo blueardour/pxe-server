@@ -45,7 +45,7 @@ DisableAdminAccountOnDomainJoin = 1
 
 [SetupData]  
 OsLoadOptions = "/fastdetect"  
-SetupSourceDevice = "\Device\LanmanRedirector\219.219.220.29\tftproot\os-cd\winxp-en-x64"
+SetupSourceDevice = "\Device\LanmanRedirector\192.168.1.1\tftproot\os-cd\winxp-en-x64"
  
    
 [GuiUnattended]  

@@ -4,7 +4,7 @@ ip=`ifconfig eth0 | grep 'inet addr' | awk '{print $2}' | awk -F: '{print $2}'`
 
 cd /tftp_root/utils
 
-lists="../13.winxp-x86-en/xp86e.sif ../pxelinux.cfg/default ../1.winxp-x86-ch/xp86c.sif"
+lists="../13.winxp-x86-en/xp86e.sif ../pxelinux.cfg/default ../1.winxp-x86-ch/xp86c.sif ../10.winxp-x64-en/xp64e.sif"
 for i in $lists
 do
   echo update ... [$i]
