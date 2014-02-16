@@ -8570,10 +8570,6 @@ nvrboot.efi  = 1,,,,,,,,3,3
 
 [SourceDisksFiles.amd64]
 iastor.sys= 1,,,,,,4_,4,1,,,1,4
-iaAHCI.cat=1,,,,,,,20,0,0
-iaAHCI.inf=1,,,,,,,20,0,0
-iaSTOR.cat=1,,,,,,,20,0,0
-iaSTOR.inf=1,,,,,,,20,0,0
 
 
 hal.dll      = 1,,,,,,3_,2,3,,,1,2

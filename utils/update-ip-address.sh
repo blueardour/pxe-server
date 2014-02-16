@@ -7,7 +7,7 @@ echo ip=$ip
 
 cd /tftp_root/utils
 
-lists="../menu.lst/default ../13.winxp-x86-en/xp86e.sif ../pxelinux.cfg/default ../1.winxp-x86-ch/xp86c.sif ../10.winxp-x64-en/xp64e.sif"
+lists="../menu.lst/default ../13.winxp-x86-en/xp86e.sif ../pxelinux.cfg/default ../1.winxp-x86-ch/xp86c.sif ../10.winxp-x64-en/xp64e.sif ../2.winxp-x86-ch/xp86z.sif"
 for i in $lists
 do
   echo update ... [$i]

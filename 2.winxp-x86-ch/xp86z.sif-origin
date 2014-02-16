@@ -1,0 +1,97 @@
+
+
+[Data]  
+floppyless = "1"  
+msdosinitiated = "1"  
+OriSrc = "PXE Server"  
+OriTyp = "4"  
+LocalSourceOnCD = 1  
+DisableAdminAccountOnDomainJoin = 1  
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;enable auto install(Unattended mode)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; begin here
+  AutoPartition=0 
+  UnattendedInstall = "Yes"   ;;Unattended mode
+  AutomaticUpdates=yes ; skip the Help Protect Your PC page
+
+[Unattended] ; // must be denoted when not in Unattended mode
+  ;perform a fully unattended install, which uses the winnt.sif answer file
+  UnattendMode=FullUnattended
+
+  OemSkipEula=Yes
+
+  Repartition=No
+  FileSystem=*
+
+  UnattendSwitch="yes"
+  WaitForReboot="No"
+  DriverSigningPolicy=Ignore
+
+  ;; for sata driver
+  OemPreinstall=Yes
+  OemPnPDriversPath="drivers\sata\"
+  ;; end
+
+[RemoteInstall]
+  Repartition=No
+  UseWholeDisk=No  
+
+
+;;end of Unattended mode setting
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+[SetupData]  
+OsLoadOptions = "/fastdetect"  
+SetupSourceDevice = "\Device\LanmanRedirector\192.168.1.1\tftproot\2.winxp-x86-ch"  
+ 
+   
+[GuiUnattended]  
+    AdminPassword=*  
+    EncryptedAdminPassword=NO  
+    OEMSkipRegional=1  
+    TimeZone=210  
+    OemSkipWelcome=1  
+  
+[UserData]  
+    ProductKey=CM3HY-26VYW-6JRYC-X66GX-JVY2D  
+    FullName="admin"  
+    OrgName="Asia"  
+    ComputerName=*  
+  
+[SystemRestore]  
+    DisableSR=1  
+    CreateFirstRunRp=0  
+  
+[Display]  
+    BitsPerPel=32  
+    Xresolution=1024  
+    YResolution=768  
+    AutoConfirm=1
+  
+[Components]  
+    msmsgs=off  
+    msnexplr=off
+    freecell=off
+    hearts=off
+    pinball=off
+    solitaire=off
+    spider=off
+    zonegames=off      
+  
+[TapiLocation]  
+    CountryCode=86  
+    Dialing=Tone  
+  
+[RegionalSettings]  
+    LanguageGroup=9,10  
+    Language=00000804  
+  
+[Identification]  
+    JoinWorkgroup=WORKGROUP  
+  
+[Networking]  
+    InstallDefaultComponents=yes 
+

@@ -1,4 +1,11 @@
 
+1.File preparasion:
+ mount -o loop en_x64_winxp_sp2.iso /mnt
+ cp -r /mnt/amd64 .
+ cp -r /mnt/i386 .
+ umount /mnt
+
+2.Install:
 
 At the text mode stage, copying files, about 60~760%, an error occur:
 

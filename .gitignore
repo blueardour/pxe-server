@@ -16,6 +16,7 @@
 
 # only add the *.inf file
 /0.winxp-drivers-via-binlsrv/inf/*
+/0.winxp-drivers-via-binlsrv/bak
 !/0.winxp-drivers-via-binlsrv/inf/*.inf
 
 /0.winxp-drivers-via-binlsrv/cab-bak
@@ -36,6 +37,16 @@
 /1.winxp-x86-ch/*.txt
 /1.winxp-x86-ch/*.cache
 /1.winxp-x86-ch/xp86c.sif
+ 
+# 2.winxp-x86-ch
+/2.winxp-x86-ch/i386/*
+!/2.winxp-x86-ch/i386/txtsetup.sif
+/2.winxp-x86-ch/*.py
+/2.winxp-x86-ch/*.inf
+/2.winxp-x86-ch/tmp*
+/2.winxp-x86-ch/*.txt
+/2.winxp-x86-ch/*.cache
+/2.winxp-x86-ch/xp86z.sif
  
 # 2.win7-x86-en/
 /2.win7-x86-en/*
@@ -61,10 +72,10 @@
 /10.winxp-x64-en/tmp
 /10.winxp-x64-en/*bak
 /10.winxp-x64-en/*.tar
-/10.winxp-x64-en/amd64/*
-!/10.winxp-x64-en/amd64/txtsetup.sif
-/10.winxp-x64-en/i386/*
+/10.winxp-x64-en/amd64
+/10.winxp-x64-en/i386
 /10.winxp-x64-en/xp64e.sif
+!/10.winxp-x64-en/amd64/txtsetup.sif
  
 # 11.win-pe/
 # file size should not exceed 100M for GitHub
