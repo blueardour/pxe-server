@@ -88,10 +88,9 @@
 !/13.winxp-x86-en/i386/txtsetup.sif
 /13.winxp-x86-en/xp86e.sif
  
-/14.diskless-linux/*
-/14.diskless-linux/boot/Bak*
-/14.diskless-linux/boot/linux-source-2.6.32.60+drm33.26-lite
-/14.diskless-linux/boot/linux-source-2.6.32.60+drm33.26-nfs
+/14.diskless-linux/*.tar
+/14.diskless-linux/bzImage
+/14.diskless-linux/initrd.img
 
 /15-lucid-i386/
 /16-lucid-amd64/
