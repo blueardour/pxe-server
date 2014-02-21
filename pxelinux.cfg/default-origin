@@ -31,13 +31,18 @@ label	winxp-x64-en
 menu	label ^6---Install WinXP-X64-EN
 kernel	10.winxp-x64-en/xp64e.0
 
-#label	winxp-x86-ch
-#menu	label ^7---Install WinXP-X86-CH
-#kernel	1.winxp-x86-ch/xp86c.0
+label	winxp-x86-ch
+menu	label ^7---Install WinXP-X86-CH
+kernel	2.winxp-x86-ch/xp86z.0
 
 label	diskless-linux
-menu	label ^a---DiskLess Ubuntu10.10
-kernel	14.diskless-linux/kernel
-append  initrd=14.diskless-linux/initrd root=/dev/nfs boot=nfs nfsroot=192.168.1.1:/nfs_root/ubuntu-10.10-i386 ip=dhcp panic=20
+menu	label ^a---DiskLess Ubuntu10.10 (Kernel Alone)
+kernel	14.diskless-linux/bzImage-alone
+append  initrd=14.diskless-linux/initrd-alone.img root=/dev/nfs boot=nfs nfsroot=192.168.1.1:/nfs_root/ubuntu-10.10-i386 ip=dhcp panic=20
+
+label	diskless-linux
+menu	label ^b---DiskLess Ubuntu10.10 (Large Amount Drivers)
+kernel	14.diskless-linux/bzImage
+append  initrd=14.diskless-linux/initrd.img root=/dev/nfs boot=nfs nfsroot=192.168.1.1:/nfs_root/ubuntu-10.10-i386 ip=dhcp panic=20
 
 
