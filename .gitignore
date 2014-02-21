@@ -38,6 +38,9 @@
 /1.winxp-x86-ch/xp86c.sif
  
 # 2.win7-x86-en/
+/2.winxp-x86-ch/*
+
+# 2.win7-x86-en/
 /2.win7-x86-en/*
 
 # 3.win7-x64-en/
